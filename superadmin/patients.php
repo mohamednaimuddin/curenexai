@@ -1,0 +1,190 @@
+<?php
+/**
+ * Super Admin - Patient Overview
+ */
+
+define('ADMIN_PAGE', true);
+require_once __DIR__ . '/../includes/init.php';
+
+$pageTitle = 'All Patients';
+
+// Filters
+$doctorFilter = intval($_GET['doctor'] ?? 0);
+$searchQuery = $_GET['search'] ?? '';
+$page = max(1, intval($_GET['page'] ?? 1));
+$perPage = 20;
+$offset = ($page - 1) * $perPage;
+
+// Build query
+$whereConditions = [];
+$params = [];
+
+if ($doctorFilter) {
+    $whereConditions[] = "p.doctor_id = ?";
+    $params[] = $doctorFilter;
+}
+
+if ($searchQuery) {
+    $whereConditions[] = "(p.patient_name LIKE ? OR p.phone LIKE ? OR p.email LIKE ?)";
+    $searchTerm = "%$searchQuery%";
+    $params[] = $searchTerm;
+    $params[] = $searchTerm;
+    $params[] = $searchTerm;
+}
+
+$whereClause = $whereConditions ? 'WHERE ' . implode(' AND ', $whereConditions) : '';
+
+// Get total count
+$totalCount = DB::queryOne("SELECT COUNT(*) as count FROM patients p $whereClause", $params)['count'];
+$totalPages = ceil($totalCount / $perPage);
+
+// Get patients - Security: Cast pagination to integers to prevent SQL injection
+$safePerPage = (int)$perPage;
+$safeOffset = (int)$offset;
+$patients = DB::query("
+    SELECT p.*, d.full_name as doctor_name,
+           (SELECT COUNT(*) FROM consultations WHERE patient_id = p.id) as consultation_count,
+           (SELECT MAX(consultation_date) FROM consultations WHERE patient_id = p.id) as last_consultation
+    FROM patients p
+    JOIN doctors d ON p.doctor_id = d.id
+    $whereClause
+    ORDER BY p.created_at DESC
+    LIMIT $safePerPage OFFSET $safeOffset
+", $params);
+
+// Get doctors for filter
+$doctors = DB::query("SELECT id, full_name FROM doctors ORDER BY full_name");
+
+include __DIR__ . '/includes/header.php';
+?>
+
+<!-- Page Header -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h4 class="mb-1">Patient Overview</h4>
+        <p class="text-muted mb-0">View all patients across all doctors</p>
+    </div>
+    <div>
+        <span class="badge bg-primary fs-6"><?php echo number_format($totalCount); ?> Total Patients</span>
+    </div>
+</div>
+
+<!-- Filters -->
+<div class="data-table mb-4">
+    <div class="p-3">
+        <form method="GET" class="row g-3">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                    <input type="text" class="form-control" name="search" placeholder="Search patients..." value="<?php echo htmlspecialchars($searchQuery); ?>">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select" name="doctor">
+                    <option value="">All Doctors</option>
+                    <?php foreach ($doctors as $doc): ?>
+                        <option value="<?php echo $doc['id']; ?>" <?php echo $doctorFilter == $doc['id'] ? 'selected' : ''; ?>>
+                            <?php echo htmlspecialchars($doc['full_name']); ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-outline-primary w-100">Filter</button>
+            </div>
+            <div class="col-md-2">
+                <a href="patients.php" class="btn btn-outline-secondary w-100">Reset</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Patients Table -->
+<div class="data-table">
+    <div class="table-header">
+        <h5><i class="bi bi-person-badge me-2"></i>Patients</h5>
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Patient</th>
+                    <th>Age/Gender</th>
+                    <th>Contact</th>
+                    <th>Doctor</th>
+                    <th>Consultations</th>
+                    <th>Last Visit</th>
+                    <th>Registered</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php if (empty($patients)): ?>
+                    <tr><td colspan="8" class="text-center text-muted py-4">No patients found</td></tr>
+                <?php else: ?>
+                    <?php foreach ($patients as $patient): ?>
+                        <tr>
+                            <td><strong>#<?php echo $patient['id']; ?></strong></td>
+                            <td>
+                                <strong><?php echo htmlspecialchars($patient['patient_name']); ?></strong>
+                                <?php if ($patient['blood_group']): ?>
+                                    <br><small class="text-muted">Blood: <?php echo $patient['blood_group']; ?></small>
+                                <?php endif; ?>
+                            </td>
+                            <td>
+                                <?php echo $patient['age'] ?? '-'; ?> yrs
+                                <br><small class="text-muted"><?php echo ucfirst($patient['gender'] ?? '-'); ?></small>
+                            </td>
+                            <td>
+                                <?php if ($patient['phone']): ?>
+                                    <small><?php echo htmlspecialchars($patient['phone']); ?></small>
+                                <?php endif; ?>
+                                <?php if ($patient['email']): ?>
+                                    <br><small class="text-muted"><?php echo htmlspecialchars($patient['email']); ?></small>
+                                <?php endif; ?>
+                            </td>
+                            <td>
+                                <a href="doctor_details.php?id=<?php echo $patient['doctor_id']; ?>" class="text-decoration-none">
+                                    <?php echo htmlspecialchars($patient['doctor_name']); ?>
+                                </a>
+                            </td>
+                            <td><span class="badge bg-info"><?php echo $patient['consultation_count']; ?></span></td>
+                            <td>
+                                <?php echo $patient['last_consultation'] ? date('M j, Y', strtotime($patient['last_consultation'])) : '-'; ?>
+                            </td>
+                            <td><?php echo date('M j, Y', strtotime($patient['created_at'])); ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
+    
+    <?php if ($totalPages > 1): ?>
+        <div class="p-3 border-top">
+            <nav>
+                <ul class="pagination mb-0 justify-content-center">
+                    <?php if ($page > 1): ?>
+                        <li class="page-item">
+                            <a class="page-link" href="?page=<?php echo $page - 1; ?>&doctor=<?php echo $doctorFilter; ?>&search=<?php echo urlencode($searchQuery); ?>">Previous</a>
+                        </li>
+                    <?php endif; ?>
+                    
+                    <?php for ($i = max(1, $page - 2); $i <= min($totalPages, $page + 2); $i++): ?>
+                        <li class="page-item <?php echo $i === $page ? 'active' : ''; ?>">
+                            <a class="page-link" href="?page=<?php echo $i; ?>&doctor=<?php echo $doctorFilter; ?>&search=<?php echo urlencode($searchQuery); ?>"><?php echo $i; ?></a>
+                        </li>
+                    <?php endfor; ?>
+                    
+                    <?php if ($page < $totalPages): ?>
+                        <li class="page-item">
+                            <a class="page-link" href="?page=<?php echo $page + 1; ?>&doctor=<?php echo $doctorFilter; ?>&search=<?php echo urlencode($searchQuery); ?>">Next</a>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+            </nav>
+        </div>
+    <?php endif; ?>
+</div>
+
+<?php include __DIR__ . '/includes/footer.php'; ?>
