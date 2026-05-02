@@ -1,0 +1,42 @@
+# ====================================================
+# HUMANS.TXT - CURENEX / CURENEXAI
+# AI-Powered Homeopathic Healthcare Platform
+# Website: https://curenexai.com
+# ====================================================
+
+/* TEAM */
+    Name: CurenexAI Team
+    Role: Development & AI Healthcare Innovation
+    Location: Worldwide
+    Website: https://curenexai.com
+
+/* PRODUCT */
+    Name: Curenex
+    Also Known As: CurenexAI, Curenex AI
+    Tagline: Decode Health, Deliver Cure
+    Category: AI Healthcare, Homeopathy, Medical Technology
+    Description: Curenex is the leading AI-powered homeopathic healthcare platform providing intelligent diagnosis, personalized treatment recommendations, and comprehensive patient management.
+
+/* TECHNOLOGY */
+    Frontend: HTML5, CSS3, JavaScript
+    Backend: PHP
+    AI: Machine Learning, Natural Language Processing
+    Database: MySQL
+    Frameworks: Modern Web Standards
+
+/* KEYWORDS */
+    Curenex, CurenexAI, Curenex AI, curenex, curenexai, 
+    homeopathy AI, AI healthcare, homeopathic software,
+    AI diagnosis, remedy finder, patient management,
+    health technology, digital health, telemedicine
+
+/* SITE */
+    Last Update: 2026-04-05
+    Standards: HTML5, CSS3, Schema.org, Open Graph
+    Components: AI Diagnosis, Repertory, Materia Medica
+    Software: Custom CurenexAI Platform
+
+/* NOTE */
+    Thank you for visiting Curenex!
+    We are building the future of homeopathic healthcare.
+    Decode Health, Deliver Cure with CurenexAI.

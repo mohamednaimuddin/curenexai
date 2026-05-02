@@ -1,0 +1,106 @@
+
+
+[2025-12-14 16:01:44] ========== NEW EMAIL ATTEMPT ==========
+[2025-12-14 16:01:44] To: mohamednaimuddinus@gmail.com, Host: smtp.gmail.com, Port: 587
+[2025-12-14 16:01:44] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP ffacd0b85a97d-42fbc6e3392sm10710559f8f.13 - gsmtp
+
+[2025-12-14 16:01:44] CLIENT -> SERVER: EHLO homeo.naimu.space
+
+[2025-12-14 16:01:44] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2a02:4780:28:8e6b::1]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[2025-12-14 16:01:44] CLIENT -> SERVER: STARTTLS
+
+[2025-12-14 16:01:44] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[2025-12-14 16:01:44] CLIENT -> SERVER: EHLO homeo.naimu.space
+
+[2025-12-14 16:01:44] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2a02:4780:28:8e6b::1]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[2025-12-14 16:01:44] CLIENT -> SERVER: AUTH LOGIN
+
+[2025-12-14 16:01:44] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[2025-12-14 16:01:44] CLIENT -> SERVER: [credentials hidden]
+[2025-12-14 16:01:44] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[2025-12-14 16:01:44] CLIENT -> SERVER: [credentials hidden]
+[2025-12-14 16:01:44] SERVER -> CLIENT: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fbc6e3392sm10710559f8f.13 - gsmtp
+
+[2025-12-14 16:01:44] SMTP ERROR: Password command failed: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fbc6e3392sm10710559f8f.13 - gsmtp
+
+[2025-12-14 16:01:44] SMTP Error: Could not authenticate.
+[2025-12-14 16:01:44] CLIENT -> SERVER: QUIT
+
+[2025-12-14 16:01:44] SERVER -> CLIENT: 221 2.0.0 closing connection ffacd0b85a97d-42fbc6e3392sm10710559f8f.13 - gsmtp
+
+[2025-12-14 16:01:44] SMTP Error: Could not authenticate.
+[2025-12-14 16:01:44] FAILED: PHPMailer Error: SMTP Error: Could not authenticate. | Exception: SMTP Error: Could not authenticate.
+
+
+[2025-12-14 16:02:04] ========== NEW EMAIL ATTEMPT ==========
+[2025-12-14 16:02:04] To: mohamednaimuddinus@gmail.com, Host: smtp.gmail.com, Port: 587
+[2025-12-14 16:02:04] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 5b1f17b1804b1-47a8fa7fed8sm49895335e9.5 - gsmtp
+
+[2025-12-14 16:02:04] CLIENT -> SERVER: EHLO homeo.naimu.space
+
+[2025-12-14 16:02:04] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2a02:4780:28:8e6b::1]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[2025-12-14 16:02:04] CLIENT -> SERVER: STARTTLS
+
+[2025-12-14 16:02:04] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[2025-12-14 16:02:04] CLIENT -> SERVER: EHLO homeo.naimu.space
+
+[2025-12-14 16:02:04] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2a02:4780:28:8e6b::1]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+[2025-12-14 16:02:04] CLIENT -> SERVER: AUTH LOGIN
+
+[2025-12-14 16:02:04] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[2025-12-14 16:02:04] CLIENT -> SERVER: [credentials hidden]
+[2025-12-14 16:02:04] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[2025-12-14 16:02:04] CLIENT -> SERVER: [credentials hidden]
+[2025-12-14 16:02:04] SERVER -> CLIENT: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a8fa7fed8sm49895335e9.5 - gsmtp
+
+[2025-12-14 16:02:04] SMTP ERROR: Password command failed: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a8fa7fed8sm49895335e9.5 - gsmtp
+
+[2025-12-14 16:02:04] SMTP Error: Could not authenticate.
+[2025-12-14 16:02:04] CLIENT -> SERVER: QUIT
+
+[2025-12-14 16:02:04] SERVER -> CLIENT: 221 2.0.0 closing connection 5b1f17b1804b1-47a8fa7fed8sm49895335e9.5 - gsmtp
+
+[2025-12-14 16:02:04] SMTP Error: Could not authenticate.
+[2025-12-14 16:02:04] FAILED: PHPMailer Error: SMTP Error: Could not authenticate. | Exception: SMTP Error: Could not authenticate.

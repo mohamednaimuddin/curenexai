@@ -1,0 +1,186 @@
+# ==================================================
+# ROBOTS.TXT FOR CURENEXAI
+# AI-Powered Homeopathic Healthcare SOFTWARE Platform
+# 
+# IMPORTANT: CurenexAI is SOFTWARE for homeopathic doctors
+# NOT related to Curenex skin medicine or pharmaceuticals
+#
+# Website: https://curenexai.com
+# Brand: CurenexAI, Curenex AI, CURENEXAI
+# Tagline: Decode Health, Deliver Cure
+# Last Updated: 2026-04-10
+# ==================================================
+
+# Sitemap Location - CRITICAL FOR SEO
+Sitemap: https://curenexai.com/sitemap.xml
+
+# Host Directive
+Host: https://curenexai.com
+
+# ===================
+# GOOGLEBOT - Primary Search Engine
+# ===================
+User-agent: Googlebot
+Allow: /
+Allow: /about.php
+Allow: /register.php
+# login.php - noindex set on page, not explicitly allowed
+# index.php - excluded (301 redirects to /)
+# forgot_password.php - excluded (utility auth page)
+Allow: /documentation.php
+Allow: /faq.php
+Allow: /support.php
+Allow: /privacy.php
+Allow: /terms.php
+Allow: /assets/image/
+Allow: /assets/css/
+Allow: /assets/js/
+Disallow: /admin/
+Disallow: /superadmin/
+Disallow: /api/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /database/
+Disallow: /logs/
+Disallow: /uploads/
+Disallow: /vendor/
+Disallow: /tests/
+Disallow: /vpsbackup/
+Disallow: /test_*.php
+Disallow: /debug_*.php
+Disallow: /check_*.php
+Disallow: /fix_*.php
+Crawl-delay: 1
+
+# ===================
+# BINGBOT - Microsoft Search
+# ===================
+User-agent: Bingbot
+Allow: /
+Allow: /about.php
+Allow: /register.php
+# index.php - excluded (301 redirects to /)
+Allow: /documentation.php
+Allow: /faq.php
+Allow: /support.php
+Allow: /privacy.php
+Allow: /terms.php
+Allow: /assets/image/
+Disallow: /admin/
+Disallow: /superadmin/
+Disallow: /api/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /database/
+Disallow: /logs/
+Disallow: /uploads/
+Disallow: /vendor/
+Disallow: /tests/
+Crawl-delay: 2
+
+# ===================
+# YANDEXBOT
+# ===================
+User-agent: Yandex
+Allow: /
+Allow: /about.php
+Disallow: /admin/
+Disallow: /api/
+Disallow: /config/
+Disallow: /includes/
+Crawl-delay: 3
+
+# ===================
+# DUCKDUCKBOT
+# ===================
+User-agent: DuckDuckBot
+Allow: /
+Allow: /about.php
+Disallow: /admin/
+Disallow: /api/
+Disallow: /config/
+
+# ===================
+# BAIDUSPIDER
+# ===================
+User-agent: Baiduspider
+Allow: /
+Allow: /about.php
+Disallow: /admin/
+Disallow: /api/
+Crawl-delay: 3
+
+# ===================
+# ALL OTHER BOTS - Default Rules
+# ===================
+User-agent: *
+
+# Allow all public pages
+Allow: /
+Allow: /about.php
+Allow: /register.php
+# index.php - excluded (301 redirects to /)
+# forgot_password.php - excluded (utility auth page)
+# login.php - has noindex meta tag
+Allow: /documentation.php
+Allow: /faq.php
+Allow: /support.php
+Allow: /privacy.php
+Allow: /terms.php
+Allow: /assets/
+
+# Block administrative and private sections
+Disallow: /admin/
+Disallow: /superadmin/
+Disallow: /api/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /database/
+Disallow: /logs/
+Disallow: /uploads/
+Disallow: /vendor/
+Disallow: /tests/
+Disallow: /vpsbackup/
+
+# Block test and debug files
+Disallow: /test_*.php
+Disallow: /debug_*.php
+Disallow: /check_*.php
+Disallow: /fix_*.php
+Disallow: /token_debug.php
+Disallow: /create_test_account.php
+
+# Block user-specific pages (require authentication)
+Disallow: /dashboard.php
+Disallow: /patients/
+Disallow: /consultations/
+Disallow: /prescriptions/
+Disallow: /repertory/
+Disallow: /dermo.php
+Disallow: /diagnose.php
+Disallow: /lab.php
+Disallow: /settings.php
+Disallow: /change_password.php
+Disallow: /update_profile.php
+
+# Block duplicate/similar pages
+Disallow: /coming-soon.php
+Disallow: /coming-soon1.php
+Disallow: /index12.php
+
+# ==================================================
+# END OF ROBOTS.TXT - CURENEX / CURENEXAI
+# ==================================================
+Disallow: /notification_preferences.php
+Disallow: /privacy_settings.php
+Disallow: /theme_appearance.php
+
+# Block dynamic/utility pages
+Disallow: /verify_email.php
+Disallow: /chatbot.php
+
+# Sitemap location
+Sitemap: https://curenexai.com/sitemap.xml
+
+# Crawl delay (optional - be gentle on server)
+Crawl-delay: 1

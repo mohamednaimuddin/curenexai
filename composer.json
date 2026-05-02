@@ -1,0 +1,8 @@
+{
+    "require": {
+        "smalot/pdfparser": "^2.12",
+        "phpmailer/phpmailer": "^7.0",
+        "tecnickcom/tcpdf": "^6.11",
+        "phpoffice/phpspreadsheet": "^5.6"
+    }
+}

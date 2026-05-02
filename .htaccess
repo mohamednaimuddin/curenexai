@@ -1,0 +1,306 @@
+# ====================================================
+# APACHE CONFIGURATION - CURENEX / CURENEXAI
+# AI-Powered Homeopathic Healthcare Platform
+# Website: https://curenexai.com
+# Keywords: Curenex, CurenexAI, Curenex AI, curenex
+# ====================================================
+
+# Prevent directory listing
+Options -Indexes +FollowSymLinks
+
+# ====================================================
+# SEO REDIRECTS & CANONICAL URLS
+# ====================================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Redirect staging domain to canonical production domain (single-hop)
+    RewriteCond %{HTTP_HOST} ^(www\.)?homeo\.naimu\.space [NC]
+    RewriteRule ^(.*)$ https://curenexai.com/$1 [L,R=301]
+
+    # Single combined redirect: HTTP -> HTTPS AND www -> non-www in ONE hop
+    # (avoids the http://www -> https://www -> https:// double-redirect chain
+    # flagged by PageSpeed Insights as "Avoid multiple page redirects").
+    RewriteCond %{HTTPS} off [OR]
+    RewriteCond %{HTTP_HOST} ^www\.curenexai\.com [NC]
+    RewriteCond %{HTTP_HOST} !^localhost [NC]
+    RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
+    RewriteRule ^(.*)$ https://curenexai.com/$1 [L,R=301]
+    
+    # Remove trailing slashes (SEO friendly)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+    
+    # Remove .php extension for clean URLs (optional)
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteCond %{REQUEST_FILENAME}\.php -f
+    # RewriteRule ^(.*)$ $1.php [L]
+    
+    # Redirect index.html to root
+    RewriteRule ^index\.html$ / [R=301,L]
+    
+    # Redirect /index.php to root (canonical URL consolidation)
+    RewriteCond %{THE_REQUEST} /index\.php [NC]
+    RewriteRule ^index\.php$ / [R=301,L]
+    
+    # Block direct access to include files
+    RewriteCond %{REQUEST_URI} ^/includes/ [NC]
+    RewriteRule .* - [F,L]
+    
+    # Block access to database directory
+    RewriteCond %{REQUEST_URI} ^/database/ [NC]
+    RewriteRule .* - [F,L]
+    
+    # Block access to logs directory
+    RewriteCond %{REQUEST_URI} ^/logs/ [NC]
+    RewriteRule .* - [F,L]
+    
+    # Block access to vendor directory except autoload
+    RewriteCond %{REQUEST_URI} ^/vendor/ [NC]
+    RewriteCond %{REQUEST_URI} !^/vendor/autoload\.php$ [NC]
+    RewriteRule .* - [F,L]
+    
+    # Block access to tests directory in production
+    RewriteCond %{REQUEST_URI} ^/tests/ [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# Protect sensitive files
+<FilesMatch "^\.env|\.env\.*|\.git|\.htaccess|composer\.(json|lock)">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Block access to PHP files in uploads directory
+<FilesMatch "\.php$">
+    <If "%{REQUEST_URI} =~ m#^/uploads/#">
+        <IfModule mod_authz_core.c>
+            Require all denied
+        </IfModule>
+        <IfModule !mod_authz_core.c>
+            Order allow,deny
+            Deny from all
+        </IfModule>
+    </If>
+</FilesMatch>
+
+# Block access to log files
+<FilesMatch "\.(log|sql|bak|old|orig|save|swp)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# ====================================================
+# SEO HEADERS & SECURITY
+# ====================================================
+<IfModule mod_headers.c>
+    # Prevent MIME-type sniffing
+    Header set X-Content-Type-Options "nosniff"
+    
+    # XSS Protection
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Clickjacking protection
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # Referrer Policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Content Security Policy
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://code.jquery.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com https://cdn.jsdelivr.net;"
+    
+    # Permissions Policy
+    Header set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+    
+    # Remove server signature
+    Header unset Server
+    Header unset X-Powered-By
+</IfModule>
+
+# ====================================================
+# BROWSER CACHING (SEO Performance)
+# ====================================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Default expiration
+    ExpiresDefault "access plus 1 month"
+    
+    # HTML - short cache for fresh content
+    ExpiresByType text/html "access plus 1 hour"
+    
+    # CSS & JavaScript
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+    
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # Fonts
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    
+    # Data/API
+    ExpiresByType application/json "access plus 0 seconds"
+    ExpiresByType application/xml "access plus 0 seconds"
+    ExpiresByType text/xml "access plus 0 seconds"
+    
+    # Manifest & Service Worker
+    ExpiresByType application/manifest+json "access plus 1 week"
+    ExpiresByType text/cache-manifest "access plus 0 seconds"
+</IfModule>
+
+# Cache-Control Headers
+<IfModule mod_headers.c>
+    # HTML files
+    <FilesMatch "\.(html|htm|php)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+    </FilesMatch>
+    
+    # Static assets (long cache)
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|otf)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+# ====================================================
+# COMPRESSION (SEO Performance)
+# ====================================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/atom+xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE application/font-woff
+    AddOutputFilterByType DEFLATE application/font-woff2
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    
+    # Remove browser bugs
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml application/xhtml+xml application/rss+xml application/atom+xml image/svg+xml font/ttf font/otf application/font-woff application/font-woff2 application/vnd.ms-fontobject
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header append Vary Accept-Encoding
+</IfModule>
+
+# ====================================================
+# MIME TYPES
+# ====================================================
+<IfModule mod_mime.c>
+    AddType application/manifest+json webmanifest
+    AddType application/manifest+json json
+    AddType text/cache-manifest appcache
+    AddType image/webp webp
+    AddType font/woff woff
+    AddType font/woff2 woff2
+    AddType application/font-woff woff
+    AddType application/font-woff2 woff2
+</IfModule>
+
+# ====================================================
+# PHP SETTINGS
+# ====================================================
+<IfModule mod_php.c>
+    php_flag display_errors Off
+    php_flag expose_php Off
+    php_value session.cookie_httponly 1
+    # session.cookie_secure is handled in init.php (only enabled in production)
+    php_value session.use_strict_mode 1
+</IfModule>
+
+# ====================================================
+# ERROR DOCUMENTS
+# ====================================================
+ErrorDocument 404 /index.php
+ErrorDocument 500 /index.php
+
+# ====================================================
+# END - CURENEX / CURENEXAI
+# ====================================================
+
+# Set cache headers for static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
+
+# Custom error pages
+ErrorDocument 403 /index.php
+ErrorDocument 404 /index.php
+ErrorDocument 500 /index.php
+
+# ====================================================
+# HTTP/2 (and HTTP/3) PROTOCOL
+# ----------------------------------------------------
+# .htaccess cannot enable HTTP/2 by itself - it must be enabled
+# at the server / vhost level. On Apache enable mod_http2 and add
+# the following to your VirtualHost (or contact your host to enable):
+#
+#   <VirtualHost *:443>
+#       Protocols h2 http/1.1
+#   </VirtualHost>
+#
+# On Nginx, ensure: listen 443 ssl http2; (and http3 / quic if available).
+# On cPanel / Hostinger / shared hosts, enable "HTTP/2" in the panel.
+#
+# The directive below is a no-op unless mod_http2 is loaded; it is
+# safe to leave in place.
+# ====================================================
+<IfModule mod_http2.c>
+    Protocols h2 h2c http/1.1
+    H2Push on
+</IfModule>
+
+# Hint preloads for critical assets (works over HTTP/2 server push when enabled)
+<IfModule mod_headers.c>
+    <FilesMatch "\.(php|html)$">
+        Header add Link "</assets/css/style.min.css>; rel=preload; as=style"
+    </FilesMatch>
+</IfModule>

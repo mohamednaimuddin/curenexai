@@ -1,0 +1,17 @@
+# ====================================================
+# ADS.TXT - CURENEX / CURENEXAI
+# AI-Powered Homeopathic Healthcare Platform
+# https://curenexai.com
+# ====================================================
+# 
+# This file declares authorized digital sellers.
+# For more information, visit: https://iabtechlab.com/ads-txt/
+#
+# Keywords: Curenex, CurenexAI, Curenex AI
+# ====================================================
+
+# Placeholder for future ad integrations
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# Add authorized advertising partners here when ready
+
+# Contact: advertising@curenexai.com

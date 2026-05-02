@@ -1,0 +1,53 @@
+# Homeopathic Doctor's Assistant
+
+# Git Ignore File
+# ===========================================
+# SECURITY - NEVER COMMIT THESE
+# ===========================================
+.env
+.env.local
+.env.*.local
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-*
+
+# Logs
+logs/*.log
+logs/rate_limit/
+*.log
+
+# Uploads (keep folder structure but not contents)
+uploads/lab_reports/*
+uploads/profile_images/*
+!uploads/lab_reports/.gitkeep
+!uploads/profile_images/.gitkeep
+
+# Dependencies
+/vendor/
+
+# OS Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Composer
+composer.lock
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+*.bak
+
+# PHP Session files
+sess_*
+
+# Debug files
+debug.log
+error.log
+php_errors.log
