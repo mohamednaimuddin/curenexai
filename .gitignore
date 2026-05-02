@@ -8,6 +8,8 @@
 .env.local
 .env.*.local
 *.env
+config/config.php
+config/*.local.php
 
 # IDE
 .vscode/
