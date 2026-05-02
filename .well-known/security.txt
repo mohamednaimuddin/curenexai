@@ -1,0 +1,19 @@
+# ====================================================
+# SECURITY.TXT - CURENEX / CURENEXAI
+# AI-Powered Homeopathic Healthcare Platform
+# Website: https://curenexai.com
+# RFC 9116 Compliant
+# ====================================================
+
+Contact: mailto:security@curenexai.com
+Expires: 2027-12-31T23:59:00.000Z
+Encryption: https://curenexai.com/.well-known/pgp-key.txt
+Acknowledgments: https://curenexai.com/security/acknowledgments.html
+Preferred-Languages: en
+Canonical: https://curenexai.com/.well-known/security.txt
+Policy: https://curenexai.com/security/policy.html
+Hiring: https://curenexai.com/careers
+
+# Curenex (CurenexAI) takes security seriously.
+# If you discover a vulnerability, please report it responsibly.
+# Thank you for helping us keep Curenex secure.
