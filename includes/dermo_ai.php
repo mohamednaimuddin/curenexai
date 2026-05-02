@@ -1666,8 +1666,8 @@ PROMPT;
     // Call Gemini Vision API - try multiple models (working models first)
     $modelsToTry = ['gemini-2.5-flash', 'gemini-flash-latest', 'gemini-2.5-pro'];
     
-    // Dedicated API key for Dermo feature + fallback to main keys
-    $dermoApiKey = 'AIzaSyClJz0p-dHP2Wi94b11yRsWF28r1XFp0PA';
+    // Dedicated API key for Dermo feature (from environment) + fallback to main keys
+    $dermoApiKey = getenv('DERMO_GEMINI_API_KEY') ?: '';
     $apiKeys = array_merge([$dermoApiKey], defined('GEMINI_API_KEYS') ? GEMINI_API_KEYS : [GEMINI_API_KEY]);
     $apiKeys = array_filter(array_unique($apiKeys)); // Remove duplicates and empty
     $lastError = null;
