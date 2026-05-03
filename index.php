@@ -705,12 +705,12 @@ $htmlClass = 'landing-page-html';
             <div class="nav-links">
                 <a href="#features">Features</a>
                 <a href="#about">About</a>
-                <a href="<?php echo APP_URL; ?>/faq.php">FAQ</a>
+                <a href="<?php echo APP_URL; ?>/faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="nav-actions">
-                <a href="<?php echo APP_URL; ?>/login.php" class="btn btn-ghost">Login</a>
-                <a href="<?php echo APP_URL; ?>/register.php" class="btn btn-primary">Get Started</a>
+                <a href="<?php echo APP_URL; ?>/login" class="btn btn-ghost">Login</a>
+                <a href="<?php echo APP_URL; ?>/register" class="btn btn-primary">Get Started</a>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
@@ -722,12 +722,12 @@ $htmlClass = 'landing-page-html';
     <div class="mobile-menu" id="mobileMenu">
         <a href="#features">Features</a>
         <a href="#about">About</a>
-        <a href="<?php echo APP_URL; ?>/faq.php">FAQ</a>
-        <a href="<?php echo APP_URL; ?>/documentation.php">Docs</a>
+        <a href="<?php echo APP_URL; ?>/faq">FAQ</a>
+        <a href="<?php echo APP_URL; ?>/documentation">Docs</a>
         <a href="#contact">Contact</a>
         <hr>
-        <a href="<?php echo APP_URL; ?>/login.php">Login</a>
-        <a href="<?php echo APP_URL; ?>/register.php" class="btn btn-primary btn-block">Get Started</a>
+        <a href="<?php echo APP_URL; ?>/login">Login</a>
+        <a href="<?php echo APP_URL; ?>/register" class="btn btn-primary btn-block">Get Started</a>
     </div>
     
     <!-- Hero Section -->
@@ -749,7 +749,7 @@ $htmlClass = 'landing-page-html';
             <h1>Digital Repertory and AI Homeopathy Software for <span class="gradient-text">Homeopathic Doctors</span></h1>
             <p>CurenexAI helps modern clinics with digital repertory workflows, AI-assisted remedy suggestions, patient management, and digital prescriptions in one homeopathy software platform.</p>
             <div class="hero-buttons">
-                <a href="<?php echo APP_URL; ?>/register.php" class="btn btn-primary btn-lg">
+                <a href="<?php echo APP_URL; ?>/register" class="btn btn-primary btn-lg">
                     <i class="fas fa-rocket"></i> Start Free Beta
                 </a>
                 <a href="#features" class="btn btn-outline btn-lg">
@@ -858,7 +858,7 @@ $htmlClass = 'landing-page-html';
                     <div class="feature-icon">
                         <i class="fas fa-book-open"></i>
                     </div>
-                    <h3><a href="<?php echo APP_URL; ?>/digital-repertory-software-homeopathy.php">Digital Repertory Software</a></h3>
+                    <h3><a href="<?php echo APP_URL; ?>/digital-repertory-software-homeopathy">Digital Repertory Software</a></h3>
                     <p>Search through comprehensive repertory with 50,000+ rubrics. Quick access to remedy relationships and materia medica. Learn how our digital repertory software supports homeopathic clinics.</p>
                 </div>
                 
@@ -917,7 +917,7 @@ $htmlClass = 'landing-page-html';
                         </div>
                     </div>
                     
-                    <a href="<?php echo APP_URL; ?>/register.php" class="btn btn-primary btn-lg">
+                    <a href="<?php echo APP_URL; ?>/register" class="btn btn-primary btn-lg">
                         <i class="fas fa-user-plus"></i> Join Today
                     </a>
                 </div>
@@ -1271,7 +1271,7 @@ $htmlClass = 'landing-page-html';
                     <div class="seo-card-icon"><i class="fas fa-rocket"></i></div>
                     <h3>How to get started</h3>
                     <ol class="seo-feature-list seo-steps">
-                        <li>Create your free homeopathic doctor account using the <a href="<?php echo APP_URL; ?>/register.php">Get Started</a> button above.</li>
+                        <li>Create your free homeopathic doctor account using the <a href="<?php echo APP_URL; ?>/register">Get Started</a> button above.</li>
                         <li>Add your first patient and run a quick repertory search on a real case.</li>
                         <li>Review the AI remedy suggestions, finalise the prescription and share the digital prescription with the patient.</li>
                         <li>Send us feedback or feature requests directly from the contact form below — we read every message.</li>
@@ -1304,10 +1304,10 @@ $htmlClass = 'landing-page-html';
                 <h2>Ready to Transform Your Practice?</h2>
                 <p>Join hundreds of homeopathic doctors who trust Curenex AI for their daily practice. Completely free!</p>
                 <div class="cta-buttons">
-                    <a href="<?php echo APP_URL; ?>/register.php" class="btn btn-white btn-lg">
+                    <a href="<?php echo APP_URL; ?>/register" class="btn btn-white btn-lg">
                         <i class="fas fa-rocket"></i> Get Started Free
                     </a>
-                    <a href="<?php echo APP_URL; ?>/login.php" class="btn btn-outline-white btn-lg">
+                    <a href="<?php echo APP_URL; ?>/login" class="btn btn-outline-white btn-lg">
                         <i class="fas fa-sign-in-alt"></i> Login
                     </a>
                 </div>
@@ -1346,23 +1346,23 @@ $htmlClass = 'landing-page-html';
                             <li><a href="#about">About Us</a></li>
                             <li><a href="#feedback">Feedback</a></li>
                             <li><a href="#contact">Contact</a></li>
-                            <li><a href="<?php echo APP_URL; ?>/login.php">Login</a></li>
-                            <li><a href="<?php echo APP_URL; ?>/register.php">Register</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/login">Login</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/register">Register</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h3 class="footer-title">Resources</h3>
                         <ul>
-                            <li><a href="<?php echo APP_URL; ?>/documentation.php">Documentation</a></li>
-                            <li><a href="<?php echo APP_URL; ?>/faq.php">FAQs</a></li>
-                            <li><a href="<?php echo APP_URL; ?>/support.php">Support</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/documentation">Documentation</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/faq">FAQs</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/support">Support</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h3 class="footer-title">Legal</h3>
                         <ul>
-                            <li><a href="<?php echo APP_URL; ?>/privacy.php">Privacy Policy</a></li>
-                            <li><a href="<?php echo APP_URL; ?>/terms.php">Terms of Service</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/privacy">Privacy Policy</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/terms">Terms of Service</a></li>
                         </ul>
                     </div>
                 </div>
