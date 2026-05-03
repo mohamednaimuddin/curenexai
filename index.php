@@ -244,7 +244,9 @@ $htmlClass = 'landing-page-html';
     <meta name="title" content="Digital Repertory Software for Homeopathy Doctors | CurenexAI">
     <meta name="description" content="CurenexAI is AI homeopathy software with digital repertory, remedy suggestions, digital prescriptions, and patient management for homeopathic doctors.">
     <meta name="keywords" content="CurenexAI, Curenex AI, curenexai, curenex ai, CURENEXAI, Curenex, curenex, Curenex software, CurenexAI software, AI homeopathy software, homeopathic software, homeopathy practice management, digital repertory software, materia medica software, homeopathy prescription software, BHMS doctor software, MD homeopathy software, homeopathic clinic management, AI healthcare platform, homeopathy patient management, symptom checker homeopathy, remedy finder, homeopathic remedies database, alternative medicine software, natural medicine platform, holistic healthcare software, clinical decision support, intelligent diagnosis system, homeopathy app, free homeopathy software, best homeopathy software 2026">
-    <meta name="author" content="CurenexAI Team">
+    <meta name="author" content="Er. Mohamed Naimuddin U S">
+    <meta name="creator" content="Er. Mohamed Naimuddin U S">
+    <meta name="clinical-advisor" content="Dr. Aysha Shirin BHMS">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -329,6 +331,17 @@ $htmlClass = 'landing-page-html';
             "contactType": "customer support",
             "url": "https://curenexai.com/support.php",
             "availableLanguage": "English"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Er. Mohamed Naimuddin U S",
+            "jobTitle": "Software Engineer & Founder"
+        },
+        "member": {
+            "@type": "Person",
+            "name": "Dr. Aysha Shirin",
+            "honorificSuffix": "BHMS",
+            "jobTitle": "Clinical Advisor"
         }
     }
     </script>
@@ -369,11 +382,19 @@ $htmlClass = 'landing-page-html';
         ],
         "screenshot": "https://curenexai.com/assets/image/CURENEXAI PNG.png",
         "softwareVersion": "2.0",
-        "author": {
-            "@type": "Organization",
-            "name": "CurenexAI",
-            "url": "https://curenexai.com"
-        }
+        "author": [
+            {
+                "@type": "Person",
+                "name": "Er. Mohamed Naimuddin U S",
+                "jobTitle": "Software Engineer & Developer"
+            },
+            {
+                "@type": "Person",
+                "name": "Dr. Aysha Shirin",
+                "honorificSuffix": "BHMS",
+                "jobTitle": "Clinical Advisor"
+            }
+        ]
     }
     </script>
     

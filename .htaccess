@@ -119,7 +119,7 @@ Options -Indexes +FollowSymLinks
     Header set Referrer-Policy "strict-origin-when-cross-origin"
     
     # Content Security Policy
-    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://code.jquery.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com https://cdn.jsdelivr.net;"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://code.jquery.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://region1.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://generativelanguage.googleapis.com https://cdn.jsdelivr.net;"
     
     # Permissions Policy
     Header set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
@@ -279,28 +279,28 @@ ErrorDocument 500 /index.php
 # ====================================================
 # HTTP/2 (and HTTP/3) PROTOCOL
 # ----------------------------------------------------
-# .htaccess cannot enable HTTP/2 by itself - it must be enabled
-# at the server / vhost level. On Apache enable mod_http2 and add
-# the following to your VirtualHost (or contact your host to enable):
+# .htaccess CANNOT enable HTTP/2 — the `Protocols` and `H2Push`
+# directives are only valid in server / VirtualHost context, NOT
+# in .htaccess. Including them here will cause Apache to return
+# 500 Internal Server Error on every request when mod_http2 is
+# loaded. Also, H2Push was removed in Apache 2.4.55+.
+#
+# To enable HTTP/2, add the following at the SERVER / VHOST level:
 #
 #   <VirtualHost *:443>
 #       Protocols h2 http/1.1
 #   </VirtualHost>
 #
-# On Nginx, ensure: listen 443 ssl http2; (and http3 / quic if available).
-# On cPanel / Hostinger / shared hosts, enable "HTTP/2" in the panel.
-#
-# The directive below is a no-op unless mod_http2 is loaded; it is
-# safe to leave in place.
+# On Nginx:    listen 443 ssl http2;
+# On cPanel / Hostinger / shared hosts: enable "HTTP/2" in the panel.
 # ====================================================
-<IfModule mod_http2.c>
-    Protocols h2 h2c http/1.1
-    H2Push on
-</IfModule>
+# (HTTP/2 directives intentionally omitted — must be set in vhost.)
 
 # Hint preloads for critical assets (works over HTTP/2 server push when enabled)
 <IfModule mod_headers.c>
     <FilesMatch "\.(php|html)$">
         Header add Link "</assets/css/style.min.css>; rel=preload; as=style"
+        Header add Link "</assets/css/index-page.css>; rel=preload; as=style"
+        Header add Link "</assets/js/index-page.js>; rel=preload; as=script"
     </FilesMatch>
 </IfModule>

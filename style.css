@@ -1241,6 +1241,18 @@ select.form-control {
     font-size: 0.75rem;
 }
 
+.footer-credits {
+    margin-top: 0.25rem;
+    font-size: 0.7rem;
+    color: var(--gray-400);
+    opacity: 0.85;
+}
+
+.footer-credits strong {
+    color: var(--gray-500, #6b7280);
+    font-weight: 600;
+}
+
 /* Hide footer on auth pages */
 body.auth-page .footer {
     display: none;
