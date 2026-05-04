@@ -111,7 +111,7 @@ $bodyClass = 'about-page';
                 "name": "Who founded CurenexAI?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "CurenexAI was founded in 2026 with a mission to revolutionize homeopathic healthcare using artificial intelligence. Our team consists of healthcare technology experts and homeopathy practitioners dedicated to improving patient outcomes through intelligent software solutions."
+                    "text": "CurenexAI was founded by Er. Mohamed Naimuddin U S and co-founded by Dr. Aysha Shirin in 2026. Er. Mohamed Naimuddin U S independently developed the platform, including its RAG system, while Dr. Aysha Shirin contributed clinical analysis and shared extensive homeopathic knowledge that shaped the software's clinical workflows."
                 }
             },
             {
@@ -158,7 +158,7 @@ $bodyClass = 'about-page';
     
     <!-- CSS -->
     <style>@font-face{font-family:'Font Awesome 6 Brands';font-display:swap}@font-face{font-family:'Font Awesome 6 Free';font-display:swap}@font-face{font-family:'Font Awesome 6 Solid';font-display:swap}</style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/style.css?v=<?php echo time(); ?>">
     

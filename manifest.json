@@ -1,9 +1,9 @@
-{
+﻿{
     "name": "CurenexAI - AI-Powered Homeopathic Healthcare Software",
     "short_name": "CurenexAI",
     "description": "CurenexAI (Curenex AI) is the leading AI-powered homeopathic healthcare SOFTWARE platform for doctors. NOT a skin medicine - CurenexAI provides intelligent diagnosis, digital repertory, materia medica, patient management & prescription software. Decode Health, Deliver Cure.",
-    "start_url": "/",
-    "scope": "/",
+    "start_url": "./",
+    "scope": "./",
     "id": "curenexai-homeopathy-software",
     "display": "standalone",
     "orientation": "portrait-primary",
@@ -16,62 +16,62 @@
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "/assets/image/CURENEXAI ICON.png",
+            "src": "assets/image/CURENEXAI ICON.png",
             "sizes": "any",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "/assets/image/CURENEXAI ICON.png",
+            "src": "assets/image/CURENEXAI ICON.png",
             "sizes": "72x72",
             "type": "image/png"
         },
         {
-            "src": "/assets/image/CURENEXAI ICON.png",
+            "src": "assets/image/CURENEXAI ICON.png",
             "sizes": "96x96",
             "type": "image/png"
         },
         {
-            "src": "/assets/image/CURENEXAI ICON.png",
+            "src": "assets/image/CURENEXAI ICON.png",
             "sizes": "128x128",
             "type": "image/png"
         },
         {
-            "src": "/assets/image/CURENEXAI ICON.png",
+            "src": "assets/image/CURENEXAI ICON.png",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "/assets/image/CURENEXAI ICON.png",
+            "src": "assets/image/CURENEXAI ICON.png",
             "sizes": "152x152",
             "type": "image/png"
         },
         {
-            "src": "/assets/image/CURENEXAI ICON.png",
+            "src": "assets/image/CURENEXAI ICON.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/assets/image/CURENEXAI ICON.png",
+            "src": "assets/image/CURENEXAI ICON.png",
             "sizes": "384x384",
             "type": "image/png"
         },
         {
-            "src": "/assets/image/CURENEXAI ICON.png",
+            "src": "assets/image/CURENEXAI ICON.png",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
     "screenshots": [
         {
-            "src": "/assets/image/CURENEXAI PNG.png",
+            "src": "assets/image/CURENEXAI PNG.png",
             "sizes": "1280x720",
             "type": "image/png",
             "form_factor": "wide",
             "label": "CurenexAI Dashboard - AI Homeopathy Software for Doctors"
         },
         {
-            "src": "/assets/image/CURENEXAI PNG.png",
+            "src": "assets/image/CURENEXAI PNG.png",
             "sizes": "750x1334",
             "type": "image/png",
             "form_factor": "narrow",
@@ -83,28 +83,29 @@
             "name": "Curenex Dashboard",
             "short_name": "Dashboard",
             "description": "Access your Curenex healthcare dashboard",
-            "url": "/dashboard.php",
-            "icons": [{"src": "/assets/image/CURENEXAI ICON.png", "sizes": "192x192"}]
+            "url": "dashboard.php",
+            "icons": [{"src": "assets/image/CURENEXAI ICON.png", "sizes": "192x192"}]
         },
         {
             "name": "Curenex Diagnosis",
             "short_name": "Diagnosis",
             "description": "Start AI-powered diagnosis with Curenex",
-            "url": "/diagnose.php",
-            "icons": [{"src": "/assets/image/CURENEXAI ICON.png", "sizes": "192x192"}]
+            "url": "diagnose.php",
+            "icons": [{"src": "assets/image/CURENEXAI ICON.png", "sizes": "192x192"}]
         },
         {
             "name": "Curenex Patients",
             "short_name": "Patients",
             "description": "Manage patients in CurenexAI",
-            "url": "/patients/list.php",
-            "icons": [{"src": "/assets/image/CURENEXAI ICON.png", "sizes": "192x192"}]
+            "url": "patients/list.php",
+            "icons": [{"src": "assets/image/CURENEXAI ICON.png", "sizes": "192x192"}]
         }
     ],
     "related_applications": [],
     "share_target": {
-        "action": "/share",
+        "action": "share",
         "method": "GET",
+        "enctype": "application/x-www-form-urlencoded",
         "params": {
             "title": "title",
             "text": "text",
@@ -120,3 +121,4 @@
         "preferred_width": 400
     }
 }
+

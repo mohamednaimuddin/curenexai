@@ -32,7 +32,7 @@ $pageTitle = 'Digital Repertory Software for Homeopathy Doctors | CurenexAI';
     <meta name="twitter:image" content="https://curenexai.com/assets/image/CURENEXAI PNG.png">
 
     <link rel="icon" type="image/x-icon" href="<?php echo APP_URL; ?>/assets/image/favicon/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <script type="application/ld+json">

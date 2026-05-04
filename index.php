@@ -240,13 +240,14 @@ $htmlClass = 'landing-page-html';
     </script>
 
     <!-- PRIMARY SEO META TAGS - CURENEXAI BRAND -->
-    <title>Digital Repertory Software for Homeopathy Doctors | CurenexAI</title>
-    <meta name="title" content="Digital Repertory Software for Homeopathy Doctors | CurenexAI">
-    <meta name="description" content="CurenexAI is AI homeopathy software with digital repertory, remedy suggestions, digital prescriptions, and patient management for homeopathic doctors.">
-    <meta name="keywords" content="CurenexAI, Curenex AI, curenexai, curenex ai, CURENEXAI, Curenex, curenex, Curenex software, CurenexAI software, AI homeopathy software, homeopathic software, homeopathy practice management, digital repertory software, materia medica software, homeopathy prescription software, BHMS doctor software, MD homeopathy software, homeopathic clinic management, AI healthcare platform, homeopathy patient management, symptom checker homeopathy, remedy finder, homeopathic remedies database, alternative medicine software, natural medicine platform, holistic healthcare software, clinical decision support, intelligent diagnosis system, homeopathy app, free homeopathy software, best homeopathy software 2026">
-    <meta name="author" content="Er. Mohamed Naimuddin U S">
-    <meta name="creator" content="Er. Mohamed Naimuddin U S">
-    <meta name="clinical-advisor" content="Dr. Aysha Shirin BHMS">
+    <title>Homeopathy AI & Digital Repertory Software | CurenexAI</title>
+    <meta name="title" content="Homeopathy AI & Digital Repertory Software | CurenexAI">
+    <meta name="description" content="CurenexAI is homeopathy AI software with digital repertory, Kent repertory search, rubrics AI support, remedy suggestions, patient management, and digital prescriptions for homeopathic doctors.">
+    <meta name="keywords" content="CurenexAI, Curenex AI, curenexai, curenex ai, CURENEXAI, Curenex, curenex, Homeopathy, Homeopathy AI, AI homeopathy software, AI, homeopathic software, homeopathy practice management, digital repertory software, digital reperatory, repertory software, reperatory, kent repertory, Kent repertory software, rubrics AI, rubic automatic AI, Rubics AI, rubics, rubics software, rubric AI, RadarOpus alternative, better than RadarOpus, materia medica software, homeopathy prescription software, BHMS doctor software, MD homeopathy software, homeopathic clinic management, AI healthcare platform, homeopathy patient management, symptom checker homeopathy, remedy finder, homeopathic remedies database, clinical decision support, intelligent diagnosis system, homeopathy app, free homeopathy software, best homeopathy software 2026">
+    <meta name="author" content="Er. Mohamed Naimuddin U S — Founder of CurenexAI">
+    <meta name="creator" content="Er. Mohamed Naimuddin U S — Founder & Sole Developer of CurenexAI">
+    <meta name="founder" content="Er. Mohamed Naimuddin U S">
+    <meta name="clinical-advisor" content="Dr. Aysha Shirin BHMS (Co-Founder; contributor to clinical analysis and homeopathic knowledge)">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -269,8 +270,8 @@ $htmlClass = 'landing-page-html';
     <!-- OPEN GRAPH / FACEBOOK -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://curenexai.com/">
-    <meta property="og:title" content="CurenexAI – Modern Clinical Homeopathic Doctors Platform | AI Remedy Suggestions & Repertory Search">
-    <meta property="og:description" content="Modern clinical homeopathic platform for homeopathic doctors and practitioners. Get started with AI remedy suggestions, repertory search, digital prescriptions, patient management and integrated feedback &amp; support — free beta.">
+    <meta property="og:title" content="CurenexAI – Homeopathy AI, Digital Repertory & Kent Repertory Software">
+    <meta property="og:description" content="Homeopathy AI platform for doctors with digital repertory, Kent repertory search, rubrics AI support, digital prescriptions, and patient management.">
     <meta property="og:image" content="https://curenexai.com/assets/image/CURENEXAI PNG.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -284,8 +285,8 @@ $htmlClass = 'landing-page-html';
     <meta name="twitter:site" content="@curenexai">
     <meta name="twitter:creator" content="@curenexai">
     <meta name="twitter:url" content="https://curenexai.com/">
-    <meta name="twitter:title" content="CurenexAI – Modern Clinical Homeopathic Doctors Platform">
-    <meta name="twitter:description" content="Modern clinical platform for homeopathic doctors. Get started with AI remedy suggestions, repertory search and digital prescriptions. Free beta.">
+    <meta name="twitter:title" content="CurenexAI – Homeopathy AI & Digital Repertory Software">
+    <meta name="twitter:description" content="Homeopathy AI platform with digital repertory, Kent repertory search, rubrics AI support, and patient management for homeopathic doctors.">
     <meta name="twitter:image" content="https://curenexai.com/assets/image/CURENEXAI PNG.png">
     <meta name="twitter:image:alt" content="CurenexAI Logo">
     
@@ -316,32 +317,81 @@ $htmlClass = 'landing-page-html';
             "height": 512
         },
         "image": "https://curenexai.com/assets/image/CURENEXAI PNG.png",
-        "description": "CurenexAI is an AI-powered homeopathic healthcare software platform. NOT a skin medicine - CurenexAI is professional homeopathy practice management software for doctors.",
+        "description": "CurenexAI is an AI-powered homeopathic healthcare software platform founded by Er. Mohamed Naimuddin U S and co-founded by Dr. Aysha Shirin in 2026. The platform and its RAG system were independently developed by Er. Mohamed Naimuddin U S. Independent project — not affiliated with Respocare Connect AI, Techno Derivation, K Derma Co. (Curenex skincare), or Currenex (FX trading). NOT a skin medicine.",
         "slogan": "Decode Health, Deliver Cure",
         "foundingDate": "2026",
+        "foundingLocation": {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Kochi",
+                "addressRegion": "Kerala",
+                "addressCountry": "IN"
+            }
+        },
         "areaServed": "Worldwide",
+        "knowsAbout": ["Homeopathy software", "Homeopathy AI", "Digital repertory", "Kent repertory", "Rubrics AI", "AI remedy suggestions", "Homeopathic patient management"],
         "sameAs": [
             "https://twitter.com/curenexai",
             "https://www.linkedin.com/company/curenexai",
             "https://www.facebook.com/curenexai",
-            "https://www.instagram.com/curenexai"
+            "https://www.instagram.com/curenexai",
+            "https://www.youtube.com/@curenexai"
         ],
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "customer support",
-            "url": "https://curenexai.com/support.php",
+            "url": "https://curenexai.com/support",
             "availableLanguage": "English"
         },
-        "founder": {
-            "@type": "Person",
-            "name": "Er. Mohamed Naimuddin U S",
-            "jobTitle": "Software Engineer & Founder"
-        },
+        "founder": [
+            {
+                "@type": "Person",
+                "@id": "https://curenexai.com/#founder",
+                "name": "Er. Mohamed Naimuddin U S",
+                "alternateName": ["Mohamed Naimuddin", "Naimuddin", "Er Naimuddin"],
+                "jobTitle": "Founder, Sole Developer & RAG System Architect",
+                "description": "Founder and sole developer of CurenexAI. Architect and independent implementer of the platform, responsible for product engineering, AI integration, and the RAG system.",
+                "nationality": "Indian",
+                "worksFor": { "@id": "https://curenexai.com/#organization" }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://curenexai.com/#cofounder",
+                "name": "Dr. Aysha Shirin",
+                "honorificSuffix": "BHMS",
+                "jobTitle": "Co-Founder & Clinical Analysis Contributor",
+                "description": "Co-founder of CurenexAI who contributed clinical analysis and shared homeopathic domain knowledge to shape the platform's clinical workflows.",
+                "worksFor": { "@id": "https://curenexai.com/#organization" }
+            }
+        ],
+        "founders": [
+            {
+                "@type": "Person",
+                "@id": "https://curenexai.com/#founder",
+                "name": "Er. Mohamed Naimuddin U S"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://curenexai.com/#cofounder",
+                "name": "Dr. Aysha Shirin"
+            }
+        ],
+        "employee": [
+            {
+                "@type": "Person",
+                "@id": "https://curenexai.com/#founder",
+                "name": "Er. Mohamed Naimuddin U S",
+                "jobTitle": "Founder, Sole Developer & RAG System Architect"
+            }
+        ],
         "member": {
             "@type": "Person",
+            "@id": "https://curenexai.com/#cofounder",
             "name": "Dr. Aysha Shirin",
             "honorificSuffix": "BHMS",
-            "jobTitle": "Clinical Advisor"
+            "jobTitle": "Co-Founder & Clinical Analysis Contributor",
+            "description": "Co-founder of CurenexAI who contributed clinical analysis and extensive homeopathic knowledge."
         }
     }
     </script>
@@ -370,10 +420,13 @@ $htmlClass = 'landing-page-html';
             "bestRating": "5",
             "worstRating": "1"
         },
-        "description": "CurenexAI is an AI-powered homeopathic healthcare software featuring intelligent diagnosis, digital repertory, materia medica database, patient management, and prescription generation for homeopathic doctors.",
+        "description": "CurenexAI is a homeopathy AI software platform featuring intelligent diagnosis, digital repertory, Kent repertory search, rubrics AI support, materia medica database, patient management, and prescription generation for homeopathic doctors.",
         "featureList": [
             "AI-Powered Diagnosis",
+            "RAG-Based Clinical Retrieval System",
             "Digital Repertory",
+            "Kent Repertory Search",
+            "Rubrics AI Workflow",
             "Materia Medica Database",
             "Patient Management System",
             "Prescription Generation",
@@ -382,19 +435,26 @@ $htmlClass = 'landing-page-html';
         ],
         "screenshot": "https://curenexai.com/assets/image/CURENEXAI PNG.png",
         "softwareVersion": "2.0",
-        "author": [
-            {
-                "@type": "Person",
-                "name": "Er. Mohamed Naimuddin U S",
-                "jobTitle": "Software Engineer & Developer"
-            },
-            {
-                "@type": "Person",
-                "name": "Dr. Aysha Shirin",
-                "honorificSuffix": "BHMS",
-                "jobTitle": "Clinical Advisor"
-            }
-        ]
+        "creator": {
+            "@type": "Person",
+            "@id": "https://curenexai.com/#founder",
+            "name": "Er. Mohamed Naimuddin U S",
+            "jobTitle": "Founder, Sole Developer & RAG System Architect"
+        },
+        "author": {
+            "@type": "Person",
+            "@id": "https://curenexai.com/#founder",
+            "name": "Er. Mohamed Naimuddin U S",
+            "jobTitle": "Founder, Sole Developer & RAG System Architect"
+        },
+        "publisher": { "@id": "https://curenexai.com/#organization" },
+        "contributor": {
+            "@type": "Person",
+            "@id": "https://curenexai.com/#cofounder",
+            "name": "Dr. Aysha Shirin",
+            "honorificSuffix": "BHMS",
+            "jobTitle": "Co-Founder & Clinical Analysis Contributor"
+        }
     }
     </script>
     
@@ -406,7 +466,7 @@ $htmlClass = 'landing-page-html';
         "@id": "https://curenexai.com/#website",
         "url": "https://curenexai.com",
         "name": "CurenexAI - AI-Powered Homeopathic Healthcare Software",
-        "description": "CurenexAI official website. AI-powered homeopathy software for doctors - NOT a skin medicine.",
+        "description": "CurenexAI official website. Homeopathy AI software with digital repertory, Kent repertory search, and rubrics AI support for doctors - NOT a skin medicine.",
         "publisher": {
             "@id": "https://curenexai.com/#organization"
         },
@@ -456,7 +516,7 @@ $htmlClass = 'landing-page-html';
                 "name": "What features does CurenexAI offer?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "CurenexAI offers AI-powered diagnosis, digital repertory with rubrics, comprehensive materia medica database, patient management system, prescription generation, skin analysis using AI, consultation tracking, and clinical decision support for homeopathic treatment."
+                    "text": "CurenexAI offers AI-powered diagnosis, digital repertory with rubrics, Kent repertory search support, comprehensive materia medica database, patient management system, prescription generation, skin analysis using AI, consultation tracking, and clinical decision support for homeopathic treatment."
                 }
             },
             {
@@ -464,7 +524,23 @@ $htmlClass = 'landing-page-html';
                 "name": "Is CurenexAI digital repertory software for homeopathy?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. CurenexAI is digital repertory software for homeopathy, with rubric search, remedy relationships, and AI-supported case analysis. Some users also search this as digital reperatory software for homeopathy."
+                    "text": "Yes. CurenexAI is digital repertory software for homeopathy, with rubric search, remedy relationships, Kent repertory workflows, and AI-supported case analysis. Some users also search this as digital reperatory software for homeopathy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does CurenexAI support Kent repertory and rubrics AI workflows?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. CurenexAI supports Kent repertory style exploration, rubric search, and AI-assisted rubric workflows. Users searching for rubrics AI, rubics AI, rubic automatic AI, or repertory automation can use CurenexAI to move from symptoms to remedy analysis faster."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is CurenexAI better than RadarOpus for modern web-based practice?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CurenexAI and RadarOpus serve different workflows. Doctors looking for a browser-based homeopathy AI platform with digital prescriptions, patient management, RAG-assisted case analysis, and modern repertory search may prefer CurenexAI. The better choice depends on your clinic workflow, but CurenexAI is built for doctors who want an AI-first, web-based alternative."
                 }
             },
             {
@@ -556,9 +632,9 @@ $htmlClass = 'landing-page-html';
     <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/style.min.css?v=<?php echo time(); ?>" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/style.min.css?v=<?php echo time(); ?>"></noscript>
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <!-- Font Awesome - self-hosted to avoid third-party tracking prevention issues -->
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/font-awesome.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/font-awesome.min.css"></noscript>
 
     <!-- Landing page styles (extracted from inline <style> blocks for higher text-to-HTML ratio & caching) -->
     <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/index-page.css?v=<?php echo @filemtime(__DIR__ . '/assets/css/index-page.css') ?: time(); ?>">
@@ -746,8 +822,8 @@ $htmlClass = 'landing-page-html';
             <div class="hero-badge">
                 <i class="fas fa-sparkles"></i> AI-Powered Homeopathy Platform <span class="hero-badge-pill">FREE BETA</span>
             </div>
-            <h1>Digital Repertory and AI Homeopathy Software for <span class="gradient-text">Homeopathic Doctors</span></h1>
-            <p>CurenexAI helps modern clinics with digital repertory workflows, AI-assisted remedy suggestions, patient management, and digital prescriptions in one homeopathy software platform.</p>
+            <h1>Homeopathy AI and Digital Repertory Software for <span class="gradient-text">Homeopathic Doctors</span></h1>
+            <p>CurenexAI helps modern clinics with digital repertory workflows, Kent repertory search, AI-assisted rubric analysis, patient management, and digital prescriptions in one homeopathy software platform.</p>
             <div class="hero-buttons">
                 <a href="<?php echo APP_URL; ?>/register" class="btn btn-primary btn-lg">
                     <i class="fas fa-rocket"></i> Start Free Beta
@@ -897,6 +973,12 @@ $htmlClass = 'landing-page-html';
                     <span class="section-badge">About Us</span>
                     <h2>Built by Doctors, <span class="gradient-text">For Doctors</span></h2>
                     <p>Curenex AI was created with a deep understanding of the unique needs of homeopathic practitioners. Our platform combines traditional homeopathic principles with modern technology.</p>
+                    <p class="about-founder-line">
+                        <strong>Founded &amp; built by</strong>
+                        <a href="https://www.linkedin.com/in/mohamed-naimuddin" target="_blank" rel="noopener author">Er. Mohamed Naimuddin U S</a>
+                        — founder, sole developer, and independent implementer of the CurenexAI platform and its RAG system.
+                        CurenexAI was co-founded with <strong>Dr. Aysha Shirin (BHMS)</strong>, who contributed clinical analysis and shared extensive homeopathic knowledge for the platform's clinical workflows.
+                    </p>
                     
                     <div class="about-features">
                         <div class="about-feature">
@@ -1237,7 +1319,7 @@ $htmlClass = 'landing-page-html';
                     <h3>What you get with CurenexAI</h3>
                     <ul class="seo-feature-list">
                         <li><strong>AI remedy suggestions</strong> — ranked remedy suggestions and rubric matches from your case-taking notes, with full reasoning you can review.</li>
-                        <li><strong>Repertory search</strong> — fast repertory search across rubrics, with cross-links into the materia medica and keynote summaries.</li>
+                        <li><strong>Repertory search</strong> — fast repertory search across rubrics, Kent repertory style pathways, with cross-links into the materia medica and keynote summaries.</li>
                         <li><strong>Digital prescriptions</strong> — generate, print and share digital prescriptions with potency, dosage and follow-up instructions in seconds.</li>
                         <li><strong>Patient management</strong> — keep constitutional history, modalities, miasmatic notes and past prescriptions in one timeline per patient.</li>
                         <li><strong>Feedback &amp; support</strong> — send feedback, request features or report issues from inside the platform and get fast responses from our team.</li>
@@ -1264,6 +1346,13 @@ $htmlClass = 'landing-page-html';
                         surfaces remedy suggestions, similar past cases and relevant rubrics, but
                         the prescribing decision always stays with the qualified homeopathic
                         doctor. That is what "modern clinical homeopathic platform" means to us.
+                    </p>
+                    <p>
+                        If you are searching for Homeopathy AI, digital reperatory tools,
+                        repertory automation, rubics AI, rubic automatic AI, or a modern
+                        alternative to RadarOpus, this is the workflow CurenexAI is built for:
+                        web-based access, AI-supported repertory reasoning, and one connected
+                        system for patients, prescriptions, and remedy analysis.
                     </p>
                 </article>
 
@@ -1331,10 +1420,11 @@ $htmlClass = 'landing-page-html';
                     </a>
                     <p>Modern clinical decision support system designed specifically for homeopathic practitioners.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on Twitter / X"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
@@ -1401,7 +1491,7 @@ $htmlClass = 'landing-page-html';
                 <p class="clinic-name"><i class="fas fa-house-medical"></i> Siris Clinics</p>
                 <div class="gratitude-divider"></div>
                 <p class="gratitude-message">
-                    We express our heartfelt gratitude to Dr. Aysha Shirin for her invaluable contribution of knowledge and expertise in building this application. Her deep understanding of homeopathic medicine has been instrumental in making this platform a comprehensive tool for practitioners.
+                    We acknowledge Dr. Aysha Shirin (BHMS), co-founder of CurenexAI, for her clinical analysis and for sharing extensive homeopathic knowledge that helped shape the platform's clinical workflows. CurenexAI was developed independently by <strong>Er. Mohamed Naimuddin U S</strong>, including implementation of the platform and its RAG system.
                 </p>
                 <div class="gratitude-footer">
                     <i class="fas fa-quote-left"></i>

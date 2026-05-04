@@ -23,10 +23,10 @@ $bodyClass = 'faq-page';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags - Curenex -->
-    <title>FAQ - CurenexAI - AI-Powered Homeopathic Healthcare Platform</title>
-    <meta name="title" content="FAQ - CurenexAI - Frequently Asked Questions">
-    <meta name="description" content="Frequently Asked Questions about Curenex (CurenexAI) - The leading AI-powered homeopathic healthcare platform. Find answers about AI diagnosis, remedies, and features.">
-    <meta name="keywords" content="Curenex FAQ, CurenexAI questions, Curenex help, homeopathy FAQ, AI healthcare questions, Curenex AI support, curenex, curenexai">
+    <title>Homeopathy AI FAQ, Kent Repertory & RadarOpus Alternative | CurenexAI</title>
+    <meta name="title" content="Homeopathy AI FAQ, Kent Repertory & RadarOpus Alternative | CurenexAI">
+    <meta name="description" content="Frequently asked questions about CurenexAI homeopathy AI software, digital repertory, Kent repertory workflows, rubrics AI, and RadarOpus alternative searches.">
+    <meta name="keywords" content="Curenex FAQ, CurenexAI questions, Curenex help, homeopathy FAQ, Homeopathy AI FAQ, Kent repertory software, digital reperatory, repertory FAQ, rubics AI, rubic automatic AI, RadarOpus alternative, better than RadarOpus, Curenex AI support, curenex, curenexai">
     <meta name="author" content="CurenexAI">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://curenexai.com/faq.php">
@@ -34,16 +34,16 @@ $bodyClass = 'faq-page';
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://curenexai.com/faq.php">
-    <meta property="og:title" content="FAQ - CurenexAI">
-    <meta property="og:description" content="Find answers to frequently asked questions about Curenex AI-powered homeopathic healthcare platform.">
+    <meta property="og:title" content="CurenexAI FAQ - Homeopathy AI, Kent Repertory & Rubrics AI">
+    <meta property="og:description" content="Find answers about CurenexAI homeopathy AI software, digital repertory, Kent repertory workflows, and RadarOpus alternative comparisons.">
     <meta property="og:image" content="https://curenexai.com/assets/image/CURENEXAI PNG.png">
     <meta property="og:site_name" content="Curenex">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@curenexai">
-    <meta name="twitter:title" content="FAQ - CurenexAI">
-    <meta name="twitter:description" content="Frequently Asked Questions about Curenex homeopathic AI platform.">
+    <meta name="twitter:title" content="CurenexAI FAQ - Homeopathy AI & Digital Repertory">
+    <meta name="twitter:description" content="Questions about CurenexAI, Kent repertory workflows, rubrics AI, and web-based alternatives to RadarOpus.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/image/CURENEXAI ICON.png">
@@ -98,6 +98,22 @@ $bodyClass = 'faq-page';
             },
             {
                 "@type": "Question",
+                "name": "Does CurenexAI support Kent repertory and rubrics AI workflows?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. CurenexAI supports digital repertory workflows with rubric exploration, Kent repertory style navigation, and AI-assisted analysis. Users who search for digital reperatory, rubics AI, or rubic automatic AI are generally looking for this kind of workflow."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is CurenexAI a web-based alternative to RadarOpus?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CurenexAI is a web-based homeopathy AI platform for doctors who want digital repertory, patient management, prescriptions, and AI-assisted case analysis in one system. Clinics comparing CurenexAI with RadarOpus should choose based on workflow needs, but CurenexAI is built as a modern browser-based alternative for practices that want integrated AI and online access."
+                }
+            },
+            {
+                "@type": "Question",
                 "name": "Is my patient data shared with the AI?",
                 "acceptedAnswer": {
                     "@type": "Answer",
@@ -145,7 +161,7 @@ $bodyClass = 'faq-page';
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/style.css?v=<?php echo time(); ?>">
     <style>@font-face{font-family:'Font Awesome 6 Brands';font-display:swap}@font-face{font-family:'Font Awesome 6 Free';font-display:swap}@font-face{font-family:'Font Awesome 6 Solid';font-display:swap}</style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/font-awesome.min.css">
     
     <style>
         .faq-container {
@@ -681,6 +697,19 @@ $bodyClass = 'faq-page';
                     </div>
                 </div>
             </div>
+
+            <div class="faq-item" data-category="ai">
+                <div class="faq-question">
+                    <h3>Does CurenexAI support Kent repertory and rubrics AI workflows?</h3>
+                    <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>Yes.</strong> CurenexAI is built for digital repertory work with fast rubric exploration, AI-assisted remedy reasoning, and Kent repertory style navigation for modern clinics.</p>
+                        <p>Users who search for <strong>digital reperatory</strong>, <strong>rubics AI</strong>, <strong>rubric AI</strong>, or <strong>rubic automatic AI</strong> are usually looking for this combination of repertory search plus AI-assisted case analysis.</p>
+                    </div>
+                </div>
+            </div>
             
             <div class="faq-item" data-category="ai">
                 <div class="faq-question">
@@ -756,6 +785,19 @@ $bodyClass = 'faq-page';
                             <li>Always verify diagnoses with your clinical expertise</li>
                             <li>Use it as one of many tools in your diagnostic process</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="diagnosis">
+                <div class="faq-question">
+                    <h3>Is CurenexAI a web-based alternative to RadarOpus?</h3>
+                    <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>CurenexAI and RadarOpus are different products, but many doctors compare them when choosing repertory software.</p>
+                        <p><strong>CurenexAI is designed for clinics that want a web-based workflow</strong> with digital repertory, AI-assisted case analysis, patient management, and digital prescriptions in one platform. If you are searching for something better than RadarOpus for a browser-first, AI-enabled workflow, CurenexAI is the relevant option to evaluate.</p>
                     </div>
                 </div>
             </div>
