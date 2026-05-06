@@ -272,10 +272,10 @@ $htmlClass = 'landing-page-html';
     <meta property="og:url" content="https://curenexai.com/">
     <meta property="og:title" content="CurenexAI – Homeopathy AI, Digital Repertory & Kent Repertory Software">
     <meta property="og:description" content="Homeopathy AI platform for doctors with digital repertory, Kent repertory search, rubrics AI support, digital prescriptions, and patient management.">
-    <meta property="og:image" content="https://curenexai.com/assets/image/CURENEXAI PNG.png">
+    <meta property="og:image" content="https://curenexai.com/assets/image/xrunbg.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="CurenexAI - AI-Powered Homeopathic Healthcare Software Logo">
+    <meta property="og:image:alt" content="CurenexAI - AI-Powered Homeopathic Healthcare Software">
     <meta property="og:site_name" content="CurenexAI">
     <meta property="og:locale" content="en_US">
     <meta property="fb:app_id" content="">
@@ -287,8 +287,8 @@ $htmlClass = 'landing-page-html';
     <meta name="twitter:url" content="https://curenexai.com/">
     <meta name="twitter:title" content="CurenexAI – Homeopathy AI & Digital Repertory Software">
     <meta name="twitter:description" content="Homeopathy AI platform with digital repertory, Kent repertory search, rubrics AI support, and patient management for homeopathic doctors.">
-    <meta name="twitter:image" content="https://curenexai.com/assets/image/CURENEXAI PNG.png">
-    <meta name="twitter:image:alt" content="CurenexAI Logo">
+    <meta name="twitter:image" content="https://curenexai.com/assets/image/xrunbg.png">
+    <meta name="twitter:image:alt" content="CurenexAI - AI-Powered Homeopathic Healthcare Software">
     
     <!-- FAVICON & APP ICONS -->
     <link rel="icon" type="image/x-icon" href="<?php echo APP_URL; ?>/assets/image/favicon/favicon.ico">
@@ -332,11 +332,9 @@ $htmlClass = 'landing-page-html';
         "areaServed": "Worldwide",
         "knowsAbout": ["Homeopathy software", "Homeopathy AI", "Digital repertory", "Kent repertory", "Rubrics AI", "AI remedy suggestions", "Homeopathic patient management"],
         "sameAs": [
-            "https://twitter.com/curenexai",
+            "https://x.com/curenexai",
             "https://www.linkedin.com/company/curenexai",
-            "https://www.facebook.com/curenexai",
-            "https://www.instagram.com/curenexai",
-            "https://www.youtube.com/@curenexai"
+            "https://www.instagram.com/curenexai"
         ],
         "contactPoint": {
             "@type": "ContactPoint",
@@ -454,6 +452,10 @@ $htmlClass = 'landing-page-html';
             "name": "Dr. Aysha Shirin",
             "honorificSuffix": "BHMS",
             "jobTitle": "Co-Founder & Clinical Analysis Contributor"
+        },
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Homeopathic Doctors, BHMS Practitioners, MD Homeopathy"
         }
     }
     </script>
@@ -606,11 +608,9 @@ $htmlClass = 'landing-page-html';
         "medicalSpecialty": "Homeopathic",
         "areaServed": "Worldwide",
         "sameAs": [
-            "https://twitter.com/curenexai",
+            "https://x.com/curenexai",
             "https://www.linkedin.com/company/curenexai",
-            "https://www.facebook.com/curenexai",
-            "https://www.instagram.com/curenexai",
-            "https://www.youtube.com/@curenexai"
+            "https://www.instagram.com/curenexai"
         ]
     }
     </script>
@@ -1420,11 +1420,9 @@ $htmlClass = 'landing-page-html';
                     </a>
                     <p>Modern clinical decision support system designed specifically for homeopathic practitioners.</p>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com/curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on Twitter / X"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/company/curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on X (Twitter)"><svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" width="1em" height="1em" aria-hidden="true"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+                        <a href="https://www.linkedin.com/company/curenexai/" target="_blank" rel="noopener me" aria-label="CurenexAI on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.instagram.com/curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
@@ -1446,6 +1444,8 @@ $htmlClass = 'landing-page-html';
                             <li><a href="<?php echo APP_URL; ?>/documentation">Documentation</a></li>
                             <li><a href="<?php echo APP_URL; ?>/faq">FAQs</a></li>
                             <li><a href="<?php echo APP_URL; ?>/support">Support</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/digital-repertory-software-homeopathy">Digital Repertory</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/vs-radaropus">CurenexAI vs RadarOpus</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -1599,8 +1599,5 @@ $htmlClass = 'landing-page-html';
 
     <!-- Chatbot Styles moved to assets/css/index-page.css -->
 
-    
-
-    <script defer src="<?php echo APP_URL; ?>/assets/js/index-page.js?v=<?php echo @filemtime(__DIR__ . '/assets/js/index-page.js') ?: time(); ?>"></script>
 </body>
 </html>

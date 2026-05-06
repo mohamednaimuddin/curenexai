@@ -13,6 +13,35 @@ $selectedRubrics = $_GET['rubrics'] ?? [];
 // flag even when the search branch below did not run.
 $stopWordsOnlyQuery = false;
 
+// Only show the Kent verified badge when verification source maps to
+// Kent Mind Rubrics pages 1-10 or 1-30.
+function isKentMindRubrics1To10VerifiedSource(array $row): bool {
+    if (!empty($row['is_verified'])) {
+        return true;
+    }
+
+    $normalizedSource = strtolower(preg_replace('/[^a-z0-9]+/', '', (string)($row['verified_source'] ?? '')));
+
+    $acceptedFragments = [
+        'kentmind110',
+        'kentmind130',
+        'kentmindrubrics110',
+        'kentmindrubrics130',
+        'kentmindrubrics110page',
+        'kentmindrubrics130page',
+        'kentmindrubrics110pagepdf',
+        'kentmindrubrics130pagepdf'
+    ];
+
+    foreach ($acceptedFragments as $fragment) {
+        if (strpos($normalizedSource, $fragment) !== false) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 // Get repertory statistics
 $repertoryStats = DB::queryOne("SELECT COUNT(*) as rubric_count, (SELECT COUNT(*) FROM repertory_remedies) as mapping_count FROM repertory");
 $totalRubricsInDB = $repertoryStats['rubric_count'] ?? 0;
@@ -871,7 +900,7 @@ $pageTitle = 'Repertory Search';
                 <div class="rubric-chip">
                     <span class="rubric-category"><?php echo ucfirst($rubric['category']); ?>:</span>
                     <span class="rubric-text"><?php echo htmlspecialchars($rubric['rubric']); ?></span>
-                    <?php if (!empty($rubric['is_verified'])): ?>
+                    <?php if (isKentMindRubrics1To10VerifiedSource($rubric)): ?>
                     <span class="verified-badge compact" title="Verified from <?php echo htmlspecialchars($rubric['verified_source'] ?? 'Kent'); ?><?php echo !empty($rubric['verified_page']) ? ' (p.' . (int)$rubric['verified_page'] . ')' : ''; ?>">
                         <i class="fas fa-check-circle"></i> Verified
                     </span>
@@ -1025,7 +1054,7 @@ $pageTitle = 'Repertory Search';
                         <div class="rubric-content">
                             <div class="rubric-info">
                                 <span class="rubric-text"><?php echo htmlspecialchars($rubric['rubric']); ?></span>
-                                <?php if (!empty($rubric['is_verified'])): ?>
+                                <?php if (isKentMindRubrics1To10VerifiedSource($rubric)): ?>
                                 <span class="verified-badge" title="Verified from <?php echo htmlspecialchars($rubric['verified_source'] ?? 'Kent'); ?><?php echo !empty($rubric['verified_page']) ? ' (p.' . (int)$rubric['verified_page'] . ')' : ''; ?>">
                                     <i class="fas fa-check-circle"></i> Verified
                                 </span>

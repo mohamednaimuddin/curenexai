@@ -1,7 +1,7 @@
 <?php
 require_once 'includes/init.php';
 
-$pageTitle = 'Digital Repertory Software for Homeopathy Doctors | CurenexAI';
+$pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
 ?>
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="https://schema.org/WebPage">
@@ -11,25 +11,25 @@ $pageTitle = 'Digital Repertory Software for Homeopathy Doctors | CurenexAI';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#14b8a6">
 
-    <title>Digital Repertory Software for Homeopathy Doctors | CurenexAI</title>
-    <meta name="title" content="Digital Repertory Software for Homeopathy Doctors | CurenexAI">
-    <meta name="description" content="CurenexAI is digital repertory software for homeopathy doctors with rubric search, remedy suggestions, materia medica reference, and patient management.">
+    <title>Digital Repertory Software for Homeopathy | CurenexAI</title>
+    <meta name="title" content="Digital Repertory Software for Homeopathy | CurenexAI">
+    <meta name="description" content="Search 50,000+ rubrics with CurenexAI's digital repertory. Kent repertory pathways, materia medica cross-links and AI remedy matching, free for homeopathic doctors.">
     <meta name="keywords" content="digital repertory software for homeopathy, digital repertory software, homeopathy software, AI homeopathy software, repertory software for homeopathic doctors, digital reperatory software for homeopathy">
     <meta name="robots" content="index, follow, max-image-preview:large">
 
-    <link rel="canonical" href="https://curenexai.com/digital-repertory-software-homeopathy.php">
+    <link rel="canonical" href="https://curenexai.com/digital-repertory-software-homeopathy">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://curenexai.com/digital-repertory-software-homeopathy.php">
-    <meta property="og:title" content="Digital Repertory Software for Homeopathy Doctors | CurenexAI">
-    <meta property="og:description" content="AI homeopathy software with digital repertory, remedy search, materia medica, and digital prescription workflows for modern clinics.">
-    <meta property="og:image" content="https://curenexai.com/assets/image/CURENEXAI PNG.png">
+    <meta property="og:url" content="https://curenexai.com/digital-repertory-software-homeopathy">
+    <meta property="og:title" content="Digital Repertory Software for Homeopathy | CurenexAI">
+    <meta property="og:description" content="Search 50,000+ rubrics with CurenexAI's digital repertory. Kent repertory pathways, materia medica cross-links and AI remedy matching, free for homeopathic doctors.">
+    <meta property="og:image" content="https://curenexai.com/assets/image/xrunbg.png">
     <meta property="og:site_name" content="CurenexAI">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Digital Repertory Software for Homeopathy Doctors | CurenexAI">
-    <meta name="twitter:description" content="AI homeopathy software with digital repertory, rubric search, and patient management.">
-    <meta name="twitter:image" content="https://curenexai.com/assets/image/CURENEXAI PNG.png">
+    <meta name="twitter:title" content="Digital Repertory Software for Homeopathy | CurenexAI">
+    <meta name="twitter:description" content="Search 50,000+ rubrics with CurenexAI's digital repertory. Kent repertory pathways, materia medica cross-links and AI remedy matching, free for homeopathic doctors.">
+    <meta name="twitter:image" content="https://curenexai.com/assets/image/xrunbg.png">
 
     <link rel="icon" type="image/x-icon" href="<?php echo APP_URL; ?>/assets/image/favicon/favicon.ico">
     <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/font-awesome.min.css">
@@ -40,10 +40,10 @@ $pageTitle = 'Digital Repertory Software for Homeopathy Doctors | CurenexAI';
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "CurenexAI",
-        "url": "https://curenexai.com/digital-repertory-software-homeopathy.php",
+        "url": "https://curenexai.com/digital-repertory-software-homeopathy",
         "applicationCategory": "HealthApplication",
         "operatingSystem": "Web Browser, Android, iOS",
-        "description": "CurenexAI is digital repertory software for homeopathy doctors with rubric search, remedy suggestions, materia medica reference, and patient management.",
+        "description": "Search 50,000+ rubrics with CurenexAI's digital repertory. Kent repertory pathways, materia medica cross-links and AI remedy matching, free for homeopathic doctors.",
         "featureList": [
             "Digital repertory rubric search",
             "AI-assisted remedy suggestions",
@@ -55,6 +55,10 @@ $pageTitle = 'Digital Repertory Software for Homeopathy Doctors | CurenexAI';
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
+        },
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Homeopathic Doctors, BHMS Practitioners, MD Homeopathy"
         }
     }
     </script>
@@ -475,7 +479,7 @@ $pageTitle = 'Digital Repertory Software for Homeopathy Doctors | CurenexAI';
         </section>
 
         <footer>
-            CurenexAI is homeopathic clinical software. It is not a medicine or skincare product.
+            CurenexAI is homeopathic clinical software. It is not a medicine or skincare product. <a href="<?php echo APP_URL; ?>/vs-radaropus">See how CurenexAI compares with RadarOpus &rarr;</a>
         </footer>
     </div>
 </body>

@@ -4580,6 +4580,14 @@ body.landing-page {
     transform: translateY(-3px);
 }
 
+.social-links .social-svg {
+    width: 1em;
+    height: 1em;
+    font-size: 1rem;
+    display: block;
+    fill: currentColor;
+}
+
 .footer-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

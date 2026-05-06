@@ -1331,10 +1331,9 @@ $bodyClass = 'about-page';
                     </a>
                     <p>Modern clinical decision support system designed specifically for homeopathic practitioners. CurenexAI is SOFTWARE, not a pharmaceutical product.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on X (Twitter)"><svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" width="1em" height="1em" aria-hidden="true"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+                        <a href="https://www.linkedin.com/company/curenexai/" target="_blank" rel="noopener me" aria-label="CurenexAI on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 
