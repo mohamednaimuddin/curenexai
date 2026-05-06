@@ -1,0 +1,53 @@
+CONCENTRATION,
+active: Coff., ox-al., thea.
+
+difficult: Acon., esc., eth., agar., agn., ail., alet., all-c., alum., ambr., am-c., Anac., ang., ant-c., apis, arg-n.,
+asaf., bapt., Bar-c., bar-m., bell., bov., brom., bry., camph., cann-i., cann-s., canth., carb-ac., carb-an.,
+Carb-s., Carb-v., Caust., cent., cham., chel., chin., chin-s., chlol., cimic., cinnb., cocc., coff, colch.,
+coloc., con., corn., croc., cupr., cycl., dros., dulc., elaps., cry-aq., euphr., fago., ferr., ferr-a., ferr-p., fl-ac.,
+gels., Glon., Graph., grat., ham., Hell., helo., hydr., hydr-ac., hyos., ign., iod., iris., jug-c., jug-r., kali-ar.,
+kali-br., kali-c., kali-p., kali-s., lac-c., lac-d., lach., Lach., lachn., lact., lil-t., lob., Lye., lyss., mag-c.,
+mag-m., mag-s., mang., meny., merc., mez., mosch., Nat-a., nat-c., nat-m., nat-p., nit-ac., Nux-m., Nux-v.,
+olnd., op., orig., ox-ac., petr., Ph-ac., Phos., phys., pic-ac., plat., plect., poth., pte/., puls., ran-sc., raph.,
+rhod., sang., sarr., sars., sec., sel., senec., seneg., Sep., Sil., Spig., spong., squil., stann., staph., stict., stram.,
+sul-ac., sulph., tab., ter., thuj., til., verat., verb., viol-o., zinc.
+morning: Anac., canth., phos.
+alternating with uterine pains: Gels.
+calculating, while: Nux-v.
+children, in: AEth., bar-c.
+conversation, during: Lyc.
+crazy feeling on top of head, wild feeling in head, with confusion of ideas: Lil-t.
+interrupted, if: Berb.
+on attempting to, it becomes dark before the eyes: Arg-n.
+has a vacant feeling: Asar., gels., mez., nat-m., ph-ac., phos., sil., stann., staph., stram., sulph.
+studying, reading, etc., while: Acon., eth., agn., alum., asar., bar-c., bar-m., bell., carb-s., caust., cham.,
+coff., corn., dros., fago., Hell., kali-c., lach., nat-c., Nux-v., ox-ac., spig., sulph.
+talking, while: Merc-c., nat-m.
+writing, while: Acon., mag-c.
+CONFIDENCE, want of self:
+Agn., alum., Anac., anan., arg-n., aur., bar-c., bell., bry., calc., canth., carb-an., carb-v., caust., chin., chlor.,
+dros., gels., hyos., ign., iod., kali-c., kali-n., kali-s., lac-c., lac-d., lach., lyc., mur-ac., nat-c., nat-m., nit-ac.,
+nux-v., olnd., op., pall., phos., plb., ran-b., rhus-t., ruta., sil., stram., sulph., sul-ac., tab., ther., verb., viol-t., zinc.
+
+and thinks others have none which makes her unhappy: Aut.
+
+CONFIDING:
+Hydr., mur-ac., spig.
+
+CONFOUNDING objects and ideas:
+Calc., cann-s., hyos., nux-v., plat., sulph.
+
+CONFUSION of mind (See Concentration):
+
+Absin., acet-ac., acon., act-sp., zth., agar., agn., ail., aloe, alum., ambr., am-c., am-m., anac., anac-oc., ant-t.,
+apis, aran., arg-m., arg-n., arn., ars., ars-1., asaf., asar., aspar., aur., aur-m., bapt., bar-c., bar-m., Bell., benz-c.,
+berb., bism., bor., bov., brom., Bry., bufo, calad., Cale., calc-p., calcs., camph., Cann-i., cann-s., canth., caps.,
+carb-ac., carb-an., carb-o., carb-s., Carb-v., carl., caust., cham., chel., chin., chin-a., chin-s., chlol., chlor., cic.,
+cina, cinnb., cimx., clem., Coce., coff., colch., coloc., corn., con., cop., corn-a., croc., crot-c., crot-h., crot-t.,
+cupr., cup-ar., cun., cycl., dig., dios., dros., dulc., echi., cry-a., eug., cup-pur., euphr., eupi., fago., ferr., ferr-ar.,
+ferr-p., fl-ac., gels., gent-l., gin., Glon., gran., graph., grat., hep., hipp., hura, hydr., hydr-ac., hyos., hyper., ign.,
+indg., iod., ip., jab., jatr., kali-ar., kali-bi., kali-br., Aali-c., kalm., kali-i., kali-n., kali-p., kali-s., kalm., kreos.,
+lac-c., Lach., lac-ac., lact., laur., lec., led., lil-t., lob., Jyvc., mag-c., mag-m., mag-s., med., meli., Mere., merc-c.,
+mez., morph., mosch., mur-ac., myric., naja., nat-a., nat-c., Nat-m., nat-p., nat-s., nicc., nit-ac., Nux-m.,
+Nux-v., olnd., Onos., Op., osm., par., Petr., phel., ph-ac., phos., pic-ac., pu/s., ran-b., sep., sil., spong., stann.,
+staph., Stram., Sulph., tarent., ther., thuj., tril., tromb., valer., verat., verb., viol-o., vip., xanth., zinc.

@@ -1,0 +1,41 @@
+ANGUISH:
+Acet-ac., Acon., zth., aloe, alum., ambr., anac., ant-t., apis, arg-n., arn., Ars., aur., bism., Bell., bov., bufo,
+
+cedr., coff., colch., crot-c., crot-h., cupr., Caust., der., Dig., graph., Hep., hyos., kali-ar., kali-i., mag-c.,
+mur-ac., naja., nat-c., Phos., Plat., psor., puls., sep., tarent., tril., verat., vip.
+
+daytime: Graph., mag-c., merc., murx., nat-c., psor., puls., stann.
+
+5 a.m. to 5 p.m.: Psor.
+
+morning: Alum., calc., nux-v., puls., verat.
+
+forenoon: Nicc., ran-b., rhus-t.
+
+evening: Ambr., carb-v., mur-ac., phos.
+
+night: Ambr., arn., nat-s., nux-v., plan.
+
+4 a.m.: Alum.
+
+chill, during: Arn.
+
+driving from place to place: Ars.
+
+eating, while: Sep.
+
+heat, during: Graph.
+
+menses, before: Graph.
+
+menses, during: Bell., calc., coff., ign., merc., nit-ac., phos., p/at., stann., xan.
+
+open air amel.: Cann-i.
+
+perspiration during: Arn.
+
+stool, before: Acon., merc., poth., verat.
+
+stool, during: Mertc., verat.
+
+walking in open air: Arg-m., arg-n., bell., canth., cina, plat., tab.

@@ -1,0 +1,69 @@
+ANXIETY:
+Abrot., Acon., acon-f,, act-sp., act-s., eth., agar., agn., all-c., aloe, alum., alumn., ambr., am-c., am-m., ang.,
+ant-c., ant-t., apis, Arg-n., arn., Ars., ars-h., Ars-i., asaf., asar., aster., Aur., aur-s., aur-m., Bell., benz-ac.,
+berb., bism., Bor., bov., Bry., bufo, Cact., cadm., calad., calc., Cale-p., Calce-s., Camph., Cann-i., cann-s.,
+canth., caps., carb-an., carb-v., Carb-s., cast., Caust., cedr., cham., chel., chin., chin-a., chin-s., chlol., chlor.,
+cic., cimex., cimic., cina, clem., cocc., coff., colch., coloc., con., cop., crot-c., crot-h., crot-t., cub., cupr.,
+cupr-ar., cur., cycl., Dig., dros., dulc., elaps., euph., euphr., ferr., ferr-ar., ferr-i., ferr-p., fl-ac., Gels., glon., grat.,
+hell., hep., Hyos., hura., hydr., hydr-ac., Ign., indg., Iod., ip., jatr., Kali-ar., Kali-c., Kali-i., kali-n., Kali-p.,
+Kali-s., kreos., lac-c., lac-d., lach., lact-ac., laur., led., lil-t., Lyc., lyss., mag-c., mag-m., mag-s., mang., meny.,
+merc., mez., mosch., mur-ac., mygal., naja., Nat-c., nat-m., nat-p., nat-s., nicc., Nit-ac., nit-m-ac., nux-m.,
+Nux-v., op., ox-ac., par., petr., Phos., phys., pic-ac., plat., plb., Psor., Puls., pyrog., ran-b., raph., Rhus-t., rib.,
+sabad., sabin., samb., samp., sang., Sec., seneg., sep., sil., spig., spong., squil., stann., Staph., stront., Sulph.,
+sul-ac., sumb., tab., tarent., thuj., valer., Verat., viol-o., viol-t., zinc.
+
+daytime: Ambr., ant-c., bell., caust., chin-a., laur., mag-c., mang., merc., nat-c., nat-m., ph-ac., phyt., plat.,
+
+psor., puls., ruta., sul-ac., zinc.
+
+5 a.m. to 5 p.m.: Psor.
+
+morning: Ail., alum., am-c., am-m., Ars., canth., carb-an., carb-s., carb-v., caust., chin., cocc., con.,
+
+Graph., ign., ip., kali-c., Lach., led., lyc., mag-c., mag-m., merc., mez., nat-m., nit-ac., Phos., plat., puls.,
+
+rhus-t., sep., sulph., sul-ac., verat., zinc.
+
+morning, rising, on: Arg-n., mag-c., rhus-t.
+
+morning, amel.: Carb-an., cast., calc-s., nux-v., rhus-t., sep.
+
+waking, on: Alum., anac., carb-an., carb-v., caust., chel., cocc., Graph., ign., ip., Lach., lyc., mag-c.,
+
+mag-m., nat-m., nat-p., Phos., plat., puls., rhus-t., sep., squil.
+
+forenoon: Acon., alum., am-c., bar-c., calc., cann-i., chel., clem., lac-c., nat-m., peeon., plat., ran-b., sars.,
+
+sulph.
+
+I1 a.m.: Sulph.
+
+till 5 p.m.: Aster.
+
+afternoon: Ath., am-c., arg-n., bell., bov., calc., calc-p., carb-v., crot-t., cupr., gamb., kali-n., mag-c., merc.,
+
+nat-c., nat-m., nat-s., nux-v., phel., ph-ac., phos., puls., rhus-t., ruta., stront., tab., zinc.
+
+3 to 6 p.m.: Con.
+
+4 p.m.: Lyc., tab.
+
+4 to 5 p.m.: Thuj.
+
+5 to 6 p.m.: Carb-v.
+
+until evening: Con., kali-n., mag-m.
+
+evening: Acon., agar., am-c., Ars., bar-c., bar-m., bell., bry., calad., Cale., Cale-s., carb-an., carb-v., caust.,
+
+chel., chin., chin-a., cina, cocc., Dig., dros., gamb., gels., graph., hep., hipp., hura., kali-ar., kali-c., kali-i.,
+
+kali-n., kali-s., lach., laur., lyc., mez., Mere., mur-ac., nat-ar., nat-c., nat-m., nicc., nit-ac., nux-v., op., petr.,
+
+ph-ac., phos., plb., puls., rhus-t., ruta., sabin., Sep., sil., spig., stann., stront., Sulph., sul-ac., tab.
+
+evening, amel.: Am-c., chel., mag-c., sul-ac., zinc.
+
+until 11 p.m.: Bor.
+
+— page 5 —
