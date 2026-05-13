@@ -339,6 +339,23 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
             }
         }
     </style>
+
+    <!-- Organization sameAs (social profile signals) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://curenexai.com/#organization",
+        "name": "CurenexAI",
+        "url": "https://curenexai.com/",
+        "logo": "https://curenexai.com/assets/image/CURENEXAI PNG.png",
+        "sameAs": [
+            "https://x.com/curenexai",
+            "https://www.linkedin.com/company/curenexai",
+            "https://www.instagram.com/curenexai"
+        ]
+    }
+    </script>
 </head>
 <body>
     <div class="shell">

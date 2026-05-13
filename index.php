@@ -1238,13 +1238,13 @@ $htmlClass = 'landing-page-html';
                             <div class="form-row-2">
                                 <div class="form-group">
                                     <label for="name"><i class="fas fa-user"></i> Your Name *</label>
-                                    <input type="text" id="name" name="name" class="form-control" 
+                                    <input type="text" id="name" name="name" class="form-control" autocomplete="name"
                                            placeholder="Dr. John Doe" 
                                            value="<?php echo htmlspecialchars($_POST['name'] ?? ''); ?>" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
-                                    <input type="email" id="email" name="email" class="form-control" 
+                                    <input type="email" id="email" name="email" class="form-control" autocomplete="email"
                                            placeholder="doctor@example.com" 
                                            value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>" required>
                                 </div>
@@ -1253,7 +1253,7 @@ $htmlClass = 'landing-page-html';
                             <div class="form-row-2">
                                 <div class="form-group">
                                     <label for="feedback_type"><i class="fas fa-tag"></i> Feedback Type</label>
-                                    <select id="feedback_type" name="feedback_type" class="form-control">
+                                    <select id="feedback_type" name="feedback_type" class="form-control" autocomplete="off">
                                         <option value="general">General Inquiry</option>
                                         <option value="feature">Feature Request</option>
                                         <option value="bug">Bug Report</option>
@@ -1262,7 +1262,7 @@ $htmlClass = 'landing-page-html';
                                 </div>
                                 <div class="form-group">
                                     <label for="subject"><i class="fas fa-heading"></i> Subject</label>
-                                    <input type="text" id="subject" name="subject" class="form-control" 
+                                    <input type="text" id="subject" name="subject" class="form-control" autocomplete="off"
                                            placeholder="How can we help?" 
                                            value="<?php echo htmlspecialchars($_POST['subject'] ?? ''); ?>">
                                 </div>
@@ -1270,7 +1270,7 @@ $htmlClass = 'landing-page-html';
                             
                             <div class="form-group">
                                 <label for="message"><i class="fas fa-comment-alt"></i> Message *</label>
-                                <textarea id="message" name="message" class="form-control" rows="4" 
+                                <textarea id="message" name="message" class="form-control" rows="4" autocomplete="off"
                                           placeholder="Tell us more about your inquiry..." required><?php echo htmlspecialchars($_POST['message'] ?? ''); ?></textarea>
                             </div>
                             
@@ -1491,7 +1491,7 @@ $htmlClass = 'landing-page-html';
                 <p class="clinic-name"><i class="fas fa-house-medical"></i> Siris Clinics</p>
                 <div class="gratitude-divider"></div>
                 <p class="gratitude-message">
-                    We acknowledge Dr. Aysha Shirin (BHMS), co-founder of CurenexAI, for her clinical analysis and for sharing extensive homeopathic knowledge that helped shape the platform's clinical workflows. CurenexAI was developed independently by <strong>Er. Mohamed Naimuddin U S</strong>, including implementation of the platform and its RAG system.
+                    We acknowledge Dr. Aysha Shirin (BHMS), co-founder of CurenexAI, for her clinical analysis and for sharing extensive homeopathic knowledge that helped shape the platform's clinical workflows. 
                 </p>
                 <div class="gratitude-footer">
                     <i class="fas fa-quote-left"></i>
@@ -1598,6 +1598,7 @@ $htmlClass = 'landing-page-html';
     </div>
 
     <!-- Chatbot Styles moved to assets/css/index-page.css -->
+    <script src="<?php echo APP_URL; ?>/assets/js/index-page.js?v=<?php echo @filemtime(__DIR__ . '/assets/js/index-page.js') ?: time(); ?>" defer></script>
 
 </body>
 </html>

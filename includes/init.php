@@ -144,9 +144,9 @@ if (IS_PRODUCTION) {
     header("Content-Security-Policy: default-src 'self'; " .
            "script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; " .
            "style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com; " .
-           "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; " .
+           "font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; " .
            "img-src 'self' data: blob: https:; " .
-           "connect-src 'self' https://generativelanguage.googleapis.com https://cdn.jsdelivr.net; " .
+           "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://region1.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://www.google.com https://www.google.co.in https://www.google.com.sa https://generativelanguage.googleapis.com https://cdn.jsdelivr.net; " .
            "frame-ancestors 'none'; " .
            "base-uri 'self'; " .
            "form-action 'self';");
