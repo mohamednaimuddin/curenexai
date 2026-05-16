@@ -23,10 +23,10 @@ function isKentMindRubrics1To10VerifiedSource(array $row): bool {
     $normalizedSource = strtolower(preg_replace('/[^a-z0-9]+/', '', (string)($row['verified_source'] ?? '')));
 
     $acceptedFragments = [
-        'kentmind110', 'kentmind130',
-        'kentmindrubrics110', 'kentmindrubrics130',
-        'kentmindrubrics110page', 'kentmindrubrics130page',
-        'kentmindrubrics110pagepdf', 'kentmindrubrics130pagepdf'
+        'kentmind110', 'kentmind130', 'kentmind195',
+        'kentmindrubrics110', 'kentmindrubrics130', 'kentmindrubrics195',
+        'kentmindrubrics110page', 'kentmindrubrics130page', 'kentmindrubrics195page',
+        'kentmindrubrics110pagepdf', 'kentmindrubrics130pagepdf', 'kentmindrubrics195pagepdf'
     ];
 
     foreach ($acceptedFragments as $fragment) {

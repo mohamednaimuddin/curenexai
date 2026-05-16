@@ -164,13 +164,14 @@
         </div>
     </footer>
     
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="<?php echo APP_URL; ?>/assets/js/main.js?v=<?php echo time(); ?>"></script>
+    <!-- JavaScript (deferred to avoid blocking main thread) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <?php $__jsMtime = @filemtime(__DIR__ . '/../assets/js/main.js') ?: '1'; ?>
+    <script src="<?php echo APP_URL; ?>/assets/js/main.js?v=<?php echo $__jsMtime; ?>" defer></script>
     
     <?php if (isset($additionalJS)): ?>
         <?php foreach ($additionalJS as $js): ?>
-            <script src="<?php echo APP_URL . $js; ?>"></script>
+            <script src="<?php echo APP_URL . $js; ?>" defer></script>
         <?php endforeach; ?>
     <?php endif; ?>
     

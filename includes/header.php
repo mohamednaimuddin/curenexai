@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="<?php echo isset($htmlClass) ? $htmlClass : ''; ?>" itemscope itemtype="https://schema.org/WebPage">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WDBLVKCVG1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-WDBLVKCVG1');
-    </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#14b8a6">
@@ -46,17 +37,26 @@
     <link rel="apple-touch-icon" href="<?php echo APP_URL; ?>/assets/image/CURENEXAI ICON.png">
     <link rel="manifest" href="<?php echo APP_URL; ?>/manifest.json">
     
-    <!-- Preconnect to external resources -->
+    <!-- Preconnect / DNS-prefetch to critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
-    <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://code.jquery.com">
+
+    <!-- Google Fonts - Inter (non-blocking with swap) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+    <?php
+    // Use file modification time instead of time() so browsers can cache assets
+    $__cssMtime = @filemtime(__DIR__ . '/../assets/css/style.css') ?: '1';
+    ?>
     <!-- CSS -->
-    <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/style.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/style.css?v=<?php echo $__cssMtime; ?>">
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/font-awesome.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/font-awesome.min.css"></noscript>
     
     <?php if (isset($additionalCSS)): ?>
         <?php foreach ($additionalCSS as $css): ?>
@@ -81,6 +81,64 @@
         .page-loader .loader-text{margin-top:16px;color:#4b5563;font-size:.95rem;font-weight:500}
         @keyframes spin{to{transform:rotate(360deg)}}
     </style>
+
+    <!-- Schema.org JSON-LD: Organization + WebSite + SoftwareApplication (improves Gemini / Google AI visibility) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "MedicalOrganization"],
+          "@id": "<?php echo APP_URL; ?>/#organization",
+          "name": "CurenexAI",
+          "alternateName": ["Curenex", "Curenex AI"],
+          "url": "<?php echo APP_URL; ?>/",
+          "logo": "<?php echo APP_URL; ?>/assets/image/CURENEXAI%20PNG.png",
+          "image": "<?php echo APP_URL; ?>/assets/image/CURENEXAI%20PNG.png",
+          "description": "CurenexAI is an AI-powered homeopathic healthcare platform for certified doctors providing intelligent diagnosis, repertory analysis and personalized treatment.",
+          "medicalSpecialty": "Homeopathic",
+          "sameAs": [
+            "https://twitter.com/curenexai"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "<?php echo APP_URL; ?>/#website",
+          "url": "<?php echo APP_URL; ?>/",
+          "name": "CurenexAI",
+          "publisher": { "@id": "<?php echo APP_URL; ?>/#organization" },
+          "inLanguage": "en",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "<?php echo APP_URL; ?>/search.php?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "CurenexAI",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "Web",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "publisher": { "@id": "<?php echo APP_URL; ?>/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Analytics (loaded after page load to reduce main-thread work / FID) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.addEventListener('load', function(){
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WDBLVKCVG1';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-WDBLVKCVG1', { 'transport_type': 'beacon' });
+      });
+    </script>
 </head>
 <body class="<?php echo isset($bodyClass) ? $bodyClass : ''; ?><?php echo (isMaintenanceMode() && !canBypassMaintenance()) ? ' maintenance-mode' : ''; ?>">
     
