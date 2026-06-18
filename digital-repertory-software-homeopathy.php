@@ -13,8 +13,8 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
 
     <title>Digital Repertory Software for Homeopathy | CurenexAI</title>
     <meta name="title" content="Digital Repertory Software for Homeopathy | CurenexAI">
-    <meta name="description" content="Search 50,000+ rubrics with CurenexAI's digital repertory. Kent repertory pathways, materia medica cross-links and AI remedy matching, free for homeopathic doctors.">
-    <meta name="keywords" content="digital repertory software for homeopathy, digital repertory software, homeopathy software, AI homeopathy software, repertory software for homeopathic doctors, digital reperatory software for homeopathy">
+    <meta name="description" content="CurenexAI helps fresh and experienced homeopathy doctors with AI rubric search, Kent repertory workflows, patient records, digital prescriptions, and free beta access.">
+    <meta name="keywords" content="digital repertory software for homeopathy, fresh homeopathy doctor software, homeopathy software for beginners, AI homeopathy software, Similia AI alternative, repertory software for homeopathic doctors, digital reperatory software for homeopathy">
     <meta name="robots" content="index, follow, max-image-preview:large">
 
     <link rel="canonical" href="https://curenexai.com/digital-repertory-software-homeopathy">
@@ -22,13 +22,13 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://curenexai.com/digital-repertory-software-homeopathy">
     <meta property="og:title" content="Digital Repertory Software for Homeopathy | CurenexAI">
-    <meta property="og:description" content="Search 50,000+ rubrics with CurenexAI's digital repertory. Kent repertory pathways, materia medica cross-links and AI remedy matching, free for homeopathic doctors.">
+    <meta property="og:description" content="CurenexAI helps fresh and experienced homeopathy doctors with AI rubric search, Kent repertory workflows, patient records, digital prescriptions, and free beta access.">
     <meta property="og:image" content="https://curenexai.com/assets/image/xrunbg.png">
     <meta property="og:site_name" content="CurenexAI">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Digital Repertory Software for Homeopathy | CurenexAI">
-    <meta name="twitter:description" content="Search 50,000+ rubrics with CurenexAI's digital repertory. Kent repertory pathways, materia medica cross-links and AI remedy matching, free for homeopathic doctors.">
+    <meta name="twitter:description" content="CurenexAI helps fresh and experienced homeopathy doctors with AI rubric search, Kent repertory workflows, patient records, digital prescriptions, and free beta access.">
     <meta name="twitter:image" content="https://curenexai.com/assets/image/xrunbg.png">
 
     <link rel="icon" type="image/x-icon" href="<?php echo APP_URL; ?>/assets/image/favicon/favicon.ico">
@@ -43,7 +43,7 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
         "url": "https://curenexai.com/digital-repertory-software-homeopathy",
         "applicationCategory": "HealthApplication",
         "operatingSystem": "Web Browser, Android, iOS",
-        "description": "Search 50,000+ rubrics with CurenexAI's digital repertory. Kent repertory pathways, materia medica cross-links and AI remedy matching, free for homeopathic doctors.",
+        "description": "CurenexAI helps fresh and experienced homeopathy doctors with AI rubric search, Kent repertory workflows, patient records, digital prescriptions, and free beta access.",
         "featureList": [
             "Digital repertory rubric search",
             "AI-assisted remedy suggestions",
@@ -82,6 +82,22 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "CurenexAI is both. It works as homeopathy software for daily practice management and as digital repertory software for rubric search, remedy analysis, and AI-assisted case support."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is CurenexAI good for fresh homeopathy doctors?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. CurenexAI is useful for fresh homeopathy doctors because it combines AI-supported rubric search, Kent repertory workflow, patient records, follow-up notes, and digital prescriptions in one beginner-friendly clinical platform."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is CurenexAI different from Similia AI for beginners?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Doctors comparing CurenexAI with Similia AI or other AI repertory apps should look at the full workflow. CurenexAI is built for repertory search plus patient management, prescriptions, follow-up history, and clinic documentation, so a fresher can learn repertory while also building good clinical records from day one."
                 }
             },
             {
@@ -215,7 +231,8 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
         .metric-list,
         .grid,
         .faq,
-        .compare-grid {
+        .compare-grid,
+        .split-grid {
             display: grid;
             gap: 18px;
         }
@@ -293,6 +310,16 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
+        .split-grid {
+            grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+            align-items: start;
+        }
+
+        .highlight {
+            background: #ecfdf5;
+            border: 1px solid rgba(15, 118, 110, 0.22);
+        }
+
         .compare-good {
             border-top: 4px solid var(--brand);
         }
@@ -334,6 +361,7 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
             .grid,
             .faq,
             .compare-grid,
+            .split-grid,
             .metric-list {
                 grid-template-columns: 1fr;
             }
@@ -439,6 +467,53 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
         </section>
 
         <section>
+            <h2>For fresh homeopathy doctors</h2>
+            <p class="section-copy">A new doctor needs confidence in rubric selection and a clean clinical habit from the first patient. CurenexAI is designed for that stage too, not only for large or established clinics.</p>
+            <div class="grid">
+                <article class="card highlight">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Learn repertory while using it</h3>
+                    <p>Search patient language, review matching rubrics, and cross-check remedy context without leaving the case screen.</p>
+                </article>
+                <article class="card highlight">
+                    <i class="fas fa-folder-open"></i>
+                    <h3>Build records from day one</h3>
+                    <p>Save patient notes, repertory reasoning, prescriptions, and follow-up history before your practice becomes busy.</p>
+                </article>
+                <article class="card highlight">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Start without heavy software cost</h3>
+                    <p>CurenexAI is available in free beta, so fresh doctors can begin with a professional digital workflow before investing in expensive legacy systems.</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>CurenexAI vs single-purpose AI repertory apps</h2>
+            <p class="section-copy">If you are comparing CurenexAI with Similia AI or another AI repertory app, the practical question is simple: do you only want rubric suggestions, or do you want a complete clinical workspace as your practice grows?</p>
+            <div class="split-grid">
+                <article class="card compare-bad">
+                    <h3>AI-only repertory app</h3>
+                    <ul>
+                        <li>Useful for quick rubric discovery</li>
+                        <li>Often focused mainly on search and suggestions</li>
+                        <li>Case records may still live in another system</li>
+                        <li>Follow-up and prescription workflow can become fragmented</li>
+                    </ul>
+                </article>
+                <article class="card compare-good">
+                    <h3>CurenexAI for a fresher doctor</h3>
+                    <ul>
+                        <li>AI-supported rubric search and Kent repertory workflow</li>
+                        <li>Patient records, notes, and prescriptions in one place</li>
+                        <li>Free beta access for homeopathic doctors</li>
+                        <li>Ready for private practice, follow-ups, lab reports, and clinic growth</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section>
             <h2>Compared with older homeopathy workflows</h2>
             <div class="compare-grid">
                 <article class="card compare-bad">
@@ -479,7 +554,15 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
                 </article>
                 <article class="card">
                     <h3>Who is this built for?</h3>
-                    <p>Homeopathic doctors, BHMS and MD Homeopathy practitioners, clinics, and students who want a faster digital workflow.</p>
+                    <p>Fresh homeopathy doctors, BHMS and MD Homeopathy practitioners, clinics, and students who want a faster digital workflow.</p>
+                </article>
+                <article class="card">
+                    <h3>Is CurenexAI good for fresh homeopathy doctors?</h3>
+                    <p>Yes. It helps beginners search rubrics, organize patient records, document prescriptions, and develop a professional clinic workflow from the start.</p>
+                </article>
+                <article class="card">
+                    <h3>Is CurenexAI a Similia AI alternative?</h3>
+                    <p>Yes, for doctors who want AI repertory support plus patient management, digital prescriptions, follow-up history, and clinic documentation in one platform.</p>
                 </article>
             </div>
         </section>
