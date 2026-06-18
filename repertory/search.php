@@ -57,14 +57,20 @@ $categories = [
     'throat' => 'Throat', 'stomach' => 'Stomach', 'abdomen' => 'Abdomen',
     'rectum' => 'Rectum', 'stool' => 'Stool', 'bladder' => 'Bladder',
     'kidneys' => 'Kidneys', 'urine' => 'Urine', 'urinary' => 'Urinary',
+    'urethra' => 'Urethra',
     'male' => 'Male', 'female' => 'Female', 'larynx' => 'Larynx',
     'respiration' => 'Respiration', 'respiratory' => 'Respiratory',
     'cough' => 'Cough', 'expectoration' => 'Expectoration',
     'chest' => 'Chest', 'heart' => 'Heart', 'back' => 'Back',
     'extremities' => 'Extremities', 'skin' => 'Skin', 'sleep' => 'Sleep',
-    'perspiration' => 'Perspiration', 'fever' => 'Fever',
-    'general' => 'General', 'generalities' => 'Generalities'
+    'perspiration' => 'Perspiration', 'chill' => 'Chill', 'fever' => 'Fever',
+    'general' => 'General', 'generals' => 'Generals', 'generalities' => 'Generalities'
 ];
+foreach (array_keys($categoryCounts) as $dbCategory) {
+    if (!isset($categories[$dbCategory])) {
+        $categories[$dbCategory] = ucwords(str_replace(['_', '-'], ' ', $dbCategory));
+    }
+}
 
 // Pagination for rubrics search
 $rubrics = [];
@@ -92,7 +98,9 @@ $synonymMap = [
     'depressed' => ['depression', 'sad', 'melancholy', 'despondent', 'hopeless', 'despair'],
     'weeping' => ['crying', 'tears', 'sobbing', 'weeps', 'tearful', 'lachrymation'],
     'weeps' => ['weeping', 'crying', 'tears', 'sobbing', 'tearful'],
-    'crying' => ['weeping', 'tears', 'weeps', 'sobbing', 'tearful'],
+    'cry' => ['crying', 'cries', 'weeping', 'weeps', 'tears', 'sobbing', 'tearful'],
+    'cries' => ['cry', 'crying', 'weeping', 'weeps', 'tears', 'sobbing', 'tearful'],
+    'crying' => ['cry', 'cries', 'weeping', 'tears', 'weeps', 'sobbing', 'tearful'],
     'consoled' => ['consolation', 'comfort', 'sympathy'],
     'consolation' => ['consoled', 'comfort', 'sympathy'],
     'restless' => ['restlessness', 'cannot rest', 'tossing', 'fidgety', 'agitation', 'cannot sit still'],
@@ -130,6 +138,10 @@ $synonymMap = [
     'groaning' => ['groan', 'groans', 'moaning', 'moan', 'lamenting'],
     'loves' => ['love', 'affection', 'fond', 'attached'],
     'animals' => ['animal', 'pets', 'dogs', 'cats'],
+    'dog' => ['dogs', 'animals'],
+    'dogs' => ['dog', 'animals'],
+    'crowd' => ['crowds', 'people', 'public places'],
+    'crowds' => ['crowd', 'people', 'public places'],
     'impatient' => ['impatience', 'hurried', 'hasty', 'irritable', 'restless'],
     'impatience' => ['impatient', 'hurried', 'hasty', 'irritable'],
     'intolerant' => ['intolerance', 'cannot bear', 'cannot endure'],
@@ -354,7 +366,7 @@ $stopWords = [
     'take', 'takes', 'took', 'taking', 'give', 'gives', 'gave', 'giving',
     'go', 'goes', 'went', 'going', 'come', 'comes', 'came', 'coming',
     'see', 'sees', 'saw', 'seeing', 'seem', 'seems', 'seemed', 'seeming',
-    'look', 'looks', 'looked', 'looking', 'think', 'thinks', 'thought',
+    'think', 'thinks', 'thought',
     'say', 'says', 'said', 'saying', 'tell', 'tells', 'told', 'telling',
     'know', 'knows', 'knew', 'knowing', 'want', 'wants', 'wanted', 'wanting',
     'use', 'uses', 'used', 'using', 'find', 'finds', 'found', 'finding',
@@ -406,6 +418,47 @@ function expandSearchTerms($query, $synonymMap, $stopWords = []) {
     ];
 }
 
+function rubric_tree_key(string $value): string {
+    $value = trim(mb_strtolower($value));
+    return preg_replace('/\s+/', ' ', $value);
+}
+
+function search_term_variants(string $term): array {
+    $term = trim(mb_strtolower($term));
+    if ($term === '') return [];
+
+    $variants = [$term];
+    if (substr($term, -3) === 'ies' && strlen($term) > 4) {
+        $variants[] = substr($term, 0, -3) . 'y';
+    } elseif (substr($term, -1) === 's' && strlen($term) > 3) {
+        $variants[] = substr($term, 0, -1);
+    } elseif (substr($term, -1) === 'y' && strlen($term) > 3) {
+        $variants[] = substr($term, 0, -1) . 'ies';
+        $variants[] = substr($term, 0, -1) . 'ying';
+    } elseif (strlen($term) > 2) {
+        $variants[] = $term . 's';
+    }
+
+    return array_values(array_unique($variants));
+}
+
+function search_concept_variants(string $term, array $synonymMap): array {
+    $terms = [$term];
+    $term = trim(mb_strtolower($term));
+    if (isset($synonymMap[$term])) {
+        $terms = array_merge($terms, $synonymMap[$term]);
+    }
+
+    $variants = [];
+    foreach ($terms as $candidate) {
+        foreach (search_term_variants((string)$candidate) as $variant) {
+            $variants[] = $variant;
+        }
+    }
+
+    return array_values(array_unique($variants));
+}
+
 // Search when there's a search query OR a category selected
 if (!empty($searchQuery) || !empty($category)) {
     $params = [];
@@ -425,6 +478,7 @@ if (!empty($searchQuery) || !empty($category)) {
                 $params[] = '%' . $term . '%';
             }
             $originalSet = array_flip($originalTerms);
+            $searchHaystack = "LOWER(CONCAT_WS(' ', r.rubric, r.sub_category, r.complete_rubric))";
             $relevanceParts = [];
             foreach ($searchTerms as $term) {
                 if (strlen($term) < 3) continue;
@@ -432,6 +486,61 @@ if (!empty($searchQuery) || !empty($category)) {
                 $relevanceParts[] = "CASE WHEN LOWER(r.rubric) LIKE ? OR LOWER(r.complete_rubric) LIKE ? THEN $weight ELSE 0 END";
                 $params[] = '%' . $term . '%';
                 $params[] = '%' . $term . '%';
+            }
+            foreach ($originalTerms as $term) {
+                $variants = search_concept_variants($term, $synonymMap);
+                if (empty($variants)) continue;
+                $exactVariants = search_term_variants($term);
+                $exactChecks = [];
+                $exactQualifiedSubChecks = [];
+                foreach ($exactVariants as $variant) {
+                    $exactChecks[] = "$searchHaystack LIKE ?";
+                    $params[] = '%' . $variant . '%';
+                    foreach ([', of', ', when', ', in', ', from'] as $suffix) {
+                        $exactQualifiedSubChecks[] = "LOWER(r.sub_category) LIKE ?";
+                        $params[] = '%' . $variant . $suffix . '%';
+                    }
+                }
+                $variantChecks = [];
+                $directLabelChecks = [];
+                $qualifiedSubChecks = [];
+                foreach ($variants as $variant) {
+                    $variantChecks[] = "$searchHaystack LIKE ?";
+                    $params[] = '%' . $variant . '%';
+                    $directLabelChecks[] = "LOWER(r.rubric) LIKE ?";
+                    $params[] = '%' . $variant . '%';
+                    $directLabelChecks[] = "LOWER(r.sub_category) LIKE ?";
+                    $params[] = '%' . $variant . '%';
+                    foreach ([', of', ', when', ', in', ', from'] as $suffix) {
+                        $qualifiedSubChecks[] = "LOWER(r.sub_category) LIKE ?";
+                        $params[] = '%' . $variant . $suffix . '%';
+                    }
+                }
+                if (!empty($exactChecks)) {
+                    $relevanceParts[] = "CASE WHEN (" . implode(' OR ', $exactChecks) . ") THEN 40 ELSE 0 END";
+                }
+                if (!empty($exactQualifiedSubChecks)) {
+                    $relevanceParts[] = "CASE WHEN (" . implode(' OR ', $exactQualifiedSubChecks) . ") THEN 80 ELSE 0 END";
+                }
+                $relevanceParts[] = "CASE WHEN (" . implode(' OR ', $variantChecks) . ") THEN 25 ELSE 0 END";
+                $relevanceParts[] = "CASE WHEN (" . implode(' OR ', $directLabelChecks) . ") THEN 15 ELSE 0 END";
+                $relevanceParts[] = "CASE WHEN (" . implode(' OR ', $qualifiedSubChecks) . ") THEN 60 ELSE 0 END";
+            }
+            if (count($originalTerms) > 1) {
+                $allOriginalChecks = [];
+                foreach ($originalTerms as $term) {
+                    $variants = search_concept_variants($term, $synonymMap);
+                    if (empty($variants)) continue;
+                    $variantChecks = [];
+                    foreach ($variants as $variant) {
+                        $variantChecks[] = "$searchHaystack LIKE ?";
+                        $params[] = '%' . $variant . '%';
+                    }
+                    $allOriginalChecks[] = '(' . implode(' OR ', $variantChecks) . ')';
+                }
+                if (!empty($allOriginalChecks)) {
+                    $relevanceParts[] = "CASE WHEN " . implode(' AND ', $allOriginalChecks) . " THEN 150 ELSE 0 END";
+                }
             }
             $relevanceCase = empty($relevanceParts)
                 ? "0 as relevance_score"
@@ -447,6 +556,29 @@ if (!empty($searchQuery) || !empty($category)) {
                 if (strlen($term) < 3) continue;
                 $relevanceParams[] = '%' . $term . '%';
                 $relevanceParams[] = '%' . $term . '%';
+            }
+            foreach ($originalTerms as $term) {
+                foreach (search_term_variants($term) as $variant) {
+                    $relevanceParams[] = '%' . $variant . '%';
+                    foreach ([', of', ', when', ', in', ', from'] as $suffix) {
+                        $relevanceParams[] = '%' . $variant . $suffix . '%';
+                    }
+                }
+                foreach (search_concept_variants($term, $synonymMap) as $variant) {
+                    $relevanceParams[] = '%' . $variant . '%';
+                    $relevanceParams[] = '%' . $variant . '%';
+                    $relevanceParams[] = '%' . $variant . '%';
+                    foreach ([', of', ', when', ', in', ', from'] as $suffix) {
+                        $relevanceParams[] = '%' . $variant . $suffix . '%';
+                    }
+                }
+            }
+            if (count($originalTerms) > 1) {
+                foreach ($originalTerms as $term) {
+                    foreach (search_concept_variants($term, $synonymMap) as $variant) {
+                        $relevanceParams[] = '%' . $variant . '%';
+                    }
+                }
             }
             $countParams = [];
             foreach ($searchTerms as $term) {
@@ -488,15 +620,81 @@ if (!empty($searchQuery) || !empty($category)) {
 // Browse-mode flag (chapter selected, no free-text search) — used by template
 $browseMode = empty($searchQuery) && !empty($category);
 
-// In browse mode, group rubrics by first alphabetic letter for the A–Z jump bar
+// In browse mode, group rubrics by first alphabetic letter for the A–Z jump
+// bar AND collapse parent / sub-rubric rows into a tree so each main rubric
+// appears once with its sub-rubrics nested beneath (Synthesis tree style).
 $browseGroups = [];
 $browseLetters = [];
 if ($browseMode && !empty($rubrics)) {
+    // Pass 1: find explicit parent rows. Kent Mind stores true parent rows
+    // as rubric + empty sub_category; many other chapters store the parent
+    // group in sub_category and the child rubric in rubric.
+    $explicitParents = [];
     foreach ($rubrics as $r) {
-        $first = strtoupper(mb_substr(trim($r['rubric']), 0, 1));
-        if (!preg_match('/[A-Z]/', $first)) $first = '#';
-        $browseGroups[$first][] = $r;
+        if (trim((string)$r['sub_category']) === '') {
+            $parentKey = rubric_tree_key((string)$r['rubric']);
+            if (
+                !isset($explicitParents[$parentKey]) ||
+                (int)$r['remedy_count'] > (int)$explicitParents[$parentKey]['remedy_count']
+            ) {
+                $explicitParents[$parentKey] = $r;
+            }
+        }
     }
+
+    // Pass 2: bucket every row by (letter -> parent_key)
+    $tree = [];
+    foreach ($rubrics as $r) {
+        $rubricLabel = trim((string)$r['rubric']);
+        $subCategory = trim((string)$r['sub_category']);
+        $rubricKey = rubric_tree_key($rubricLabel);
+        $hasExplicitParent = isset($explicitParents[$rubricKey]);
+
+        if ($subCategory === '' || $hasExplicitParent) {
+            $parentLabel = $rubricLabel;
+            $parentKey = $rubricKey;
+            $childLabel = $subCategory;
+        } else {
+            $parentLabel = $subCategory;
+            $parentKey = rubric_tree_key($subCategory);
+            $childLabel = $rubricLabel;
+        }
+
+        $first = strtoupper(mb_substr($parentLabel, 0, 1));
+        if (!preg_match('/[A-Z]/', $first)) $first = '#';
+        if (!isset($tree[$first][$parentKey])) {
+            $tree[$first][$parentKey] = [
+                'parent'        => null,
+                'subs'          => [],
+                'total_remedies'=> 0,
+                'label'         => $parentLabel,
+            ];
+        }
+        if ($subCategory === '' || (!$hasExplicitParent && rubric_tree_key($childLabel) === $parentKey)) {
+            // Main rubric row — keep the one with the highest remedy_count
+            if (
+                $tree[$first][$parentKey]['parent'] === null ||
+                (int)$r['remedy_count'] > (int)$tree[$first][$parentKey]['parent']['remedy_count']
+            ) {
+                $tree[$first][$parentKey]['parent'] = $r;
+            }
+        } else {
+            $r['tree_label'] = $childLabel;
+            $tree[$first][$parentKey]['subs'][] = $r;
+        }
+        $tree[$first][$parentKey]['total_remedies'] += (int)$r['remedy_count'];
+    }
+    // Pass 3: sort sub-rubrics alphabetically by the visible child label
+    foreach ($tree as $L => $bucket) {
+        foreach ($bucket as $k => $node) {
+            usort($tree[$L][$k]['subs'], function ($a, $b) {
+                return strcasecmp((string)($a['tree_label'] ?? $a['sub_category']), (string)($b['tree_label'] ?? $b['sub_category']));
+            });
+        }
+        // Sort parent keys alphabetically within letter
+        ksort($tree[$L]);
+    }
+    $browseGroups = $tree;
     $browseLetters = array_keys($browseGroups);
     sort($browseLetters);
 }
@@ -581,7 +779,7 @@ function syn_cat_icon(string $cat): string {
         'stomach' => 'fa-utensils',
         'abdomen' => 'fa-circle-dot',
         'rectum', 'stool' => 'fa-toilet',
-        'bladder', 'kidneys', 'urine', 'urinary' => 'fa-droplet',
+        'bladder', 'kidneys', 'urine', 'urinary', 'urethra' => 'fa-droplet',
         'male' => 'fa-mars',
         'female' => 'fa-venus',
         'respiration', 'respiratory', 'cough', 'expectoration' => 'fa-lungs',
@@ -592,9 +790,9 @@ function syn_cat_icon(string $cat): string {
         'skin' => 'fa-hand-dots',
         'sleep' => 'fa-bed',
         'perspiration' => 'fa-water',
-        'fever' => 'fa-temperature-high',
+        'chill', 'fever' => 'fa-temperature-high',
         'vertigo' => 'fa-arrows-spin',
-        'general', 'generalities' => 'fa-circle-user',
+        'general', 'generals', 'generalities' => 'fa-circle-user',
         default => 'fa-folder'
     };
 }
@@ -1007,6 +1205,50 @@ body:has(.syn-app) { overflow: hidden; }
 .syn-browse-row.syn-selected .syn-bw-add { opacity: 1; }
 .syn-browse-row .syn-bw-add:hover { color: var(--syn-accent); background: #fff; }
 .syn-browse-row.syn-selected .syn-bw-add { color: var(--syn-danger); }
+
+/* === Browse tree (parent rubric + nested sub-rubrics) === */
+.syn-tree-node { margin-bottom: 2px; }
+.syn-tree-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 18px; height: 18px;
+    border: none; background: transparent;
+    color: var(--syn-text-muted); cursor: pointer;
+    border-radius: 4px; padding: 0; margin-right: 4px;
+    transition: transform .15s ease, color .15s ease;
+    flex-shrink: 0;
+}
+.syn-tree-toggle:hover { color: var(--syn-accent); background: rgba(0,0,0,.04); }
+.syn-tree-toggle-empty { visibility: hidden; }
+.syn-tree-node.syn-open > .syn-browse-row .syn-tree-toggle { transform: rotate(90deg); color: var(--syn-accent); }
+.syn-tree-children {
+    display: none;
+    margin-left: 26px;
+    border-left: 2px solid var(--syn-border, #e5e7eb);
+    padding-left: 8px;
+    margin-top: 2px;
+}
+.syn-tree-node.syn-open > .syn-tree-children { display: block; }
+.syn-browse-row.syn-sub-row {
+    background: transparent;
+    border-color: transparent;
+    padding: 4px 8px;
+    font-size: 13px;
+}
+.syn-browse-row.syn-sub-row:hover { background: #f8fafc; }
+.syn-sub-name { color: var(--syn-text-muted); font-weight: 400; }
+.syn-browse-row.syn-sub-row.syn-selected .syn-sub-name { color: var(--syn-text); font-weight: 500; }
+.syn-bw-subcount {
+    font-size: 11px; font-weight: 600; color: var(--syn-accent);
+    background: var(--syn-accent-soft, rgba(59,130,246,.1));
+    padding: 1px 6px; border-radius: 10px; margin-right: 6px;
+    flex-shrink: 0;
+}
+.syn-bw-page {
+    font-size: 10px; color: var(--syn-text-dim, #9ca3af);
+    font-variant-numeric: tabular-nums;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
 .syn-rubric-row.syn-selected {
     background: #ecfdf5;
     border-color: #a7f3d0;
@@ -1695,22 +1937,77 @@ body:has(.syn-app) { overflow: hidden; }
                         <section class="syn-browse-letter" id="<?php echo $anchorId; ?>">
                             <h3><?php echo htmlspecialchars($letter); ?></h3>
                             <div class="syn-browse-list">
-                            <?php foreach ($browseGroups[$letter] as $rubric):
-                                $isSelected = in_array($rubric['id'], $selectedRubrics);
-                                $count = (int)$rubric['remedy_count'];
-                                $rubricJson = htmlspecialchars(json_encode($rubric['rubric']), ENT_QUOTES);
+                            <?php foreach ($browseGroups[$letter] as $rubricKey => $node):
+                                $parent      = $node['parent'];
+                                $subs        = $node['subs'];
+                                $totRem      = (int)$node['total_remedies'];
+                                $hasSubs     = !empty($subs);
+                                $parentId    = $parent ? (int)$parent['id'] : 0;
+                                $parentLabel = $node['label'];
+                                $parentCount = $parent ? (int)$parent['remedy_count'] : 0;
+                                $parentSel   = $parent ? in_array($parentId, $selectedRubrics) : false;
+                                $page        = $parent['verified_page'] ?? null;
+                                $rubricJson  = htmlspecialchars(json_encode($parentLabel), ENT_QUOTES);
+                                $rowId       = 'syn-tree-' . md5($letter . $rubricKey);
                             ?>
-                                <div class="syn-browse-row <?php echo $isSelected ? 'syn-selected' : ''; ?> <?php echo $count === 0 ? 'syn-zero' : ''; ?>"
-                                     id="syn-rubric-<?php echo (int)$rubric['id']; ?>"
-                                     onclick="synShowRemedies(<?php echo (int)$rubric['id']; ?>, <?php echo $rubricJson; ?>)"
-                                     title="<?php echo htmlspecialchars($rubric['rubric']); ?> &mdash; <?php echo $count; ?> remedies">
-                                    <span class="syn-bw-name"><?php echo htmlspecialchars($rubric['rubric']); ?></span>
-                                    <span class="syn-bw-count"><?php echo $count; ?></span>
-                                    <button type="button" class="syn-bw-add"
-                                            onclick="event.stopPropagation(); synToggleRubric(<?php echo (int)$rubric['id']; ?>)"
-                                            title="<?php echo $isSelected ? 'Remove from clipboard' : 'Add to clipboard'; ?>">
-                                        <i class="fas <?php echo $isSelected ? 'fa-times' : 'fa-plus'; ?>"></i>
-                                    </button>
+                                <div class="syn-tree-node <?php echo $hasSubs ? 'syn-has-subs' : ''; ?> <?php echo !$parent && $hasSubs ? 'syn-open' : ''; ?>">
+                                    <div class="syn-browse-row <?php echo $parentSel ? 'syn-selected' : ''; ?> <?php echo $parentCount === 0 && !$hasSubs ? 'syn-zero' : ''; ?>"
+                                         id="syn-rubric-<?php echo $parentId; ?>"
+                                         <?php if ($parent): ?>onclick="synShowRemedies(<?php echo $parentId; ?>, <?php echo $rubricJson; ?>)"<?php endif; ?>
+                                         title="<?php echo htmlspecialchars($parentLabel); ?>">
+                                        <?php if ($hasSubs): ?>
+                                        <button type="button" class="syn-tree-toggle" onclick="event.stopPropagation(); this.closest('.syn-tree-node').classList.toggle('syn-open');" aria-label="Expand sub-rubrics">
+                                            <i class="fas fa-caret-right"></i>
+                                        </button>
+                                        <?php else: ?>
+                                        <span class="syn-tree-toggle syn-tree-toggle-empty"></span>
+                                        <?php endif; ?>
+                                        <span class="syn-bw-name"><?php echo htmlspecialchars($parentLabel); ?></span>
+                                        <?php if ($hasSubs): ?>
+                                        <span class="syn-bw-subcount" title="<?php echo count($subs); ?> sub-rubrics, <?php echo $totRem; ?> remedies total">
+                                            +<?php echo count($subs); ?>
+                                        </span>
+                                        <?php endif; ?>
+                                        <span class="syn-bw-count"><?php echo $parentCount; ?></span>
+                                        <?php if ($page): ?>
+                                        <span class="syn-bw-page" title="Kent p.<?php echo (int)$page; ?>">p.<?php echo (int)$page; ?></span>
+                                        <?php endif; ?>
+                                        <?php if ($parent): ?>
+                                        <button type="button" class="syn-bw-add"
+                                                onclick="event.stopPropagation(); synToggleRubric(<?php echo $parentId; ?>)"
+                                                title="<?php echo $parentSel ? 'Remove from clipboard' : 'Add to clipboard'; ?>">
+                                            <i class="fas <?php echo $parentSel ? 'fa-times' : 'fa-plus'; ?>"></i>
+                                        </button>
+                                        <?php endif; ?>
+                                    </div>
+                                    <?php if ($hasSubs): ?>
+                                    <div class="syn-tree-children">
+                                        <?php foreach ($subs as $sub):
+                                            $subId    = (int)$sub['id'];
+                                            $subSel   = in_array($subId, $selectedRubrics);
+                                            $subCnt   = (int)$sub['remedy_count'];
+                                            $subPage  = $sub['verified_page'] ?? null;
+                                            $subLabel = $sub['tree_label'] ?? $sub['sub_category'];
+                                            $subJson  = htmlspecialchars(json_encode($parentLabel . ' — ' . $subLabel), ENT_QUOTES);
+                                        ?>
+                                        <div class="syn-browse-row syn-sub-row <?php echo $subSel ? 'syn-selected' : ''; ?> <?php echo $subCnt === 0 ? 'syn-zero' : ''; ?>"
+                                             id="syn-rubric-<?php echo $subId; ?>"
+                                             onclick="synShowRemedies(<?php echo $subId; ?>, <?php echo $subJson; ?>)"
+                                             title="<?php echo htmlspecialchars($parentLabel . ' — ' . $subLabel); ?>">
+                                            <span class="syn-bw-name syn-sub-name"><?php echo htmlspecialchars($subLabel); ?></span>
+                                            <span class="syn-bw-count"><?php echo $subCnt; ?></span>
+                                            <?php if ($subPage): ?>
+                                            <span class="syn-bw-page" title="Kent p.<?php echo (int)$subPage; ?>">p.<?php echo (int)$subPage; ?></span>
+                                            <?php endif; ?>
+                                            <button type="button" class="syn-bw-add"
+                                                    onclick="event.stopPropagation(); synToggleRubric(<?php echo $subId; ?>)"
+                                                    title="<?php echo $subSel ? 'Remove from clipboard' : 'Add to clipboard'; ?>">
+                                                <i class="fas <?php echo $subSel ? 'fa-times' : 'fa-plus'; ?>"></i>
+                                            </button>
+                                        </div>
+                                        <?php endforeach; ?>
+                                    </div>
+                                    <?php endif; ?>
                                 </div>
                             <?php endforeach; ?>
                             </div>

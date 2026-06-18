@@ -31,7 +31,7 @@
     <!-- SEO Landing: RadarOpus Comparison -->
     <url>
         <loc>https://curenexai.com/vs-radaropus</loc>
-        <lastmod>2026-05-06</lastmod>
+        <lastmod>2026-05-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -40,12 +40,80 @@
         </image:image>
     </url>
 
+    <!-- SEO Landing: RadarOpus Alternative -->
+    <url>
+        <loc>https://curenexai.com/radaropus-alternative</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://curenexai.com/assets/image/xrunbg.png</image:loc>
+            <image:title>Best RadarOpus Alternative in 2026 - AI-Powered Homeopathy Software</image:title>
+        </image:image>
+    </url>
+
+    <!-- SEO Landing: Best Homeopathy Software -->
+    <url>
+        <loc>https://curenexai.com/best-homeopathy-software</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://curenexai.com/assets/image/xrunbg.png</image:loc>
+            <image:title>Best Homeopathy Software in 2026 - CurenexAI</image:title>
+        </image:image>
+    </url>
+
+    <!-- SEO Landing: AI Homeopathy Software -->
+    <url>
+        <loc>https://curenexai.com/ai-homeopathy-software</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://curenexai.com/assets/image/xrunbg.png</image:loc>
+            <image:title>AI Homeopathy Software - CurenexAI</image:title>
+        </image:image>
+    </url>
+
+    <!-- SEO Landing: Cloud Homeopathy Software -->
+    <url>
+        <loc>https://curenexai.com/cloud-homeopathy-software</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://curenexai.com/assets/image/xrunbg.png</image:loc>
+            <image:title>Cloud Homeopathy Software - CurenexAI</image:title>
+        </image:image>
+    </url>
+
+    <!-- SEO Landing: Homeopathy Repertory Software -->
+    <url>
+        <loc>https://curenexai.com/homeopathy-repertory-software</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://curenexai.com/assets/image/xrunbg.png</image:loc>
+            <image:title>Homeopathy Repertory Software - CurenexAI</image:title>
+        </image:image>
+    </url>
+
     <!-- About -->
     <url>
         <loc>https://curenexai.com/about</loc>
-        <lastmod>2026-05-06</lastmod>
+        <lastmod>2026-05-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <!-- Author: Dr. Aysha Shirin -->
+    <url>
+        <loc>https://curenexai.com/authors/dr-aysha-shirin</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 
     <!-- Register (high-intent conversion page) -->

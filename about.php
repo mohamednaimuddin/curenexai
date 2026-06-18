@@ -37,14 +37,14 @@ $bodyClass = 'about-page';
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://curenexai.com/about.php">
     <meta property="og:title" content="About CurenexAI - AI-Powered Homeopathic Healthcare Software">
-    <meta property="og:description" content="CurenexAI is AI-powered homeopathy SOFTWARE for doctors - NOT a skin medicine. Learn about our intelligent diagnosis, digital repertory, and patient management features.">
+    <meta property="og:description" content="CurenexAI is an AI-powered homeopathy software platform for doctors. Learn about its founders, clinical workflow, digital repertory, and patient management tools.">
     <meta property="og:image" content="https://curenexai.com/assets/image/CURENEXAI PNG.png">
     <meta property="og:site_name" content="CurenexAI">
     
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About CurenexAI - AI-Powered Homeopathic Healthcare Software">
-    <meta name="twitter:description" content="CurenexAI is AI-powered homeopathy SOFTWARE for doctors - NOT a skin medicine.">
+    <meta name="twitter:description" content="CurenexAI is an AI-powered homeopathy software platform for doctors, with digital repertory, AI case support, and patient management.">
     <meta name="twitter:image" content="https://curenexai.com/assets/image/CURENEXAI PNG.png">
     
     <!-- FAVICON -->
@@ -57,7 +57,7 @@ $bodyClass = 'about-page';
         "@context": "https://schema.org",
         "@type": "AboutPage",
         "name": "About CurenexAI",
-        "description": "Learn about CurenexAI - AI-powered homeopathic healthcare software. NOT a skin medicine.",
+        "description": "Learn about CurenexAI, an AI-powered homeopathic healthcare software platform for doctors and clinics.",
         "url": "https://curenexai.com/about.php",
         "mainEntity": {
             "@type": "SoftwareApplication",
@@ -65,7 +65,7 @@ $bodyClass = 'about-page';
             "alternateName": ["Curenex AI", "CURENEXAI", "Curenex"],
             "applicationCategory": "HealthApplication",
             "operatingSystem": "Web, Android, iOS",
-            "description": "CurenexAI is an AI-powered homeopathic healthcare software platform designed for homeopathic doctors and practitioners. It is NOT a pharmaceutical product or skin medicine.",
+            "description": "CurenexAI is an AI-powered homeopathic healthcare software platform designed for homeopathic doctors and practitioners. It provides digital repertory, materia medica reference, patient management, AI-assisted case analysis, and prescription workflows.",
             "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -95,7 +95,7 @@ $bodyClass = 'about-page';
                 "name": "What is CurenexAI?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "CurenexAI (also written as Curenex AI) is an AI-powered homeopathic healthcare SOFTWARE platform. It is designed for homeopathic doctors (BHMS, MD Homeopathy) to manage their practice with intelligent diagnosis, digital repertory, materia medica database, patient management, and prescription generation. CurenexAI is NOT a skin medicine or pharmaceutical product."
+                    "text": "CurenexAI (also written as Curenex AI) is an AI-powered homeopathic healthcare software platform. It is designed for homeopathic doctors (BHMS, MD Homeopathy) to manage their practice with intelligent diagnosis support, digital repertory, materia medica database, patient management, and prescription generation. CurenexAI is separate from similarly named skincare or pharmaceutical products."
                 }
             },
             {
@@ -103,7 +103,7 @@ $bodyClass = 'about-page';
                 "name": "Is CurenexAI related to Curenex skin medicine?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "No, CurenexAI has NO relation to any skin medicine or pharmaceutical product called Curenex. CurenexAI is purely a DIGITAL SOFTWARE PLATFORM for homeopathic healthcare professionals. If you are looking for skin medicine, CurenexAI is not what you need - we are a software company providing AI-powered tools for homeopathic doctors."
+                    "text": "CurenexAI is separate from similarly named skincare or pharmaceutical products. CurenexAI refers to this digital software platform for homeopathic healthcare professionals, including AI-assisted case analysis, digital repertory tools, patient records, and prescription workflows."
                 }
             },
             {
@@ -129,6 +129,34 @@ $bodyClass = 'about-page';
                     "@type": "Answer",
                     "text": "CurenexAI stands out with its advanced AI integration, including Google Gemini AI for intelligent diagnosis and treatment suggestions. Unlike traditional homeopathy software, CurenexAI learns and adapts, providing personalized clinical decision support based on the latest homeopathic research and your patient data."
                 }
+            }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA.ORG - FOUNDERS AND CLINICAL CONTRIBUTOR -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://curenexai.com/about#founder-mohamed-naimuddin",
+                "name": "Er. Mohamed Naimuddin U S",
+                "jobTitle": "Founder, developer and architect of CurenexAI",
+                "url": "https://curenexai.com/about",
+                "sameAs": ["https://www.linkedin.com/in/mohamed-naimuddin"],
+                "knowsAbout": ["AI software development", "retrieval-augmented generation", "homeopathy clinical software", "healthcare SaaS"]
+            },
+            {
+                "@type": "Person",
+                "@id": "https://curenexai.com/authors/dr-aysha-shirin#person",
+                "name": "Dr. Aysha Shirin",
+                "honorificPrefix": "Dr.",
+                "hasCredential": "BHMS",
+                "jobTitle": "Co-Founder and clinical knowledge contributor",
+                "url": "https://curenexai.com/authors/dr-aysha-shirin",
+                "knowsAbout": ["Homeopathy", "homeopathic case analysis", "clinical workflows", "materia medica", "repertory analysis"]
             }
         ]
     }
@@ -1137,7 +1165,7 @@ $bodyClass = 'about-page';
             </div>
             <div class="disclaimer-text">
                 <h3><i class="fas fa-shield-alt"></i> Important Clarification</h3>
-                <p><strong>CurenexAI is a SOFTWARE platform, NOT a skin medicine or pharmaceutical product.</strong> If you are searching for Curenex skin cream or medicine, you are in the wrong place. CurenexAI is an AI-powered digital tool designed exclusively for homeopathic healthcare professionals.</p>
+                <p><strong>CurenexAI is a homeopathic clinical software platform.</strong> It is separate from similarly named skincare, cosmetic, or pharmaceutical products. On this website, CurenexAI refers to a digital tool for homeopathic healthcare professionals, with AI-assisted case analysis, digital repertory, patient management, and prescription workflows.</p>
             </div>
         </div>
     </div>
@@ -1275,7 +1303,7 @@ $bodyClass = 'about-page';
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p><strong>No, absolutely not.</strong> CurenexAI is a completely different product. It is a SOFTWARE PLATFORM for homeopathic doctors, not a pharmaceutical or skincare product. If you're looking for skin medicine, CurenexAI is not what you need.</p>
+                        <p>CurenexAI is separate from similarly named skincare or pharmaceutical products. This website is about CurenexAI homeopathic clinical software: a digital platform for doctors that includes AI-assisted case analysis, repertory tools, patient records, and prescription workflows.</p>
                     </div>
                 </div>
                 
@@ -1315,7 +1343,7 @@ $bodyClass = 'about-page';
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, absolutely. CurenexAI uses 256-bit encryption, per-account security protection, and strict access controls to protect your patient data. We are committed to HIPAA compliance and data privacy standards.</p>
+                        <p>CurenexAI protects clinical accounts with password hashing, CSRF protection, authenticated sessions, rate limiting on sensitive actions, and per-account data access controls. Patient records are separated by practitioner account, and AI features are designed as decision support rather than a replacement for professional medical judgment.</p>
                     </div>
                 </div>
             </div>

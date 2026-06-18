@@ -35,7 +35,7 @@ class HomeoBot {
             'rubrics' => '50,000+'
         ],
         'pricing' => 'FREE during beta period',
-        'security' => 'HIPAA compliant with 256-bit encryption',
+        'security' => 'Account-based patient data access with security controls and privacy-minded workflows',
         'contact' => '+919061565631 (WhatsApp)'
     ];
     
@@ -114,7 +114,7 @@ class HomeoBot {
         'security' => [
             'keywords' => ['secure', 'security', 'safe', 'privacy', 'hipaa', 'data protection', 'encrypted'],
             'responses' => [
-                "Your data is protected with:\n• 256-bit encryption\n• HIPAA compliance\n• Secure cloud storage\n• Regular backups\n\nPatient privacy is our top priority! 🔒"
+                "Your data is protected with account-based access controls, secure session handling, restricted patient record visibility, and privacy-minded workflows. Patient privacy is a core design priority."
             ]
         ],
         

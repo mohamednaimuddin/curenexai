@@ -5,8 +5,9 @@
 # Keywords: Curenex, CurenexAI, Curenex AI, curenex
 # ====================================================
 
-# Prevent directory listing
-Options -Indexes +FollowSymLinks
+# Directory listing should be disabled at vhost/server level on production.
+# Avoid Options here because some Ubuntu Apache AllowOverride settings reject it
+# and return 500 for every request.
 
 # ====================================================
 # SEO REDIRECTS & CANONICAL URLS
@@ -76,6 +77,10 @@ Options -Indexes +FollowSymLinks
     # Block access to tests directory in production
     RewriteCond %{REQUEST_URI} ^/tests/ [NC]
     RewriteRule .* - [F,L]
+
+    # Block executable PHP files inside uploads without using nested <If> blocks.
+    RewriteCond %{REQUEST_URI} ^/uploads/ [NC]
+    RewriteRule \.php$ - [F,L]
 </IfModule>
 
 # Protect sensitive files
@@ -87,19 +92,6 @@ Options -Indexes +FollowSymLinks
         Order allow,deny
         Deny from all
     </IfModule>
-</FilesMatch>
-
-# Block access to PHP files in uploads directory
-<FilesMatch "\.php$">
-    <If "%{REQUEST_URI} =~ m#^/uploads/#">
-        <IfModule mod_authz_core.c>
-            Require all denied
-        </IfModule>
-        <IfModule !mod_authz_core.c>
-            Order allow,deny
-            Deny from all
-        </IfModule>
-    </If>
 </FilesMatch>
 
 # Block access to log files
@@ -135,8 +127,8 @@ Options -Indexes +FollowSymLinks
     # Permissions Policy
     Header set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
     
-    # Remove server signature
-    Header unset Server
+    # Remove X-Powered-By where permitted. Server header removal should be done
+    # in Apache server config, not .htaccess, on many Ubuntu deployments.
     Header unset X-Powered-By
 </IfModule>
 
@@ -261,11 +253,10 @@ Options -Indexes +FollowSymLinks
 # ====================================================
 # ERROR DOCUMENTS
 # ====================================================
-ErrorDocument 404 index.php
-ErrorDocument 500 index.php
+ErrorDocument 404 /index.php
 
-# 403 error page (404/500 already set above)
-ErrorDocument 403 index.php
+# 403 error page
+ErrorDocument 403 /index.php
 
 # ====================================================
 # HTTP/2 (and HTTP/3) PROTOCOL

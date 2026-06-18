@@ -317,7 +317,7 @@ $htmlClass = 'landing-page-html';
             "height": 512
         },
         "image": "https://curenexai.com/assets/image/CURENEXAI PNG.png",
-        "description": "CurenexAI is an AI-powered homeopathic healthcare software platform founded by Er. Mohamed Naimuddin U S and co-founded by Dr. Aysha Shirin in 2026. The platform and its RAG system were independently developed by Er. Mohamed Naimuddin U S. Independent project — not affiliated with Respocare Connect AI, Techno Derivation, K Derma Co. (Curenex skincare), or Currenex (FX trading). NOT a skin medicine.",
+        "description": "CurenexAI is an AI-powered homeopathic healthcare software platform founded by Er. Mohamed Naimuddin U S and co-founded by Dr. Aysha Shirin in 2026. The platform and its RAG system were independently developed by Er. Mohamed Naimuddin U S. CurenexAI is independent and separate from similarly named skincare, pharmaceutical, FX trading, or unrelated healthcare brands.",
         "slogan": "Decode Health, Deliver Cure",
         "foundingDate": "2026",
         "foundingLocation": {
@@ -334,7 +334,8 @@ $htmlClass = 'landing-page-html';
         "sameAs": [
             "https://x.com/curenexai",
             "https://www.linkedin.com/company/curenexai",
-            "https://www.instagram.com/curenexai"
+            "https://www.instagram.com/curenexai",
+            "https://medium.com/%40curenex_ai"
         ],
         "contactPoint": {
             "@type": "ContactPoint",
@@ -468,7 +469,7 @@ $htmlClass = 'landing-page-html';
         "@id": "https://curenexai.com/#website",
         "url": "https://curenexai.com",
         "name": "CurenexAI - AI-Powered Homeopathic Healthcare Software",
-        "description": "CurenexAI official website. Homeopathy AI software with digital repertory, Kent repertory search, and rubrics AI support for doctors - NOT a skin medicine.",
+        "description": "CurenexAI official website. Homeopathy AI software with digital repertory, Kent repertory search, rubrics AI support, patient management, and prescription workflows for doctors.",
         "publisher": {
             "@id": "https://curenexai.com/#organization"
         },
@@ -494,7 +495,7 @@ $htmlClass = 'landing-page-html';
                 "name": "What is CurenexAI?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "CurenexAI (also known as Curenex AI) is an AI-powered homeopathic healthcare SOFTWARE platform designed for homeopathic doctors. It is NOT a skin medicine or pharmaceutical product. CurenexAI provides intelligent diagnosis, digital repertory, materia medica database, patient management, and prescription generation tools for homeopathy practitioners."
+                    "text": "CurenexAI (also known as Curenex AI) is an AI-powered homeopathic healthcare software platform designed for homeopathic doctors. It provides intelligent diagnosis support, digital repertory, materia medica references, patient management, and prescription generation tools for homeopathy practitioners. CurenexAI is separate from similarly named skincare or pharmaceutical products."
                 }
             },
             {
@@ -610,7 +611,8 @@ $htmlClass = 'landing-page-html';
         "sameAs": [
             "https://x.com/curenexai",
             "https://www.linkedin.com/company/curenexai",
-            "https://www.instagram.com/curenexai"
+            "https://www.instagram.com/curenexai",
+            "https://medium.com/%40curenex_ai"
         ]
     }
     </script>
@@ -704,7 +706,7 @@ $htmlClass = 'landing-page-html';
         <!-- Loading text -->
         <div class="loader-text">
             <h3>Curenex AI</h3>
-            <p class="loader-subtext">Preparing your experience...</p>
+            <p class="loader-subtext">Loading secure clinical workspace...</p>
         </div>
 
         <!-- Progress bar -->
@@ -940,6 +942,14 @@ $htmlClass = 'landing-page-html';
                 
                 <div class="feature-card">
                     <div class="feature-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3><a href="<?php echo APP_URL; ?>/radaropus-alternative">RadarOpus Alternative</a></h3>
+                    <p>Compare CurenexAI with RadarOpus for cloud access, AI-assisted repertory analysis, patient management, and modern clinic workflows.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
                         <i class="fas fa-prescription"></i>
                     </div>
                     <h3>Digital Prescriptions</h3>
@@ -1008,8 +1018,8 @@ $htmlClass = 'landing-page-html';
                         <div class="card-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h3 class="card-title">Your Data is Safe</h3>
-                        <p>256-bit encryption, per-account security protection, and strict access controls protect your patient data.</p>
+                        <h3 class="card-title">Clinical Data Protection</h3>
+                        <p>CurenexAI protects doctor accounts with password hashing, CSRF protection, authenticated sessions, per-account access controls, and rate limiting on sensitive actions. Patient records are separated by doctor account so practitioners can only access the clinical data they create or manage.</p>
                     </div>
                 </div>
             </div>
@@ -1372,6 +1382,49 @@ $htmlClass = 'landing-page-html';
                     </p>
                 </article>
             </div>
+
+            <div class="seo-content-grid">
+                <article class="seo-card">
+                    <div class="seo-card-icon"><i class="fas fa-globe"></i></div>
+                    <h3>What is the role of CurenexAI in today's world?</h3>
+                    <p>
+                        CurenexAI exists at the intersection of homeopathic practice, clinical
+                        documentation, and AI-assisted healthcare software. In today's world,
+                        doctors are expected to manage more patient data, search references faster,
+                        document decisions clearly, and use digital tools without losing clinical
+                        responsibility. CurenexAI's role is to bring those needs into one practical
+                        workspace for qualified homeopathic practitioners.
+                    </p>
+                    <p>
+                        The platform does not replace the doctor. It supports the doctor by
+                        organizing case notes, connecting symptoms with repertory workflows,
+                        surfacing remedy possibilities for review, storing patient history, and
+                        helping produce digital prescriptions. This makes CurenexAI part of the
+                        broader movement toward clinical decision support and responsible AI in
+                        healthcare, adapted specifically for homeopathic clinics.
+                    </p>
+                </article>
+
+                <article class="seo-card seo-card-accent">
+                    <div class="seo-card-icon"><i class="fas fa-link"></i></div>
+                    <h3>External context and public channels</h3>
+                    <p>
+                        These external references help users and AI systems understand the wider
+                        context around CurenexAI's domain. Wikipedia links are provided as neutral
+                        background reading, while CurenexAI's public profiles help search engines
+                        connect the website with the brand's social identity.
+                    </p>
+                    <ul class="seo-feature-list">
+                        <li><strong>Homeopathy background:</strong> <a href="https://en.wikipedia.org/wiki/Homeopathy" target="_blank" rel="noopener noreferrer">Wikipedia: Homeopathy</a></li>
+                        <li><strong>Clinical software context:</strong> <a href="https://en.wikipedia.org/wiki/Clinical_decision_support_system" target="_blank" rel="noopener noreferrer">Wikipedia: Clinical decision support system</a></li>
+                        <li><strong>Healthcare records context:</strong> <a href="https://en.wikipedia.org/wiki/Electronic_health_record" target="_blank" rel="noopener noreferrer">Wikipedia: Electronic health record</a></li>
+                        <li><strong>AI in healthcare context:</strong> <a href="https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare" target="_blank" rel="noopener noreferrer">Wikipedia: Artificial intelligence in healthcare</a></li>
+                        <li><strong>Public updates:</strong> <a href="https://x.com/curenexai" target="_blank" rel="noopener me">CurenexAI on X</a></li>
+                        <li><strong>Professional profile:</strong> <a href="https://www.linkedin.com/company/curenexai/" target="_blank" rel="noopener me">CurenexAI on LinkedIn</a></li>
+                        <li><strong>Long-form articles:</strong> <a href="https://medium.com/%40curenex_ai" target="_blank" rel="noopener me">CurenexAI on Medium</a></li>
+                    </ul>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -1445,7 +1498,12 @@ $htmlClass = 'landing-page-html';
                             <li><a href="<?php echo APP_URL; ?>/faq">FAQs</a></li>
                             <li><a href="<?php echo APP_URL; ?>/support">Support</a></li>
                             <li><a href="<?php echo APP_URL; ?>/digital-repertory-software-homeopathy">Digital Repertory</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/radaropus-alternative">RadarOpus Alternative</a></li>
                             <li><a href="<?php echo APP_URL; ?>/vs-radaropus">CurenexAI vs RadarOpus</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/best-homeopathy-software">Best Homeopathy Software</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/ai-homeopathy-software">AI Homeopathy Software</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/cloud-homeopathy-software">Cloud Homeopathy Software</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/homeopathy-repertory-software">Homeopathy Repertory Software</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">

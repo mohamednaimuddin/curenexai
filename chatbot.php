@@ -133,7 +133,7 @@ PLATFORM FEATURES (mention briefly only when asked):
 
 KEY FACTS:
 - FREE during beta period
-- Cloud-based, HIPAA compliant, 256-bit encryption
+- Cloud-based account access with security controls, privacy-minded workflows, and restricted patient data access
 - 500+ doctors, 10,000+ patients, 50,000+ remedies
 
 "YOU COULD BE FEATURED" PROGRAM:

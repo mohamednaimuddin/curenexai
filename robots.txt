@@ -23,6 +23,7 @@ Host: https://curenexai.com
 User-agent: Googlebot
 Allow: /
 Allow: /about.php
+Allow: /authors/dr-aysha-shirin.php
 Allow: /register.php
 # login.php - noindex set on page, not explicitly allowed
 # index.php - excluded (301 redirects to /)
@@ -30,6 +31,13 @@ Allow: /register.php
 Allow: /documentation.php
 Allow: /faq.php
 Allow: /support.php
+Allow: /radaropus-alternative.php
+Allow: /vs-radaropus.php
+Allow: /digital-repertory-software-homeopathy.php
+Allow: /best-homeopathy-software.php
+Allow: /ai-homeopathy-software.php
+Allow: /cloud-homeopathy-software.php
+Allow: /homeopathy-repertory-software.php
 Allow: /privacy.php
 Allow: /terms.php
 Allow: /assets/image/
@@ -58,11 +66,19 @@ Crawl-delay: 1
 User-agent: Bingbot
 Allow: /
 Allow: /about.php
+Allow: /authors/dr-aysha-shirin.php
 Allow: /register.php
 # index.php - excluded (301 redirects to /)
 Allow: /documentation.php
 Allow: /faq.php
 Allow: /support.php
+Allow: /radaropus-alternative.php
+Allow: /vs-radaropus.php
+Allow: /digital-repertory-software-homeopathy.php
+Allow: /best-homeopathy-software.php
+Allow: /ai-homeopathy-software.php
+Allow: /cloud-homeopathy-software.php
+Allow: /homeopathy-repertory-software.php
 Allow: /privacy.php
 Allow: /terms.php
 Allow: /assets/image/

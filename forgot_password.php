@@ -342,6 +342,41 @@ $htmlClass = 'auth-page-html';
 <?php require_once 'includes/header.php'; ?>
 
 <style>
+    html.auth-page-html,
+    body.auth-page {
+        height: auto;
+        min-height: 100%;
+        max-height: none;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: static;
+        width: auto;
+    }
+
+    .auth-container {
+        max-width: 820px;
+        max-height: none;
+        min-height: 100vh;
+        overflow: visible;
+        padding: 24px 12px;
+        margin: 0 auto;
+        justify-content: flex-start;
+        gap: 22px;
+    }
+
+    .auth-box {
+        max-width: 420px;
+        max-height: none;
+        flex: 0 0 auto;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .auth-body {
+        flex: 0 0 auto;
+        overflow: visible;
+    }
+
     .auth-container::before {
         content: '';
         position: fixed;
@@ -353,6 +388,48 @@ $htmlClass = 'auth-page-html';
         opacity: 0.04;
         pointer-events: none;
         z-index: 0;
+    }
+
+    .auth-knowledge-block {
+        width: 100%;
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 22px;
+        background: rgba(255, 255, 255, 0.94);
+        border: 1px solid #dbe7e5;
+        border-radius: 18px;
+        box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+        color: #1f2937;
+        line-height: 1.65;
+    }
+
+    .auth-knowledge-block h2 {
+        margin: 0 0 10px;
+        font-size: 1.2rem;
+        color: #0f766e;
+    }
+
+    .auth-knowledge-block p {
+        margin: 0 0 12px;
+        color: #475569;
+    }
+
+    .auth-knowledge-block ul {
+        margin: 0;
+        padding-left: 20px;
+        color: #475569;
+    }
+
+    @media (max-width: 480px) {
+        .auth-container {
+            padding: 18px 8px;
+            gap: 18px;
+        }
+
+        .auth-box,
+        .auth-knowledge-block {
+            max-width: 100%;
+        }
     }
 </style>
 
@@ -390,7 +467,7 @@ $htmlClass = 'auth-page-html';
                     <div class="form-group">
                         <label for="email"><i class="fas fa-envelope me-2"></i>Email Address</label>
                         <input type="email" id="email" name="email" class="form-control" 
-                               placeholder="Enter your registered email" required autofocus>
+                               placeholder="Enter your registered email" required>
                     </div>
                     
                     <button type="submit" name="submit_email" class="btn btn-primary btn-block">
@@ -456,6 +533,17 @@ $htmlClass = 'auth-page-html';
             <?php endif; ?>
         </div>
     </div>
+
+    <section class="auth-knowledge-block" aria-labelledby="account-recovery-title">
+        <h2 id="account-recovery-title">How CurenexAI account recovery works</h2>
+        <p>CurenexAI uses link-based password recovery for registered doctor accounts. When a practitioner requests a reset, the system creates a single-use 64-character token, stores it with a password-reset purpose, and sends a secure reset link to the registered email address.</p>
+        <p>Password reset links expire after 30 minutes. To protect account privacy, the public form does not reveal whether an email address exists unless debug mode is explicitly enabled for development. Reset requests are rate-limited to reduce abuse and automated guessing.</p>
+        <ul>
+            <li><strong>Token lifetime:</strong> password reset links are valid for 30 minutes.</li>
+            <li><strong>Abuse protection:</strong> reset requests are rate-limited per IP address.</li>
+            <li><strong>Password handling:</strong> new passwords are stored only as server-side password hashes, not as readable text.</li>
+        </ul>
+    </section>
 </div>
 
 <style>

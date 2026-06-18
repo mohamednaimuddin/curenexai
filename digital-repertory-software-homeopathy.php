@@ -301,6 +301,38 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
             border-top: 4px solid var(--accent);
         }
 
+        .comparison-table-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: #fff;
+            box-shadow: 0 14px 36px rgba(15, 23, 42, 0.06);
+        }
+
+        .comparison-table {
+            width: 100%;
+            min-width: 720px;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px 18px;
+            border-bottom: 1px solid var(--line);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .comparison-table thead th {
+            background: linear-gradient(135deg, #ecfdf5, #f0fdfa);
+            color: var(--brand-strong);
+        }
+
+        .comparison-table tbody tr:last-child th,
+        .comparison-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
         .faq {
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -463,6 +495,49 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
         </section>
 
         <section>
+            <h2>Digital repertory software comparison</h2>
+            <p class="section-copy">For doctors comparing digital repertory software, the most useful distinction is whether the tool only searches rubrics or whether it connects repertory work with the complete clinical workflow.</p>
+            <div class="comparison-table-wrap">
+                <table class="comparison-table" aria-label="Digital repertory software comparison">
+                    <thead>
+                        <tr>
+                            <th scope="col">Capability</th>
+                            <th scope="col">Traditional repertory software</th>
+                            <th scope="col">CurenexAI digital repertory workflow</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Rubric search</th>
+                            <td>Searches repertory entries, often as a standalone lookup task.</td>
+                            <td>Connects rubric search with patient case notes, remedy review, and clinical context.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">AI assistance</th>
+                            <td>Usually limited or absent; the doctor manually organizes every comparison.</td>
+                            <td>Uses AI-assisted review to surface remedy possibilities while keeping the doctor responsible for decisions.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Patient records</th>
+                            <td>Often handled in a separate clinic system or paper file.</td>
+                            <td>Keeps patients, consultations, follow-ups, prescriptions, and repertory work in one account-based workflow.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cloud access</th>
+                            <td>May depend on local installation or device-specific setup.</td>
+                            <td>Runs in the browser so doctors can use the same workflow across modern devices.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Citation-ready summary</th>
+                            <td>Best described as a digital version of repertory lookup.</td>
+                            <td>Best described as AI-assisted homeopathy software that combines repertory, materia medica context, patient management, and prescriptions.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
             <h2>Frequently asked questions</h2>
             <div class="faq">
                 <article class="card">
@@ -496,7 +571,7 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
         </section>
 
         <footer>
-            CurenexAI is homeopathic clinical software. It is not a medicine or skincare product. <a href="<?php echo APP_URL; ?>/vs-radaropus">See how CurenexAI compares with RadarOpus &rarr;</a>
+            CurenexAI is homeopathic clinical software. It is not a medicine or skincare product. <a href="<?php echo APP_URL; ?>/radaropus-alternative">Explore CurenexAI as a RadarOpus alternative &rarr;</a>
         </footer>
     </div>
 </body>

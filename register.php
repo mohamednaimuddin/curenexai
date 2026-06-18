@@ -493,7 +493,7 @@ $htmlClass = 'auth-page-html';
     <div class="terms-modal-content">
         <div class="terms-modal-header">
             <h2><i class="fas fa-file-contract"></i> Terms and Conditions</h2>
-            <button class="terms-close-btn" onclick="closeTermsModal()">&times;</button>
+            <button class="terms-close-btn" onclick="closeTermsModal()" type="button" aria-label="Close Terms and Conditions modal" title="Close Terms and Conditions">&times;</button>
         </div>
         <div class="terms-modal-body">
             <p class="terms-effective-date"><strong>Effective Date:</strong> December 2024</p>
@@ -639,7 +639,7 @@ $htmlClass = 'auth-page-html';
     <div class="terms-modal-content">
         <div class="terms-modal-header" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
             <h2><i class="fas fa-shield-alt"></i> Privacy Policy</h2>
-            <button class="terms-close-btn" onclick="closePrivacyModal()">&times;</button>
+            <button class="terms-close-btn" onclick="closePrivacyModal()" type="button" aria-label="Close Privacy Policy modal" title="Close Privacy Policy">&times;</button>
         </div>
         <div class="terms-modal-body">
             <p class="terms-effective-date"><strong>Effective Date:</strong> December 2024</p>
