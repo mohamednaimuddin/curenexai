@@ -6,6 +6,16 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18250112030"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WDBLVKCVG1');
+      gtag('config', 'AW-18250112030');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -579,7 +589,12 @@ $pageTitle = 'Digital Repertory Software for Homeopathy | CurenexAI';
         </section>
 
         <footer>
-            CurenexAI is homeopathic clinical software. It is not a medicine or skincare product. <a href="<?php echo APP_URL; ?>/vs-radaropus">See how CurenexAI compares with RadarOpus &rarr;</a>
+            CurenexAI is homeopathic clinical software. It is not a medicine or skincare product.
+            <a href="<?php echo APP_URL; ?>/kent-repertory-online">Kent repertory online &rarr;</a>
+            <span> | </span>
+            <a href="<?php echo APP_URL; ?>/materia-medica">Explore online materia medica &rarr;</a>
+            <span> | </span>
+            <a href="<?php echo APP_URL; ?>/vs-radaropus">See how CurenexAI compares with RadarOpus &rarr;</a>
         </footer>
     </div>
 </body>

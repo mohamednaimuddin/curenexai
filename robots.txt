@@ -8,7 +8,7 @@
 # Website: https://curenexai.com
 # Brand: CurenexAI, Curenex AI, CURENEXAI
 # Tagline: Decode Health, Deliver Cure
-# Last Updated: 2026-04-10
+# Last Updated: 2026-06-18
 # ==================================================
 
 # Sitemap Location - CRITICAL FOR SEO
@@ -22,16 +22,16 @@ Host: https://curenexai.com
 # ===================
 User-agent: Googlebot
 Allow: /
-Allow: /about.php
-Allow: /register.php
-# login.php - noindex set on page, not explicitly allowed
+Allow: /about
+Allow: /register
+# login - noindex set on page, not explicitly allowed
 # index.php - excluded (301 redirects to /)
-# forgot_password.php - excluded (utility auth page)
-Allow: /documentation.php
-Allow: /faq.php
-Allow: /support.php
-Allow: /privacy.php
-Allow: /terms.php
+# forgot_password - excluded (utility auth page)
+Allow: /documentation
+Allow: /faq
+Allow: /support
+Allow: /privacy
+Allow: /terms
 Allow: /assets/image/
 Allow: /assets/css/
 Allow: /assets/js/
@@ -57,14 +57,14 @@ Crawl-delay: 1
 # ===================
 User-agent: Bingbot
 Allow: /
-Allow: /about.php
-Allow: /register.php
+Allow: /about
+Allow: /register
 # index.php - excluded (301 redirects to /)
-Allow: /documentation.php
-Allow: /faq.php
-Allow: /support.php
-Allow: /privacy.php
-Allow: /terms.php
+Allow: /documentation
+Allow: /faq
+Allow: /support
+Allow: /privacy
+Allow: /terms
 Allow: /assets/image/
 Disallow: /admin/
 Disallow: /superadmin/
@@ -83,7 +83,7 @@ Crawl-delay: 2
 # ===================
 User-agent: Yandex
 Allow: /
-Allow: /about.php
+Allow: /about
 Disallow: /admin/
 Disallow: /api/
 Disallow: /config/
@@ -95,7 +95,7 @@ Crawl-delay: 3
 # ===================
 User-agent: DuckDuckBot
 Allow: /
-Allow: /about.php
+Allow: /about
 Disallow: /admin/
 Disallow: /api/
 Disallow: /config/
@@ -105,7 +105,7 @@ Disallow: /config/
 # ===================
 User-agent: Baiduspider
 Allow: /
-Allow: /about.php
+Allow: /about
 Disallow: /admin/
 Disallow: /api/
 Crawl-delay: 3
@@ -115,12 +115,12 @@ Crawl-delay: 3
 # ===================
 User-agent: GPTBot
 Allow: /
-Allow: /about.php
-Allow: /documentation.php
-Allow: /faq.php
-Allow: /support.php
-Allow: /privacy.php
-Allow: /terms.php
+Allow: /about
+Allow: /documentation
+Allow: /faq
+Allow: /support
+Allow: /privacy
+Allow: /terms
 Allow: /llms.txt
 Allow: /robots.txt
 Allow: /sitemap.xml
@@ -144,12 +144,12 @@ Crawl-delay: 2
 
 User-agent: ChatGPT-User
 Allow: /
-Allow: /about.php
-Allow: /documentation.php
-Allow: /faq.php
-Allow: /support.php
-Allow: /privacy.php
-Allow: /terms.php
+Allow: /about
+Allow: /documentation
+Allow: /faq
+Allow: /support
+Allow: /privacy
+Allow: /terms
 Allow: /llms.txt
 Allow: /robots.txt
 Allow: /sitemap.xml
@@ -173,12 +173,12 @@ Crawl-delay: 2
 
 User-agent: OAI-SearchBot
 Allow: /
-Allow: /about.php
-Allow: /documentation.php
-Allow: /faq.php
-Allow: /support.php
-Allow: /privacy.php
-Allow: /terms.php
+Allow: /about
+Allow: /documentation
+Allow: /faq
+Allow: /support
+Allow: /privacy
+Allow: /terms
 Allow: /llms.txt
 Allow: /robots.txt
 Allow: /sitemap.xml
@@ -205,12 +205,12 @@ Crawl-delay: 2
 # ===================
 User-agent: Google-Extended
 Allow: /
-Allow: /about.php
-Allow: /documentation.php
-Allow: /faq.php
-Allow: /support.php
-Allow: /privacy.php
-Allow: /terms.php
+Allow: /about
+Allow: /documentation
+Allow: /faq
+Allow: /support
+Allow: /privacy
+Allow: /terms
 Allow: /llms.txt
 Allow: /robots.txt
 Allow: /sitemap.xml
@@ -234,12 +234,12 @@ Crawl-delay: 2
 
 User-agent: GoogleOther
 Allow: /
-Allow: /about.php
-Allow: /documentation.php
-Allow: /faq.php
-Allow: /support.php
-Allow: /privacy.php
-Allow: /terms.php
+Allow: /about
+Allow: /documentation
+Allow: /faq
+Allow: /support
+Allow: /privacy
+Allow: /terms
 Allow: /llms.txt
 Allow: /robots.txt
 Allow: /sitemap.xml
@@ -268,16 +268,16 @@ User-agent: *
 
 # Allow all public pages
 Allow: /
-Allow: /about.php
-Allow: /register.php
+Allow: /about
+Allow: /register
 # index.php - excluded (301 redirects to /)
-# forgot_password.php - excluded (utility auth page)
-# login.php - has noindex meta tag
-Allow: /documentation.php
-Allow: /faq.php
-Allow: /support.php
-Allow: /privacy.php
-Allow: /terms.php
+# forgot_password - excluded (utility auth page)
+# login - has noindex meta tag
+Allow: /documentation
+Allow: /faq
+Allow: /support
+Allow: /privacy
+Allow: /terms
 Allow: /assets/
 
 # Block administrative and private sections

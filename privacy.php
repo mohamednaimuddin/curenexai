@@ -11,12 +11,13 @@ $bodyClass = 'legal-page';
 <html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WDBLVKCVG1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18250112030"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-WDBLVKCVG1');
+      gtag('config', 'AW-18250112030');
     </script>
     
     <meta charset="UTF-8">

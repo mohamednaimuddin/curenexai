@@ -13,28 +13,17 @@ $selectedRubrics = $_GET['rubrics'] ?? [];
 // flag even when the search branch below did not run.
 $stopWordsOnlyQuery = false;
 
-// Only show the Kent verified badge when verification source maps to
-// Kent Mind Rubrics pages 1-10 or 1-30.
+// Only show the Kent verified badge for rubrics cross-checked against
+// Homeoint's Kent Repertory source.
 function isKentMindRubrics1To10VerifiedSource(array $row): bool {
     if (!empty($row['is_verified'])) {
-        return true;
+        $normalizedSource = strtolower(preg_replace('/[^a-z0-9]+/', '', (string)($row['verified_source'] ?? '')));
+        return strpos($normalizedSource, 'homeointkentrepertory') !== false;
     }
 
     $normalizedSource = strtolower(preg_replace('/[^a-z0-9]+/', '', (string)($row['verified_source'] ?? '')));
 
-    $acceptedFragments = [
-        'kentmind110', 'kentmind130', 'kentmind195',
-        'kentmindrubrics110', 'kentmindrubrics130', 'kentmindrubrics195',
-        'kentmindrubrics110page', 'kentmindrubrics130page', 'kentmindrubrics195page',
-        'kentmindrubrics110pagepdf', 'kentmindrubrics130pagepdf', 'kentmindrubrics195pagepdf'
-    ];
-
-    foreach ($acceptedFragments as $fragment) {
-        if (strpos($normalizedSource, $fragment) !== false) {
-            return true;
-        }
-    }
-    return false;
+    return strpos($normalizedSource, 'homeointkentrepertory') !== false;
 }
 
 // Get repertory statistics
@@ -984,6 +973,20 @@ body:has(.syn-app) { overflow: hidden; }
 .syn-browse-row .syn-bw-name {
     flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     color: var(--syn-text);
+    min-width: 0;
+}
+.syn-browse-row .syn-bw-main {
+    flex: 1;
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.syn-browse-row .syn-bw-tools {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 .syn-browse-row.syn-zero .syn-bw-name { color: var(--syn-text-dim); }
 .syn-browse-row .syn-bw-count {
@@ -993,6 +996,34 @@ body:has(.syn-app) { overflow: hidden; }
     font-size: 12px; font-weight: 600;
     color: var(--syn-text-muted);
     padding: 0 4px;
+}
+.syn-browse-row .syn-bw-kent {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 1px 6px;
+    border-radius: 999px;
+    border: 1px solid #6ee7b7;
+    background: #d1fae5;
+    color: #065f46;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.syn-clip-kent {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    margin-left: 5px;
+    padding: 1px 6px;
+    border-radius: 999px;
+    border: 1px solid #6ee7b7;
+    background: #d1fae5;
+    color: #065f46;
+    font-size: 9px;
+    font-weight: 700;
+    vertical-align: middle;
 }
 .syn-browse-row.syn-zero .syn-bw-count { color: #cbd5e1; }
 .syn-browse-row .syn-bw-add {
@@ -1703,14 +1734,23 @@ body:has(.syn-app) { overflow: hidden; }
                                 <div class="syn-browse-row <?php echo $isSelected ? 'syn-selected' : ''; ?> <?php echo $count === 0 ? 'syn-zero' : ''; ?>"
                                      id="syn-rubric-<?php echo (int)$rubric['id']; ?>"
                                      onclick="synShowRemedies(<?php echo (int)$rubric['id']; ?>, <?php echo $rubricJson; ?>)"
-                                     title="<?php echo htmlspecialchars($rubric['rubric']); ?> &mdash; <?php echo $count; ?> remedies">
-                                    <span class="syn-bw-name"><?php echo htmlspecialchars($rubric['rubric']); ?></span>
-                                    <span class="syn-bw-count"><?php echo $count; ?></span>
-                                    <button type="button" class="syn-bw-add"
-                                            onclick="event.stopPropagation(); synToggleRubric(<?php echo (int)$rubric['id']; ?>)"
-                                            title="<?php echo $isSelected ? 'Remove from clipboard' : 'Add to clipboard'; ?>">
-                                        <i class="fas <?php echo $isSelected ? 'fa-times' : 'fa-plus'; ?>"></i>
-                                    </button>
+                                    title="<?php echo htmlspecialchars($rubric['rubric']); ?> &mdash; <?php echo $count; ?> remedies">
+                                    <span class="syn-bw-main">
+                                        <span class="syn-bw-name"><?php echo htmlspecialchars($rubric['rubric']); ?></span>
+                                        <?php if (isKentMindRubrics1To10VerifiedSource($rubric)): ?>
+                                        <span class="syn-bw-kent" title="Verified from <?php echo htmlspecialchars($rubric['verified_source'] ?? 'Homeoint Kent Repertory'); ?>">
+                                            <i class="fas fa-check-circle"></i> Kent
+                                        </span>
+                                        <?php endif; ?>
+                                    </span>
+                                    <span class="syn-bw-tools">
+                                        <span class="syn-bw-count"><?php echo $count; ?></span>
+                                        <button type="button" class="syn-bw-add"
+                                                onclick="event.stopPropagation(); synToggleRubric(<?php echo (int)$rubric['id']; ?>)"
+                                                title="<?php echo $isSelected ? 'Remove from clipboard' : 'Add to clipboard'; ?>">
+                                            <i class="fas <?php echo $isSelected ? 'fa-times' : 'fa-plus'; ?>"></i>
+                                        </button>
+                                    </span>
                                 </div>
                             <?php endforeach; ?>
                             </div>
@@ -1771,7 +1811,7 @@ body:has(.syn-app) { overflow: hidden; }
                                 </span>
                                 <?php if (isKentMindRubrics1To10VerifiedSource($rubric)): ?>
                                 <span class="syn-tag syn-tag-verified" title="Verified from <?php echo htmlspecialchars($rubric['verified_source'] ?? 'Kent'); ?>">
-                                    <i class="fas fa-check-circle"></i> Verified
+                                    <i class="fas fa-check-circle"></i> Kent
                                 </span>
                                 <?php endif; ?>
                                 <?php if (!empty($rubric['repertory_source'])): ?>
@@ -1880,8 +1920,8 @@ body:has(.syn-app) { overflow: hidden; }
                             <span class="syn-clip-cat"><?php echo htmlspecialchars($rubric['category']); ?></span>
                             <?php echo htmlspecialchars($rubric['rubric']); ?>
                             <?php if (isKentMindRubrics1To10VerifiedSource($rubric)): ?>
-                                <span class="syn-tag syn-tag-verified" style="font-size:9px; padding:1px 6px; margin-left:4px;">
-                                    <i class="fas fa-check-circle"></i>
+                                <span class="syn-clip-kent" title="Verified from <?php echo htmlspecialchars($rubric['verified_source'] ?? 'Homeoint Kent Repertory'); ?>">
+                                    <i class="fas fa-check-circle"></i> Kent
                                 </span>
                             <?php endif; ?>
                         </div>

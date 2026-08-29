@@ -231,12 +231,13 @@ $htmlClass = 'landing-page-html';
     <meta name="application-name" content="CurenexAI">
     
     <!-- Google tag (gtag.js) - Site Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WDBLVKCVG1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18250112030"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-WDBLVKCVG1', { 'anonymize_ip': true });
+      gtag('config', 'AW-18250112030');
     </script>
 
     <!-- PRIMARY SEO META TAGS - CURENEXAI BRAND -->
@@ -1445,6 +1446,8 @@ $htmlClass = 'landing-page-html';
                             <li><a href="<?php echo APP_URL; ?>/faq">FAQs</a></li>
                             <li><a href="<?php echo APP_URL; ?>/support">Support</a></li>
                             <li><a href="<?php echo APP_URL; ?>/digital-repertory-software-homeopathy">Digital Repertory</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/kent-repertory-online">Kent Repertory Online</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/materia-medica">Online Materia Medica</a></li>
                             <li><a href="<?php echo APP_URL; ?>/vs-radaropus">CurenexAI vs RadarOpus</a></li>
                         </ul>
                     </div>

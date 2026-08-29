@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="<?php echo isset($htmlClass) ? $htmlClass : ''; ?>" itemscope itemtype="https://schema.org/WebPage">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18250112030"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WDBLVKCVG1');
+      gtag('config', 'AW-18250112030');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#14b8a6">
@@ -126,19 +136,6 @@
     }
     </script>
 
-    <!-- Google Analytics (loaded after page load to reduce main-thread work / FID) -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      window.addEventListener('load', function(){
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WDBLVKCVG1';
-        document.head.appendChild(s);
-        gtag('js', new Date());
-        gtag('config', 'G-WDBLVKCVG1', { 'transport_type': 'beacon' });
-      });
-    </script>
 </head>
 <body class="<?php echo isset($bodyClass) ? $bodyClass : ''; ?><?php echo (isMaintenanceMode() && !canBypassMaintenance()) ? ' maintenance-mode' : ''; ?>">
     

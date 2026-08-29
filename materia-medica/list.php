@@ -23,6 +23,53 @@ $page = max(1, intval($_GET['page'] ?? 1));
 $query = "SELECT * FROM remedies WHERE 1=1";
 $params = [];
 
+$bookFilters = [
+    'kent' => [
+        'label' => "Kent's Lectures / Kent Materia Medica",
+        'pattern' => '%Kent%'
+    ],
+    'boericke' => [
+        'label' => 'Boericke Materia Medica / Pocket Manual',
+        'pattern' => '%Boericke%'
+    ],
+    'murphy' => [
+        'label' => "Murphy's Lotus Materia Medica",
+        'pattern' => '%Murphy%'
+    ],
+    'allen' => [
+        'label' => "Allen's Keynotes / Encyclopedia",
+        'pattern' => '%Allen%'
+    ],
+    'clarke' => [
+        'label' => "Clarke's Dictionary",
+        'pattern' => '%Clarke%'
+    ],
+    'hering' => [
+        'label' => "Hering's Guiding Symptoms",
+        'pattern' => '%Hering%'
+    ],
+    'vermeulen' => [
+        'label' => 'Vermeulen',
+        'pattern' => '%Vermeulen%'
+    ],
+    'indian_materia_medica' => [
+        'label' => 'Indian Materia Medica',
+        'pattern' => '%Indian Materia Medica%'
+    ],
+    'modern_provings' => [
+        'label' => 'Modern Provings',
+        'pattern' => '%Modern Provings%'
+    ],
+    'schuessler' => [
+        'label' => "Schuessler Tissue Salts",
+        'pattern' => '%Schuessler%'
+    ],
+    'foubister' => [
+        'label' => 'Foubister',
+        'pattern' => '%Foubister%'
+    ],
+];
+
 if (!empty($search)) {
     // Extended search to include more symptom fields for better results
     $query .= " AND (
@@ -54,25 +101,9 @@ if (!empty($family)) {
     $params[] = $family;
 }
 
-if (!empty($book)) {
-    switch ($book) {
-        case 'kent':
-            $query .= " AND book_reference LIKE ?";
-            $params[] = "%Kent's Lectures%";
-            break;
-        case 'boericke':
-            $query .= " AND book_reference LIKE ?";
-            $params[] = "%Boericke Materia Medica%";
-            break;
-        case 'murphy':
-            $query .= " AND book_reference LIKE ?";
-            $params[] = "%Murphy%";
-            break;
-        case 'allen':
-            $query .= " AND book_reference LIKE ?";
-            $params[] = "%Allen's Keynotes%";
-            break;
-    }
+if (!empty($book) && isset($bookFilters[$book])) {
+    $query .= " AND book_reference LIKE ?";
+    $params[] = $bookFilters[$book]['pattern'];
 }
 
 // Sorting
@@ -160,10 +191,11 @@ require_once '../includes/header.php';
                     <label><i class="fas fa-book"></i> Reference Book</label>
                     <select name="book" class="form-control">
                         <option value="">All Books</option>
-                        <option value="kent" <?= ($book ?? '') === 'kent' ? 'selected' : '' ?>>Kent's Lectures on Materia Medica</option>
-                        <option value="boericke" <?= ($book ?? '') === 'boericke' ? 'selected' : '' ?>>Boericke Materia Medica</option>
-                        <option value="murphy" <?= ($book ?? '') === 'murphy' ? 'selected' : '' ?>>Murphy's Lotus Materia Medica</option>
-                        <option value="allen" <?= ($book ?? '') === 'allen' ? 'selected' : '' ?>>Allen's Keynotes</option>
+                        <?php foreach ($bookFilters as $bookKey => $bookFilter): ?>
+                            <option value="<?= htmlspecialchars($bookKey) ?>" <?= $book === $bookKey ? 'selected' : '' ?>>
+                                <?= htmlspecialchars($bookFilter['label']) ?>
+                            </option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
 

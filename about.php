@@ -11,16 +11,17 @@ $bodyClass = 'about-page';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#6366f1">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18250112030"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WDBLVKCVG1');
+      gtag('config', 'AW-18250112030');
     </script>
-    
+
     <!-- PRIMARY SEO META TAGS -->
     <title>About CurenexAI - AI Homeopathic Healthcare Software</title>
     <meta name="title" content="About CurenexAI - AI Homeopathic Healthcare Software">
@@ -29,10 +30,10 @@ $bodyClass = 'about-page';
     <meta name="author" content="CurenexAI Team">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="googlebot" content="index, follow">
-    
+
     <!-- CANONICAL URL -->
     <link rel="canonical" href="https://curenexai.com/about.php">
-    
+
     <!-- OPEN GRAPH -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://curenexai.com/about.php">
@@ -40,17 +41,17 @@ $bodyClass = 'about-page';
     <meta property="og:description" content="CurenexAI is AI-powered homeopathy SOFTWARE for doctors - NOT a skin medicine. Learn about our intelligent diagnosis, digital repertory, and patient management features.">
     <meta property="og:image" content="https://curenexai.com/assets/image/CURENEXAI PNG.png">
     <meta property="og:site_name" content="CurenexAI">
-    
+
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About CurenexAI - AI-Powered Homeopathic Healthcare Software">
     <meta name="twitter:description" content="CurenexAI is AI-powered homeopathy SOFTWARE for doctors - NOT a skin medicine.">
     <meta name="twitter:image" content="https://curenexai.com/assets/image/CURENEXAI PNG.png">
-    
+
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="<?php echo APP_URL; ?>/assets/image/CURENEXAI ICON.png">
     <link rel="apple-touch-icon" href="<?php echo APP_URL; ?>/assets/image/CURENEXAI ICON.png">
-    
+
     <!-- SCHEMA.ORG - ABOUT PAGE -->
     <script type="application/ld+json">
     {
@@ -83,7 +84,7 @@ $bodyClass = 'about-page';
         }
     }
     </script>
-    
+
     <!-- SCHEMA.ORG - FAQ -->
     <script type="application/ld+json">
     {
@@ -133,7 +134,7 @@ $bodyClass = 'about-page';
         ]
     }
     </script>
-    
+
     <!-- SCHEMA.ORG - BREADCRUMB -->
     <script type="application/ld+json">
     {
@@ -155,33 +156,33 @@ $bodyClass = 'about-page';
         ]
     }
     </script>
-    
+
     <!-- CSS -->
     <style>@font-face{font-family:'Font Awesome 6 Brands';font-display:swap}@font-face{font-family:'Font Awesome 6 Free';font-display:swap}@font-face{font-family:'Font Awesome 6 Solid';font-display:swap}</style>
     <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo APP_URL; ?>/assets/css/style.css?v=<?php echo time(); ?>">
-    
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: #f8fafc;
             color: #1e293b;
             line-height: 1.6;
         }
-        
+
         /* Back Navigation */
         .back-nav {
             padding: 20px 40px;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
         }
-        
+
         .back-nav a {
             color: rgba(255,255,255,0.9);
             text-decoration: none;
@@ -191,11 +192,11 @@ $bodyClass = 'about-page';
             font-size: 0.95rem;
             transition: all 0.3s ease;
         }
-        
+
         .back-nav a:hover {
             color: #a5b4fc;
         }
-        
+
         /* Navigation */
         .landing-nav {
             position: fixed;
@@ -207,14 +208,14 @@ $bodyClass = 'about-page';
             transition: all 0.3s ease;
             background: transparent;
         }
-        
+
         .landing-nav.scrolled {
             background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(20px);
             padding: 15px 0;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
         }
-        
+
         .nav-container {
             max-width: 1280px;
             margin: 0 auto;
@@ -223,24 +224,24 @@ $bodyClass = 'about-page';
             align-items: center;
             justify-content: space-between;
         }
-        
+
         .nav-logo {
             display: flex;
             align-items: center;
             gap: 12px;
             text-decoration: none;
         }
-        
+
         .nav-logo-img {
             height: 45px;
             width: auto;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 35px;
         }
-        
+
         .nav-links a {
             color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
@@ -248,17 +249,17 @@ $bodyClass = 'about-page';
             font-size: 0.95rem;
             transition: color 0.3s;
         }
-        
+
         .nav-links a:hover {
             color: #a5b4fc;
         }
-        
+
         .nav-actions {
             display: flex;
             gap: 15px;
             align-items: center;
         }
-        
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -272,33 +273,33 @@ $bodyClass = 'about-page';
             cursor: pointer;
             border: none;
         }
-        
+
         .btn-ghost {
             background: rgba(255, 255, 255, 0.1);
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
+
         .btn-ghost:hover {
             background: rgba(255, 255, 255, 0.2);
         }
-        
+
         .btn-primary {
             background: linear-gradient(135deg, #6366f1, #8b5cf6);
             color: white;
             box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
         }
-        
+
         .btn-lg {
             padding: 16px 32px;
             font-size: 1.05rem;
         }
-        
+
         .mobile-menu-btn {
             display: none;
             background: rgba(255, 255, 255, 0.1);
@@ -310,7 +311,7 @@ $bodyClass = 'about-page';
             cursor: pointer;
             font-size: 1.2rem;
         }
-        
+
         /* Mobile Menu */
         .mobile-menu {
             display: none;
@@ -326,12 +327,12 @@ $bodyClass = 'about-page';
             opacity: 0;
             transition: all 0.3s ease;
         }
-        
+
         .mobile-menu.active {
             transform: translateY(0);
             opacity: 1;
         }
-        
+
         .mobile-menu a {
             display: block;
             color: white;
@@ -341,17 +342,17 @@ $bodyClass = 'about-page';
             margin-bottom: 5px;
             transition: background 0.3s;
         }
-        
+
         .mobile-menu a:hover {
             background: rgba(255, 255, 255, 0.1);
         }
-        
+
         .mobile-menu hr {
             border: none;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             margin: 15px 0;
         }
-        
+
         /* Hero Page Header */
         .page-hero {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
@@ -359,7 +360,7 @@ $bodyClass = 'about-page';
             position: relative;
             overflow: hidden;
         }
-        
+
         .page-hero::before {
             content: '';
             position: absolute;
@@ -371,7 +372,7 @@ $bodyClass = 'about-page';
             background-size: 50px 50px;
             opacity: 0.5;
         }
-        
+
         .page-hero-content {
             max-width: 900px;
             margin: 0 auto;
@@ -379,7 +380,7 @@ $bodyClass = 'about-page';
             position: relative;
             z-index: 1;
         }
-        
+
         .page-badge {
             display: inline-flex;
             align-items: center;
@@ -393,7 +394,7 @@ $bodyClass = 'about-page';
             font-weight: 500;
             margin-bottom: 25px;
         }
-        
+
         .page-hero h1 {
             font-size: 3.5rem;
             font-weight: 800;
@@ -401,14 +402,14 @@ $bodyClass = 'about-page';
             margin-bottom: 20px;
             line-height: 1.2;
         }
-        
+
         .gradient-text {
             background: linear-gradient(135deg, #818cf8, #a78bfa, #c084fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .page-hero p {
             font-size: 1.25rem;
             color: rgba(255, 255, 255, 0.8);
@@ -416,14 +417,14 @@ $bodyClass = 'about-page';
             margin: 0 auto;
             line-height: 1.7;
         }
-        
+
         /* Disclaimer Banner */
         .disclaimer-banner {
             background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
             border-bottom: 3px solid #f59e0b;
             padding: 20px 40px;
         }
-        
+
         .disclaimer-content {
             max-width: 1000px;
             margin: 0 auto;
@@ -431,7 +432,7 @@ $bodyClass = 'about-page';
             align-items: center;
             gap: 20px;
         }
-        
+
         .disclaimer-icon {
             width: 50px;
             height: 50px;
@@ -442,52 +443,52 @@ $bodyClass = 'about-page';
             justify-content: center;
             flex-shrink: 0;
         }
-        
+
         .disclaimer-icon i {
             color: white;
             font-size: 24px;
         }
-        
+
         .disclaimer-text h3 {
             color: #92400e;
             font-size: 1.1rem;
             margin-bottom: 5px;
         }
-        
+
         .disclaimer-text p {
             color: #78350f;
             font-size: 0.95rem;
             margin: 0;
             line-height: 1.6;
         }
-        
+
         /* Section Styles */
         .section {
             padding: 80px 40px;
         }
-        
+
         .section-light {
             background: #ffffff;
         }
-        
+
         .section-gray {
             background: #f8fafc;
         }
-        
+
         .section-gradient {
             background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 50%, #faf5ff 100%);
         }
-        
+
         .section-container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .section-header {
             text-align: center;
             margin-bottom: 60px;
         }
-        
+
         .section-badge {
             display: inline-flex;
             align-items: center;
@@ -503,21 +504,21 @@ $bodyClass = 'about-page';
             letter-spacing: 0.5px;
             margin-bottom: 20px;
         }
-        
+
         .section-header h2 {
             font-size: 2.5rem;
             font-weight: 800;
             color: #1e293b;
             margin-bottom: 15px;
         }
-        
+
         .section-header p {
             font-size: 1.15rem;
             color: #64748b;
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         /* About Content Grid */
         .about-grid {
             display: grid;
@@ -526,25 +527,25 @@ $bodyClass = 'about-page';
             align-items: center;
             margin-bottom: 80px;
         }
-        
+
         .about-text h3 {
             font-size: 1.8rem;
             font-weight: 700;
             color: #1e293b;
             margin-bottom: 20px;
         }
-        
+
         .about-text p {
             font-size: 1.05rem;
             color: #64748b;
             line-height: 1.8;
             margin-bottom: 20px;
         }
-        
+
         .about-image {
             position: relative;
         }
-        
+
         .about-card {
             background: white;
             border-radius: 24px;
@@ -552,7 +553,7 @@ $bodyClass = 'about-page';
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
             border: 1px solid #e2e8f0;
         }
-        
+
         .about-card .card-icon {
             width: 70px;
             height: 70px;
@@ -563,31 +564,31 @@ $bodyClass = 'about-page';
             justify-content: center;
             margin-bottom: 25px;
         }
-        
+
         .about-card .card-icon i {
             font-size: 32px;
             color: white;
         }
-        
+
         .about-card h4 {
             font-size: 1.4rem;
             font-weight: 700;
             color: #1e293b;
             margin-bottom: 15px;
         }
-        
+
         .about-card p {
             color: #64748b;
             line-height: 1.7;
         }
-        
+
         /* Feature Cards */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
-        
+
         .feature-card {
             background: white;
             border-radius: 20px;
@@ -598,13 +599,13 @@ $bodyClass = 'about-page';
             position: relative;
             overflow: hidden;
         }
-        
+
         .feature-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 25px 60px rgba(99, 102, 241, 0.15);
             border-color: rgba(99, 102, 241, 0.3);
         }
-        
+
         .feature-card::before {
             content: '';
             position: absolute;
@@ -616,11 +617,11 @@ $bodyClass = 'about-page';
             transform: scaleX(0);
             transition: transform 0.4s ease;
         }
-        
+
         .feature-card:hover::before {
             transform: scaleX(1);
         }
-        
+
         .feature-icon {
             width: 60px;
             height: 60px;
@@ -632,41 +633,41 @@ $bodyClass = 'about-page';
             margin-bottom: 20px;
             transition: all 0.3s ease;
         }
-        
+
         .feature-card:hover .feature-icon {
             background: linear-gradient(135deg, #6366f1, #8b5cf6);
         }
-        
+
         .feature-icon i {
             font-size: 26px;
             color: #6366f1;
             transition: color 0.3s ease;
         }
-        
+
         .feature-card:hover .feature-icon i {
             color: white;
         }
-        
+
         .feature-card h3 {
             font-size: 1.2rem;
             font-weight: 700;
             color: #1e293b;
             margin-bottom: 12px;
         }
-        
+
         .feature-card p {
             color: #64748b;
             font-size: 0.95rem;
             line-height: 1.6;
             margin: 0;
         }
-        
+
         /* Override global style.css animation - make cards visible */
         .features-grid .feature-card {
             opacity: 1 !important;
             transform: translateY(0) !important;
         }
-        
+
         /* Team Section */
         .team-card {
             background: white;
@@ -678,7 +679,7 @@ $bodyClass = 'about-page';
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .team-icon {
             width: 100px;
             height: 100px;
@@ -689,58 +690,58 @@ $bodyClass = 'about-page';
             justify-content: center;
             margin: 0 auto 30px;
         }
-        
+
         .team-icon i {
             font-size: 45px;
             color: white;
         }
-        
+
         .team-card h3 {
             font-size: 1.8rem;
             font-weight: 700;
             color: #1e293b;
             margin-bottom: 20px;
         }
-        
+
         .team-card p {
             font-size: 1.1rem;
             color: #64748b;
             line-height: 1.8;
             margin-bottom: 30px;
         }
-        
+
         .team-values {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-top: 30px;
         }
-        
+
         .value-item {
             padding: 20px;
             background: #f8fafc;
             border-radius: 16px;
         }
-        
+
         .value-item i {
             font-size: 28px;
             color: #6366f1;
             margin-bottom: 12px;
         }
-        
+
         .value-item h4 {
             font-size: 1rem;
             font-weight: 600;
             color: #1e293b;
             margin: 0;
         }
-        
+
         /* FAQ Section */
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .faq-item {
             background: white;
             border-radius: 16px;
@@ -749,7 +750,7 @@ $bodyClass = 'about-page';
             border: 1px solid #e2e8f0;
             overflow: hidden;
         }
-        
+
         .faq-question {
             padding: 25px 30px;
             cursor: pointer;
@@ -760,11 +761,11 @@ $bodyClass = 'about-page';
             background: white;
             transition: background 0.3s;
         }
-        
+
         .faq-question:hover {
             background: #f8fafc;
         }
-        
+
         .faq-question h3 {
             font-size: 1.05rem;
             font-weight: 600;
@@ -772,35 +773,35 @@ $bodyClass = 'about-page';
             margin: 0;
             flex: 1;
         }
-        
+
         .faq-question i {
             color: #6366f1;
             font-size: 1.2rem;
             transition: transform 0.3s;
         }
-        
+
         .faq-item.active .faq-question i {
             transform: rotate(180deg);
         }
-        
+
         .faq-answer {
             padding: 0 30px;
             max-height: 0;
             overflow: hidden;
             transition: all 0.3s ease;
         }
-        
+
         .faq-item.active .faq-answer {
             padding: 0 30px 25px;
             max-height: 500px;
         }
-        
+
         .faq-answer p {
             color: #64748b;
             line-height: 1.7;
             margin: 0;
         }
-        
+
         /* CTA Section */
         .cta-section {
             background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
@@ -809,7 +810,7 @@ $bodyClass = 'about-page';
             position: relative;
             overflow: hidden;
         }
-        
+
         .cta-section::before {
             content: '';
             position: absolute;
@@ -820,67 +821,67 @@ $bodyClass = 'about-page';
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
             background-size: 40px 40px;
         }
-        
+
         .cta-content {
             position: relative;
             z-index: 1;
             max-width: 700px;
             margin: 0 auto;
         }
-        
+
         .cta-content h2 {
             font-size: 2.5rem;
             font-weight: 800;
             color: white;
             margin-bottom: 20px;
         }
-        
+
         .cta-content p {
             font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 35px;
         }
-        
+
         .cta-buttons {
             display: flex;
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
         }
-        
+
         .btn-white {
             background: white;
             color: #6366f1;
         }
-        
+
         .btn-white:hover {
             background: #f8fafc;
             transform: translateY(-2px);
         }
-        
+
         .btn-outline-white {
             background: transparent;
             color: white;
             border: 2px solid rgba(255, 255, 255, 0.5);
         }
-        
+
         .btn-outline-white:hover {
             background: rgba(255, 255, 255, 0.1);
             border-color: white;
         }
-        
+
         /* Footer */
         .landing-footer {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
             padding: 60px 40px 30px;
         }
-        
+
         .footer-container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .footer-main {
             display: grid;
             grid-template-columns: 1.5fr 2fr;
@@ -888,11 +889,11 @@ $bodyClass = 'about-page';
             padding-bottom: 40px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .footer-brand {
             max-width: 350px;
         }
-        
+
         .footer-logo {
             display: flex;
             align-items: center;
@@ -900,23 +901,23 @@ $bodyClass = 'about-page';
             text-decoration: none;
             margin-bottom: 20px;
         }
-        
+
         .footer-logo-img {
             height: 45px;
             width: auto;
         }
-        
+
         .footer-brand p {
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.7;
             margin-bottom: 25px;
         }
-        
+
         .social-links {
             display: flex;
             gap: 12px;
         }
-        
+
         .social-links a {
             width: 42px;
             height: 42px;
@@ -929,136 +930,136 @@ $bodyClass = 'about-page';
             text-decoration: none;
             transition: all 0.3s;
         }
-        
+
         .social-links a:hover {
             background: #6366f1;
             transform: translateY(-3px);
         }
-        
+
         .footer-links {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
         }
-        
+
         .footer-column h4 {
             font-size: 1.1rem;
             font-weight: 600;
             margin-bottom: 20px;
             color: white;
         }
-        
+
         .footer-column ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        
+
         .footer-column ul li {
             margin-bottom: 12px;
         }
-        
+
         .footer-column ul li a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         .footer-column ul li a:hover {
             color: #a5b4fc;
         }
-        
+
         .footer-bottom {
             padding-top: 30px;
             text-align: center;
         }
-        
+
         .footer-bottom p {
             color: rgba(255, 255, 255, 0.6);
             font-size: 0.9rem;
         }
-        
+
         .footer-bottom a {
             color: #a5b4fc;
             text-decoration: none;
         }
-        
+
         /* Responsive */
         @media (max-width: 1024px) {
             .about-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            
+
             .footer-main {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            
+
             .footer-links {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-        
+
         @media (max-width: 768px) {
             .nav-links, .nav-actions {
                 display: none;
             }
-            
+
             .mobile-menu-btn {
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
-            
+
             .mobile-menu {
                 display: block;
             }
-            
+
             .page-hero {
                 padding: 140px 20px 80px;
             }
-            
+
             .page-hero h1 {
                 font-size: 2.2rem;
             }
-            
+
             .section {
                 padding: 60px 20px;
             }
-            
+
             .section-header h2 {
                 font-size: 1.8rem;
             }
-            
+
             .disclaimer-content {
                 flex-direction: column;
                 text-align: center;
             }
-            
+
             .team-values {
                 grid-template-columns: 1fr;
             }
-            
+
             .footer-links {
                 grid-template-columns: 1fr 1fr;
                 gap: 30px;
             }
-            
+
             .cta-content h2 {
                 font-size: 1.8rem;
             }
         }
-        
+
         @media (max-width: 480px) {
             .back-nav {
                 padding: 15px 20px;
             }
-            
+
             .nav-container {
                 padding: 0 20px;
             }
-            
+
             .footer-links {
                 grid-template-columns: 1fr;
             }
@@ -1105,7 +1106,7 @@ $bodyClass = 'about-page';
             </button>
         </div>
     </nav>
-    
+
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="<?php echo APP_URL; ?>/#features">Features</a>
@@ -1128,7 +1129,7 @@ $bodyClass = 'about-page';
             <p>AI-Powered Homeopathic Healthcare Software Platform — Built by healthcare experts, designed for modern homeopathic practitioners to decode health and deliver cure.</p>
         </div>
     </section>
-    
+
     <!-- Disclaimer Banner -->
     <div class="disclaimer-banner">
         <div class="disclaimer-content">
@@ -1141,7 +1142,7 @@ $bodyClass = 'about-page';
             </div>
         </div>
     </div>
-    
+
     <!-- What is CurenexAI Section -->
     <section class="section section-light">
         <div class="section-container">
@@ -1164,7 +1165,7 @@ $bodyClass = 'about-page';
             </div>
         </div>
     </section>
-    
+
     <!-- Features Section -->
     <section class="section section-gray">
         <div class="section-container">
@@ -1173,7 +1174,7 @@ $bodyClass = 'about-page';
                 <h2>Everything You Need to <span class="gradient-text">Modernize</span> Your Practice</h2>
                 <p>Powerful AI-driven tools designed specifically for homeopathic practitioners</p>
             </div>
-            
+
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -1182,7 +1183,7 @@ $bodyClass = 'about-page';
                     <h3>AI-Powered Diagnosis</h3>
                     <p>Leverage Google Gemini AI for intelligent symptom analysis and treatment recommendations based on homeopathic principles.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-book-medical"></i>
@@ -1190,7 +1191,7 @@ $bodyClass = 'about-page';
                     <h3>Digital Repertory</h3>
                     <p>Access 50,000+ rubrics and symptoms with instant search and AI-assisted remedy suggestions.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-pills"></i>
@@ -1198,7 +1199,7 @@ $bodyClass = 'about-page';
                     <h3>Materia Medica</h3>
                     <p>Complete database of homeopathic remedies with detailed information, keynotes, and clinical indications.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-users"></i>
@@ -1206,7 +1207,7 @@ $bodyClass = 'about-page';
                     <h3>Patient Management</h3>
                     <p>Maintain complete patient records, consultation history, follow-ups, and treatment progress tracking.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-file-prescription"></i>
@@ -1214,7 +1215,7 @@ $bodyClass = 'about-page';
                     <h3>Prescription Generation</h3>
                     <p>Generate professional prescriptions with automated remedy suggestions and dosage recommendations.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-camera"></i>
@@ -1225,7 +1226,7 @@ $bodyClass = 'about-page';
             </div>
         </div>
     </section>
-    
+
     <!-- Our Team Section -->
     <section class="section section-gradient">
         <div class="section-container">
@@ -1233,14 +1234,14 @@ $bodyClass = 'about-page';
                 <span class="section-badge">Our Team</span>
                 <h2>Built by Experts, <span class="gradient-text">For Experts</span></h2>
             </div>
-            
+
             <div class="team-card">
                 <div class="team-icon">
                     <i class="fas fa-users-cog"></i>
                 </div>
                 <h3>Healthcare Technology Pioneers</h3>
                 <p>CurenexAI was founded in 2026 by a team of  homeopathy practitioners ans software engineer dedicated to improving patient outcomes through intelligent software solutions. We combine decades of clinical experience with cutting-edge AI technology.</p>
-                
+
                 <div class="team-values">
                     <div class="value-item">
                         <i class="fas fa-lightbulb"></i>
@@ -1258,7 +1259,7 @@ $bodyClass = 'about-page';
             </div>
         </div>
     </section>
-    
+
     <!-- FAQ Section -->
     <section class="section section-light">
         <div class="section-container">
@@ -1267,7 +1268,7 @@ $bodyClass = 'about-page';
                 <h2>Frequently Asked <span class="gradient-text">Questions</span></h2>
                 <p>Common questions about CurenexAI and what we do</p>
             </div>
-            
+
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
@@ -1278,7 +1279,7 @@ $bodyClass = 'about-page';
                         <p><strong>No, absolutely not.</strong> CurenexAI is a completely different product. It is a SOFTWARE PLATFORM for homeopathic doctors, not a pharmaceutical or skincare product. If you're looking for skin medicine, CurenexAI is not what you need.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Who can use CurenexAI?</h3>
@@ -1288,7 +1289,7 @@ $bodyClass = 'about-page';
                         <p>CurenexAI is designed for licensed homeopathic practitioners, including BHMS doctors, MD Homeopathy specialists, homeopathy students, and alternative medicine professionals worldwide.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Is CurenexAI free?</h3>
@@ -1298,7 +1299,7 @@ $bodyClass = 'about-page';
                         <p>Yes! CurenexAI is currently in FREE BETA, allowing homeopathic doctors to access all features at no cost. Premium features may be introduced later through subscription plans.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>How do I get started with CurenexAI?</h3>
@@ -1308,7 +1309,7 @@ $bodyClass = 'about-page';
                         <p>Simply click the "Get Started" button to create your free account and start using our AI-powered homeopathy software immediately. Registration takes less than 2 minutes!</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Is my patient data secure?</h3>
@@ -1321,7 +1322,7 @@ $bodyClass = 'about-page';
             </div>
         </div>
     </section>
-    
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
@@ -1337,7 +1338,7 @@ $bodyClass = 'about-page';
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="landing-footer">
         <div class="footer-container">
@@ -1353,7 +1354,7 @@ $bodyClass = 'about-page';
                         <a href="https://www.instagram.com/curenexai" target="_blank" rel="noopener me" aria-label="CurenexAI on Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4>Quick Links</h4>
@@ -1368,9 +1369,12 @@ $bodyClass = 'about-page';
                     <div class="footer-column">
                         <h4>Resources</h4>
                         <ul>
-                            <li><a href="<?php echo APP_URL; ?>/documentation.php">Documentation</a></li>
-                            <li><a href="<?php echo APP_URL; ?>/faq.php">FAQs</a></li>
-                            <li><a href="<?php echo APP_URL; ?>/support.php">Support</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/documentation">Documentation</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/faq">FAQs</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/support">Support</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/digital-repertory-software-homeopathy">Digital Repertory Software</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/kent-repertory-online">Kent Repertory Online</a></li>
+                            <li><a href="<?php echo APP_URL; ?>/materia-medica">Online Materia Medica</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -1382,13 +1386,13 @@ $bodyClass = 'about-page';
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; <?php echo date('Y'); ?> <a href="https://curenexai.com" target="_blank" style="color: #a5b4fc; text-decoration: none;">CurenexAI</a> - <?php echo APP_NAME; ?>. All rights reserved. | Designed for certified homeopathic doctors. NOT affiliated with any skin medicine or pharmaceutical products.</p>
             </div>
         </div>
     </footer>
-    
+
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -1398,7 +1402,7 @@ $bodyClass = 'about-page';
             this.querySelector('i').classList.toggle('fa-bars');
             this.querySelector('i').classList.toggle('fa-times');
         });
-        
+
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('.landing-nav');
@@ -1408,25 +1412,25 @@ $bodyClass = 'about-page';
                 nav.classList.remove('scrolled');
             }
         });
-        
+
         // FAQ Toggle
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', function() {
                 const item = this.parentElement;
                 const wasActive = item.classList.contains('active');
-                
+
                 // Close all FAQs
                 document.querySelectorAll('.faq-item').forEach(faq => {
                     faq.classList.remove('active');
                 });
-                
+
                 // Open clicked FAQ if it wasn't active
                 if (!wasActive) {
                     item.classList.add('active');
                 }
             });
         });
-        
+
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
